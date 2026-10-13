@@ -195,15 +195,18 @@ img.img-thumbnail,
 }
 
 /* Dropdown của menu chính — style.css dùng #menusite nên phải cùng độ ưu tiên */
+/* style.css đặt nền/viền khung bằng !important nên phải dùng !important để đè */
 #menusite .dropdown-menu {
     padding: var(--space-2) 0;
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius) !important;
     box-shadow: 0 16px 40px rgba(0, 0, 0, .45);
 }
 
-#menusite .dropdown-menu > li { border-color: var(--color-border); }
+#menusite .dropdown-menu > li { border-bottom-color: var(--color-border); }
+
+#menusite .dropdown-submenu li a { color: var(--color-text-body); }
 
 #menusite .dropdown-menu > li > a {
     background-color: transparent;
