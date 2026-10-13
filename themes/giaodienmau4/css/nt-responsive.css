@@ -1,0 +1,207 @@
+/**
+ * Giao diện "Nhật Trình" — Lớp nhìn cho màn hình hẹp
+ *
+ * Chuyển từ giaodienmau3/assets/css/page-mobile.css. Bỏ hẳn khối giả khung
+ * artboard 390px (body { max-width: 390px; ... }, viền hai bên) vì theme thật
+ * phải rộng hết màn hình — .wraper vẫn do css/style.css + css/style.responsive.css
+ * của NukeViet điều khiển (xem base.css). Vùng chạm tối thiểu 44px theo hướng
+ * dẫn iOS/Android. Bootstrap tự xếp chồng cột col-sm-*/col-md-* khi không có
+ * col-xs-* tương ứng nên lưới 3 cột / 2 cột không cần ghi đè ở đây.
+ */
+
+@media (max-width: 991px) {
+    #header {
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+    }
+
+    .masthead-issue {
+        display: none;
+    }
+
+    .logo .brand {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 767px) {
+    .wraper {
+        padding: 0 16px;
+    }
+
+    /* Thanh trên cùng */
+    .header-nav-inner {
+        height: auto;
+        min-height: 34px;
+        padding: 6px 0;
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 11px;
+    }
+
+    .header-nav-inner .grp {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* Măng sét — chỉ còn logo, ẩn kỳ báo và ô tìm kiếm tĩnh để nhường chỗ */
+    #header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 18px 0 14px;
+        gap: 10px;
+    }
+
+    .masthead-issue {
+        display: none;
+    }
+
+    .logo .brand {
+        font-size: 34px;
+    }
+
+    .right-ads {
+        align-items: center;
+        width: 100%;
+    }
+
+    .masthead-tools {
+        align-items: stretch;
+    }
+
+    .account-links {
+        justify-content: center;
+    }
+
+    /* Menu: giữ nút thu gọn thật của Bootstrap, chỉ đổi lớp nhìn */
+    #menusite .navbar-nav {
+        display: block;
+    }
+
+    #menusite .navbar-default .navbar-nav > li > a,
+    #menusite .navbar-nav > li > a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid var(--nt-border);
+        border-radius: 0;
+    }
+
+    /* Đường dẫn */
+    .third-nav .clearfix > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    /* Khối nội dung */
+    .panel-heading {
+        font-size: 14px;
+    }
+
+    /* Tin nổi bật trang chủ */
+    .hero-story .ph {
+        height: 220px;
+    }
+
+    .headline--hero {
+        font-size: 26px;
+    }
+
+    /* Lưới phụ — xếp một cột trên màn hình hẹp */
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .story-card .ph {
+        height: 200px;
+    }
+
+    /* Mẫu tin có ảnh nhỏ — ảnh nhỏ lại, không tràn ngang */
+    .news-row {
+        gap: 12px;
+        padding: 14px 0;
+    }
+
+    .news-row .thumb {
+        width: 96px;
+        height: 66px;
+    }
+
+    .news-row .headline,
+    .block_news li.has-img > a.show {
+        font-size: 16px;
+    }
+
+    /* Trang chuyên mục */
+    .cat-head h1 {
+        font-size: 26px;
+    }
+
+    .lead-story {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .lead-story .ph {
+        width: 100%;
+        height: 220px;
+    }
+
+    /* Trang chi tiết */
+    .article-title {
+        font-size: 26px;
+    }
+
+    .article-meta {
+        flex-wrap: wrap;
+    }
+
+    .article-body p {
+        font-size: 15px;
+    }
+
+    /* Khối "Góc nhìn" [BOTTOM] */
+    .section-feature .block_news {
+        grid-template-columns: 1fr;
+    }
+
+    /* Chân trang */
+    .footer-grid > div {
+        margin-bottom: 26px;
+    }
+
+    .footerNav2 .inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 8px 0;
+    }
+
+    .footerNav2 .bttop {
+        margin-left: 0;
+    }
+
+    /* Vùng chạm tối thiểu 44px */
+    .dotted-list a,
+    .hot-list a.show,
+    .breadcrumbs a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .btn,
+    .btn-cta {
+        min-height: 44px;
+    }
+
+    /* Bảng nội dung do biên tập viên chèn — không để tràn ngang */
+    .article-body table {
+        display: block;
+        overflow-x: auto;
+        max-width: 100%;
+    }
+}

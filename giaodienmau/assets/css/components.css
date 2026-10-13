@@ -1,0 +1,623 @@
+/**
+ * Giao diện mẫu — Thành phần dùng chung
+ *
+ * Mỗi nhóm ghi kèm nguồn trong themes/default để đối chiếu khi
+ * chuyển bản mẫu này thành theme NukeViet thật.
+ */
+
+/* ==========================================================================
+   Thanh trên cùng — style.css: .section-header-bar
+   ========================================================================== */
+
+.section-header-bar {
+    background-image: linear-gradient(to bottom, var(--gd-primary) 0, var(--gd-primary-dark) 100%);
+    color: #ffffff;
+    font-size: var(--gd-fs-sm);
+}
+
+.header-nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 34px;
+}
+
+.header-nav-inner .spacer {
+    flex-grow: 1;
+}
+
+.header-nav-inner .grp {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header-nav-inner a {
+    color: #ffffff;
+    opacity: .92;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icons span {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Đầu trang — style.css: #header, #header .logo .site_description
+   ========================================================================== */
+
+.section-header {
+    background-color: var(--gd-surface);
+    border-bottom: 1px solid var(--gd-border);
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    gap: var(--gd-gutter);
+}
+
+#header .logo {
+    padding: 20px 10px 20px 0;
+}
+
+#header .logo .brand {
+    font-family: var(--gd-serif);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--gd-primary-dark);
+    letter-spacing: -.5px;
+}
+
+#header .logo .brand em {
+    font-style: normal;
+    color: #c9302c;
+}
+
+#header .logo .site_description {
+    color: var(--gd-muted);
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: var(--gd-serif);
+    line-height: 1.1;
+    margin: 6px 0 0;
+    padding: 0;
+    display: block;
+}
+
+#header .right-ads {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 10px 0;
+}
+
+/* Ô quảng cáo giữ chỗ — thay bằng block banners của NukeViet */
+.ads-slot {
+    border: 1px dashed #c3d3e0;
+    background-color: #f7fbff;
+    color: #8fa8bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--gd-fs-sm);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Menu — style.css: .second-nav .bg + Bootstrap 3 .navbar-default
+   ========================================================================== */
+
+.second-nav .bg {
+    background: var(--gd-menu-bg);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .05) 0%, rgba(0, 0, 0, 0) 100%);
+    border-top-left-radius: var(--gd-radius-nav);
+    border-top-right-radius: var(--gd-radius-nav);
+    padding-top: 8px;
+}
+
+.navbar {
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+    border-radius: var(--gd-radius) var(--gd-radius) 0 0;
+    margin: 0 8px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: stretch;
+}
+
+.navbar li > a {
+    display: block;
+    padding: 15px;
+    color: #777777;
+    font-size: var(--gd-fs-base);
+    line-height: 20px;
+}
+
+.navbar li > a:hover {
+    color: var(--gd-text);
+}
+
+.navbar li.active > a {
+    color: #555555;
+    background-color: #e7e7e7;
+}
+
+.navbar li.home > a {
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+/* ==========================================================================
+   Thanh đường dẫn + tìm kiếm — style.css: .third-nav, .breadcrumbs
+   ========================================================================== */
+
+.third-nav {
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.third-nav .row {
+    border-bottom: 1px solid var(--gd-border-strong);
+}
+
+.third-nav .bg {
+    background-color: var(--gd-body-bg);
+    padding: 5px 5px 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.breadcrumbs a {
+    background-color: var(--gd-border-strong);
+    padding: .6em 1em;
+    color: var(--gd-text);
+    position: relative;
+    font-size: 13px;
+}
+
+.breadcrumbs a:hover {
+    background-color: var(--gd-primary-soft);
+}
+
+.current-time {
+    color: var(--gd-muted);
+    font-size: var(--gd-fs-sm);
+    margin-left: auto;
+}
+
+.headerSearch {
+    display: flex;
+    width: 240px;
+}
+
+.headerSearch input {
+    flex-grow: 1;
+    height: 34px;
+    border: 1px solid var(--gd-border-input);
+    border-right: 0;
+    border-radius: var(--gd-radius) 0 0 var(--gd-radius);
+    padding: 6px 12px;
+    font-size: var(--gd-fs-base);
+    color: #555555;
+    background-color: var(--gd-surface);
+    font-family: inherit;
+}
+
+.headerSearch .btn-info {
+    width: 40px;
+    height: 34px;
+    border: 1px solid #46b8da;
+    border-radius: 0 var(--gd-radius) var(--gd-radius) 0;
+    background-color: #5bc0de;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Khối nội dung — layout/block.default.tpl, layout/block.primary.tpl
+   ========================================================================== */
+
+.panel {
+    background-color: var(--gd-surface);
+    border: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius);
+    margin-bottom: 20px;
+    box-shadow: var(--gd-shadow-panel);
+}
+
+.panel-heading {
+    padding: 10px 15px;
+    background-color: var(--gd-panel-head);
+    border-bottom: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius-sm) var(--gd-radius-sm) 0 0;
+    font-size: var(--gd-fs-base);
+    font-weight: bold;
+}
+
+.panel-primary {
+    border-color: var(--gd-primary);
+}
+
+.panel-primary > .panel-heading {
+    background-color: var(--gd-primary);
+    border-color: var(--gd-primary);
+    color: #ffffff;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.panel-body--tight {
+    padding: 5px 15px;
+}
+
+.panel-body--flush {
+    padding: 0;
+}
+
+/* ==========================================================================
+   Ô giữ chỗ ảnh — thay bằng ảnh thật khi có
+   ========================================================================== */
+
+.ph {
+    background-color: var(--gd-placeholder);
+    background-image: linear-gradient(135deg, #e3eaf1 0%, #cfdae4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ph svg {
+    opacity: .45;
+}
+
+.ph .play {
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    background-color: rgba(36, 86, 130, .85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Mẫu tin — news.css: div.news_column, #hot-news
+   ========================================================================== */
+
+.headline {
+    font-family: var(--gd-serif);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.headline a {
+    color: var(--gd-text-strong);
+}
+
+.news-item {
+    display: flex;
+    gap: 12px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--gd-border-soft);
+}
+
+.news-item:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.news-meta {
+    color: var(--gd-muted);
+    font-size: var(--gd-fs-sm);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.cat-tag {
+    display: inline-block;
+    background-color: #e8f0f7;
+    color: var(--gd-primary-dark);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    padding: 2px 7px;
+    border-radius: 2px;
+}
+
+/* Danh sách xếp hạng — news.css: #hot-news .hot-news-others li */
+.hot-list li {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--gd-border-soft);
+}
+
+.hot-list li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hot-list a {
+    color: var(--gd-text-soft);
+}
+
+.hot-list .num {
+    flex-shrink: 0;
+    width: 22px;
+    font-family: var(--gd-serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gd-primary);
+    line-height: 1.1;
+}
+
+/* Danh sách tin không ảnh ở cột bên */
+.side-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gd-border-soft);
+}
+
+.side-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.side-list a {
+    color: var(--gd-text-soft);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* Danh sách chuyên mục ở cột trái */
+.cat-list li a {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--gd-border-strong);
+    color: var(--gd-text-soft);
+}
+
+.cat-list li:last-child a {
+    border-bottom: 0;
+}
+
+.cat-list .count {
+    float: right;
+    color: var(--gd-muted);
+    font-size: var(--gd-fs-sm);
+}
+
+/* Thẻ chủ đề / từ khóa */
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: var(--gd-primary-tint);
+    border-radius: var(--gd-radius-sm);
+    font-size: 13px;
+}
+
+/* ==========================================================================
+   Nút và phân trang — Bootstrap 3
+   ========================================================================== */
+
+.btn {
+    display: inline-block;
+    height: 34px;
+    line-height: 32px;
+    padding: 0 16px;
+    border-radius: var(--gd-radius);
+    font-size: var(--gd-fs-base);
+    font-family: inherit;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--gd-primary);
+    border-color: #357ebd;
+    color: #ffffff;
+}
+
+.btn-default {
+    background-color: var(--gd-surface);
+    border-color: var(--gd-border-input);
+    color: var(--gd-text);
+}
+
+.btn-info-solid {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    color: #ffffff;
+}
+
+.pager {
+    display: flex;
+    gap: 4px;
+}
+
+.pager--center {
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.pager a {
+    display: block;
+    min-width: 36px;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    border: 1px solid var(--gd-border);
+    background-color: var(--gd-surface);
+    color: var(--gd-link);
+    padding: 0 10px;
+}
+
+.pager a.on {
+    background-color: var(--gd-primary);
+    border-color: var(--gd-primary);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Chân trang — style.css: #footer, .footerNav2
+   ========================================================================== */
+
+#footer {
+    border-top: 1px solid var(--gd-primary);
+    border-bottom: 1px solid var(--gd-primary-dark);
+    background-color: var(--gd-primary-dark);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0, rgba(0, 0, 0, 0) 100%);
+    padding: 20px 0;
+    font-size: 13px;
+    color: #dcdcdc;
+}
+
+#footer a {
+    color: #dcdcdc;
+}
+
+#footer .h3 {
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #dcdcdc;
+}
+
+#footer p {
+    margin: 0;
+    padding: 0;
+}
+
+#footer .menu li a {
+    display: block;
+    border-bottom: 1px dotted #6aa3d5;
+    padding: 8px 0;
+}
+
+#footer .menu li a:hover {
+    border-bottom-color: #ffffff;
+    color: #ffffff;
+}
+
+.footer-form {
+    display: flex;
+}
+
+.footer-form input {
+    flex-grow: 1;
+    height: 34px;
+    border: 1px solid #6aa3d5;
+    border-right: 0;
+    border-radius: var(--gd-radius) 0 0 var(--gd-radius);
+    padding: 6px 10px;
+    font-size: 13px;
+    font-family: inherit;
+    background-color: #1e4b73;
+    color: #dcdcdc;
+}
+
+.footer-form button {
+    height: 34px;
+    padding: 0 14px;
+    border: 1px solid var(--gd-primary);
+    border-radius: 0 var(--gd-radius) var(--gd-radius) 0;
+    background-color: var(--gd-primary);
+    color: #ffffff;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.footer-social span {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #1e4b73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerNav2 {
+    background-color: var(--gd-primary-darker);
+    padding: 10px 0;
+    color: #dcdcdc;
+}
+
+.footerNav2 .inner {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.footerNav2 .pill {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--gd-primary-dark);
+    color: var(--gd-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.footerNav2 .pill.on {
+    background-color: var(--gd-primary);
+    color: #dcdcdc;
+}
+
+.footerNav2 .bttop {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--gd-primary-dark);
+    color: var(--gd-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}

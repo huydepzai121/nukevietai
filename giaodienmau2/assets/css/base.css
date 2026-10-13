@@ -1,0 +1,112 @@
+/**
+ * Giao diện mẫu 2 — Nền tảng: reset, chữ, khung trang, lưới
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--violet-dark);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--violet);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -.01em;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 12.5px;
+}
+
+/* Khung 1080px của theme default */
+.wraper {
+    width: var(--wrap);
+    margin: 0 auto;
+}
+
+/* Bố cục 3 cột theo layout.left-main-right (5 / 13 / 6 trong lưới 24 cột) */
+.body-grid {
+    display: flex;
+    gap: var(--gutter);
+    padding: 22px 0 34px;
+    align-items: flex-start;
+}
+
+.col-left {
+    width: var(--col-left);
+    flex-shrink: 0;
+}
+
+.col-main {
+    width: var(--col-main);
+    flex-shrink: 0;
+}
+
+.col-right {
+    width: var(--col-right);
+    flex-shrink: 0;
+}
+
+/* Biến thể layout.main-right (18 / 6 cột) */
+.col-main--wide {
+    width: var(--col-wide);
+}
+
+/* Lưới phụ dùng lại ở nhiều trang */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--gutter);
+}

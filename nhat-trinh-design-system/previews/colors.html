@@ -1,0 +1,52 @@
+<!-- @dsCard group="Colors" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Màu — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+.sw { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+.sw div { display: flex; flex-direction: column; gap: 6px; font-size: 12px; }
+.sw i { display: block; height: 64px; border: 1px solid var(--color-border); }
+.sw b { color: var(--color-text); font-size: 13px; }
+.sw code { color: var(--color-text-muted); font-size: 11px; }
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Màu <small>giấy, mực, đỏ nhấn</small></h2>
+<div class="sw">
+<div><i style="background:var(--color-bg)"></i><b>Nền trang</b><code>--color-bg #f7f3ea</code></div>
+<div><i style="background:var(--color-surface)"></i><b>Bề mặt</b><code>--color-surface #fffdf7</code></div>
+<div><i style="background:var(--color-surface-alt)"></i><b>Nền phụ</b><code>--color-surface-alt #f2ece0</code></div>
+<div><i style="background:var(--color-inverse)"></i><b>Nền tối / mực</b><code>--color-inverse #14110d</code></div>
+<div><i style="background:var(--color-text-body)"></i><b>Chữ thân</b><code>--color-text-body #3d372e</code></div>
+<div><i style="background:var(--color-text-muted)"></i><b>Chữ mờ</b><code>--color-text-muted #7a7266</code></div>
+<div><i style="background:var(--color-text-subtle)"></i><b>Chữ rất mờ</b><code>--color-text-subtle #9a9184</code></div>
+<div><i style="background:var(--color-accent)"></i><b>Nhấn / CTA</b><code>--color-accent #a8231c</code></div>
+<div><i style="background:var(--color-accent-hover)"></i><b>Nhấn hover</b><code>--color-accent-hover #7c1813</code></div>
+<div><i style="background:var(--color-highlight)"></i><b>Vàng đồng</b><code>--color-highlight #d8b26a</code></div>
+<div><i style="background:var(--color-border)"></i><b>Viền</b><code>--color-border #d8cfbe</code></div>
+<div><i style="background:var(--color-border-dotted)"></i><b>Viền chấm</b><code>--color-border-dotted #cfc5b2</code></div>
+</div>
+<h2 class="section-title">Trạng thái</h2>
+<div class="sw">
+<div><i style="background:var(--color-success-bg);border-left:4px solid var(--color-success)"></i><b>Thành công</b><code>--color-success #3f5a2e</code></div>
+<div><i style="background:var(--color-warning-bg);border-left:4px solid var(--color-warning)"></i><b>Cảnh báo</b><code>--color-warning #8a5a12</code></div>
+<div><i style="background:var(--color-danger-bg);border-left:4px solid var(--color-danger)"></i><b>Lỗi</b><code>--color-danger #a8231c</code></div>
+</div>
+<p class="pv-note">Không dùng trắng thuần #fff hay đen thuần #000. Vàng đồng chỉ đặt trên nền tối.</p>
+</main>
+</body>
+</html>

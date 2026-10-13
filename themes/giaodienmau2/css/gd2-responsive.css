@@ -1,0 +1,219 @@
+/**
+ * Nhịp Phố — Lớp nhìn cho màn hình hẹp
+ *
+ * Chuyển từ giaodienmau2/assets/css/page-mobile.css. Bỏ phần khung
+ * artboard 390px (body max-width + viền hai bên) vì theme thật phải rộng
+ * hết màn hình; khung .wraper vẫn do css/style.responsive.css điều khiển.
+ * Vùng chạm tối thiểu 44px.
+ */
+
+@media (max-width: 767px) {
+    .section-body {
+        background-color: var(--bg);
+    }
+
+    .wraper {
+        width: 100%;
+        padding: 0 14px;
+    }
+
+    /* Thanh trên cùng */
+    .header-nav-inner {
+        min-height: 40px;
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    /* Đầu trang */
+    #header {
+        padding: 16px 0 12px;
+        gap: 12px;
+    }
+
+    #header .logo {
+        justify-content: center;
+        padding: 0;
+    }
+
+    #header .logo .mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    #header .logo img {
+        max-height: 44px;
+    }
+
+    #header .right-ads {
+        display: none;
+    }
+
+    /* Menu: giữ nút thu gọn của Bootstrap, chỉ đổi lớp nhìn */
+    #menusite .navbar,
+    #menusite .navbar-default {
+        background-color: var(--violet);
+        border-radius: 0;
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    #menusite .navbar-nav {
+        display: block;
+    }
+
+    #menusite .navbar-default .navbar-nav > li > a,
+    #menusite .navbar-nav > li > a {
+        min-height: 44px;
+        border-radius: 0;
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #menusite .navbar-default .navbar-nav > li > a:hover,
+    #menusite .navbar-default .navbar-nav > li > a:focus,
+    #menusite .navbar-default .navbar-nav > .active > a,
+    #menusite .navbar-default .navbar-nav > .open > a {
+        background-color: var(--violet-dark);
+        color: #ffffff;
+    }
+
+    /* Đường dẫn + tìm kiếm */
+    .third-nav .bg {
+        padding-top: 14px;
+    }
+
+    .headerSearch {
+        width: 100%;
+    }
+
+    .headerSearch .input-group {
+        height: 46px;
+    }
+
+    .headerSearch .form-control,
+    .headerSearch input {
+        height: 44px;
+    }
+
+    .headerSearch .btn,
+    .headerSearch .btn-info {
+        width: 34px;
+        height: 34px;
+    }
+
+    /* Khối nội dung */
+    .panel-heading {
+        padding: 14px 14px 0;
+    }
+
+    .panel-body {
+        padding: 12px 14px 14px;
+    }
+
+    /* Mẫu tin: ảnh nhỏ lại, không tràn ngang */
+    .news-item {
+        padding: 13px 0;
+    }
+
+    .news-item .thumb {
+        width: 96px;
+        height: 70px;
+    }
+
+    .news-item h3 {
+        font-size: 14.5px;
+    }
+
+    /* Mẫu tin rút gọn dùng cho danh sách trên màn hình hẹp */
+    .m-item {
+        display: flex;
+        gap: 12px;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .m-item:first-child {
+        padding-top: 0;
+    }
+
+    .m-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .m-item h3 {
+        font-size: 14.5px;
+    }
+
+    .m-item h3 a {
+        color: var(--ink);
+    }
+
+    .m-item img {
+        width: 96px;
+        height: 70px;
+    }
+
+    /* Thanh điều hướng dưới cùng */
+    .tabbar {
+        display: flex;
+        background-color: var(--surface);
+        border-top: 1px solid var(--border);
+        padding: 6px 4px;
+    }
+
+    .tabbar a {
+        flex-grow: 1;
+        min-height: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--muted);
+        border-radius: var(--radius-img);
+    }
+
+    .tabbar a.on {
+        color: var(--violet);
+        background-color: var(--violet-tint);
+    }
+
+    /* Vùng chạm tối thiểu 44px */
+    .cat-list a,
+    .side-list a,
+    .hot-list a,
+    .footerNav2 a,
+    #footer ul li a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hot-list a,
+    .side-list a {
+        display: block;
+        padding: 6px 0;
+        min-height: 44px;
+    }
+
+    .btn {
+        min-height: 44px;
+    }
+
+    /* Chân trang */
+    .footerNav2 .inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .footerNav2 .bttop {
+        margin-left: 0;
+    }
+}

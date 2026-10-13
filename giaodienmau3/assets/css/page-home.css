@@ -1,0 +1,33 @@
+/**
+ * Giao diện mẫu 3 — "Nhật Trình" — Trang chủ
+ * Chỉ phần bố cục riêng của trang chủ: tin nổi bật dọc + lưới 2 tin phụ.
+ */
+
+.hero-story .ph {
+    height: 300px;
+}
+
+.hero-story .excerpt {
+    margin-top: 12px;
+}
+
+.hero-story .byline {
+    margin-top: 10px;
+}
+
+.story-card .ph {
+    height: 150px;
+}
+
+.story-card .kicker {
+    margin: 11px 0 6px;
+}
+
+.story-card .excerpt {
+    margin-top: 8px;
+}
+
+.focus-box .ph {
+    height: 130px;
+    margin-bottom: 12px;
+}

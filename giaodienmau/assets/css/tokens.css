@@ -1,0 +1,63 @@
+/**
+ * Giao diện mẫu — Design tokens
+ *
+ * Mọi giá trị dưới đây lấy nguyên từ themes/default của NukeViet.
+ * Cột "nguồn" ghi rõ file và selector gốc để đối chiếu khi sửa.
+ */
+
+:root {
+    /* Màu thương hiệu — style.css: .section-header-bar, #footer, .footerNav2 */
+    --gd-primary: #428bca;
+    --gd-primary-dark: #245682;
+    --gd-primary-darker: #193c5a;
+    --gd-primary-soft: #a6c8e6;   /* breadcrumbs a:hover */
+    --gd-primary-tint: #eef3f8;   /* nền thẻ từ khóa, chủ đề */
+
+    /* Chữ — style.css: body, a:link, a.dimgray */
+    --gd-text: #333333;
+    --gd-text-strong: #1a1a1a;
+    --gd-text-soft: #383838;      /* news.css: #topnews a, ul.related a */
+    --gd-muted: #707070;
+    --gd-link: #1a3f5e;
+    --gd-link-hover: #0e2132;
+
+    /* Nền và viền */
+    --gd-body-bg: #eeeeee;        /* style.css: body, .third-nav .bg */
+    --gd-surface: #ffffff;
+    --gd-panel-head: #f5f5f5;     /* Bootstrap 3 .panel-default > .panel-heading */
+    --gd-border: #dddddd;         /* style.css: --nv-border-color */
+    --gd-border-strong: #dcdcdc;  /* breadcrumbs, .third-nav .row */
+    --gd-border-soft: #dadada;    /* news.css: #hot-news li */
+    --gd-border-input: #cccccc;
+    --gd-menu-bg: #cccccc;        /* style.css: .second-nav .bg */
+    --gd-placeholder: #dbe4ec;    /* ô giữ chỗ ảnh */
+    --gd-placeholder-ink: #7d95ab;
+
+    /* Chữ: sans của theme, serif kế thừa từ #header .logo .site_description */
+    --gd-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --gd-serif: 'Times New Roman', Times, serif;
+    --gd-mono: 'Courier New', Courier, monospace;
+
+    /* Cỡ chữ — style.css: --nv-font-size-* và body */
+    --gd-fs-xs: 10px;
+    --gd-fs-sm: 12px;
+    --gd-fs-base: 14px;
+    --gd-fs-lg: 16px;
+    --gd-fs-xxl: 22px;
+    --gd-lh-base: 1.42857;
+    --gd-lh-read: 1.75;
+
+    /* Lưới — style.css: .wraper; lưới 24 cột của NukeViet */
+    --gd-wrap: 1080px;
+    --gd-gutter: 30px;
+    --gd-col-left: 210px;    /* 5/24 cột  */
+    --gd-col-main: 555px;    /* 13/24 cột */
+    --gd-col-right: 255px;   /* 6/24 cột  */
+    --gd-col-wide: 795px;    /* 18/24 cột */
+
+    /* Bo góc và đổ bóng — Bootstrap 3 */
+    --gd-radius: 4px;
+    --gd-radius-sm: 3px;
+    --gd-radius-nav: 5px;    /* .second-nav .bg */
+    --gd-shadow-panel: 0 1px 1px rgba(0, 0, 0, .05);
+}

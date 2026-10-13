@@ -1,0 +1,161 @@
+/**
+ * Giao diện mẫu — Bản di động 390px
+ * Đối chiếu: themes/default/css/style.responsive.css
+ * (.wraper và .container = 100% dưới ngưỡng màn hình nhỏ)
+ *
+ * Vùng chạm tối thiểu 44px theo hướng dẫn của cả iOS và Android.
+ */
+
+body {
+    max-width: 390px;
+    margin: 0 auto;
+    background-color: var(--gd-surface);
+    border-left: 1px solid var(--gd-border);
+    border-right: 1px solid var(--gd-border);
+}
+
+.wraper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 12px;
+}
+
+.section-body {
+    background-color: var(--gd-body-bg);
+}
+
+.header-nav-inner {
+    height: 40px;
+    gap: 12px;
+}
+
+.header-nav-inner .contactDefault {
+    font-size: 11px;
+}
+
+#header {
+    gap: 12px;
+}
+
+#header .logo {
+    padding: 14px 0;
+}
+
+#header .logo .brand {
+    font-size: 28px;
+}
+
+#header .logo .site_description {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+#header .right-ads {
+    display: none;
+}
+
+.second-nav .bg {
+    padding: 6px 6px 0;
+}
+
+.navbar {
+    margin: 0;
+    border-radius: var(--gd-radius) var(--gd-radius) 0 0;
+}
+
+.navbar ul {
+    overflow: hidden;
+}
+
+.navbar li > a {
+    padding: 14px 12px;
+    font-size: 13px;
+    min-height: 48px;
+}
+
+.mnav {
+    display: flex;
+    align-items: center;
+}
+
+.burger {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.burger i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #777777;
+}
+
+.third-nav {
+    margin: 8px 0 0;
+}
+
+.headerSearch {
+    width: 100%;
+}
+
+.headerSearch .btn-info {
+    width: 48px;
+}
+
+.m-hero .headline {
+    font-size: 22px;
+    margin: 10px 0 8px;
+}
+
+.m-item {
+    display: flex;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--gd-border-soft);
+}
+
+.m-item:last-child {
+    border-bottom: 0;
+}
+
+.m-item .headline {
+    font-size: 15px;
+}
+
+/* Thanh điều hướng dưới cùng */
+.tabbar {
+    display: flex;
+    background-color: var(--gd-surface);
+    border-top: 1px solid var(--gd-border);
+}
+
+.tabbar a {
+    flex-grow: 1;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 11px;
+    color: var(--gd-muted);
+}
+
+.tabbar a.on {
+    color: var(--gd-primary-dark);
+}
+
+.footerNav2 .inner {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 4px 0;
+}

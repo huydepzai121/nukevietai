@@ -87,3 +87,8 @@
 !/data/cache/.htaccess
 !/data/cache/index.html
 !/data/tmp/index.html
+
+# Docker (môi trường phát triển cục bộ)
+/.env
+/.docker/mariadb/dump/*
+!/.docker/mariadb/dump/.gitkeep

@@ -1,0 +1,1156 @@
+/**
+ * Nhịp Phố — Thành phần dùng chung
+ *
+ * Các bộ chọn bám theo markup thật của NukeViet (layout/*.tpl và block
+ * [MENU_SITE] do module menu sinh ra), không phải markup của bản tĩnh
+ * trong giaodienmau2/. Giá trị màu, cỡ, bo góc lấy nguyên từ bản tĩnh.
+ */
+
+/* ==========================================================================
+   Thanh trên cùng — [CONTACT_DEFAULT] [SOCIAL_ICONS] [PERSONALAREA]
+   ========================================================================== */
+
+.section-header-bar {
+    background-image: linear-gradient(90deg, #6b4eff 0%, #a24bf0 52%, #ff6a4d 100%);
+    color: #ffffff;
+    font-size: 12.5px;
+}
+
+.section-header-bar .header-nav,
+.section-header-bar .header-nav-inner {
+    color: #ffffff;
+}
+
+.header-nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 38px;
+    padding: 0;
+}
+
+.header-nav-inner .spacer {
+    flex-grow: 1;
+}
+
+.header-nav-inner .grp {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.header-nav-inner .grp ul {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.section-header-bar a,
+.section-header-bar .header-nav a {
+    color: #ffffff;
+}
+
+.section-header-bar .header-nav a:hover {
+    color: #ffffff;
+    opacity: .85;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.social-icons a,
+.social-icons > span {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.personalArea {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.personalArea a.button,
+.chip-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 30px;
+    padding: 0 12px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, .22);
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.personalArea a.button.active,
+.personalArea a.button:hover,
+.personalArea a.button:focus {
+    background-color: rgba(255, 255, 255, .34);
+    color: #ffffff;
+}
+
+.personalArea a.button .fa {
+    position: static;
+    transform: none;
+    left: auto;
+    top: auto;
+}
+
+/* ==========================================================================
+   Đầu trang — logo + [HEAD_RIGHT]
+   ========================================================================== */
+
+.section-header {
+    background-color: var(--surface);
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    gap: var(--gutter);
+    padding: 22px 0;
+}
+
+#header .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+}
+
+#header .logo .mark {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-img);
+    flex-shrink: 0;
+    background-image: linear-gradient(135deg, #6b4eff, #a24bf0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header .logo img {
+    max-height: 52px;
+    width: auto;
+}
+
+#header .logo .site_description {
+    display: block;
+    color: var(--muted);
+    font-size: 12.5px;
+    font-weight: 500;
+}
+
+#header .right-ads {
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   Menu — [MENU_SITE], markup của modules/menu/global.bootstrap.tpl
+   ========================================================================== */
+
+.section-nav {
+    background-color: var(--surface);
+}
+
+.second-nav .bg {
+    background: none;
+    background-image: none !important;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#menusite .navbar,
+#menusite .navbar-default {
+    background-color: var(--bg);
+    background-image: none;
+    border: 0;
+    border-radius: var(--radius-pill);
+    margin: 0 0 10px;
+    min-height: 0;
+    padding: 5px;
+}
+
+#menusite .navbar-nav {
+    float: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+    margin: 0;
+}
+
+#menusite .navbar-default .navbar-nav > li,
+#menusite .navbar-default .navbar-nav > li:first-child,
+#menusite .navbar-default .navbar-nav > li:last-child {
+    margin: 0;
+    float: none;
+}
+
+#menusite .navbar-nav > li > a,
+#menusite .navbar-default .navbar-nav > li > a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 15px;
+    border-radius: var(--radius-pill);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background-color: transparent;
+    text-shadow: none;
+    line-height: 1.2;
+}
+
+#menusite .navbar-default .navbar-nav > li > a:hover,
+#menusite .navbar-default .navbar-nav > li > a:focus {
+    background-color: var(--surface);
+    color: var(--violet-dark);
+}
+
+#menusite .navbar-default .navbar-nav > .active > a,
+#menusite .navbar-default .navbar-nav > .active > a:hover,
+#menusite .navbar-default .navbar-nav > .active > a:focus,
+#menusite .navbar-default .navbar-nav > .open > a,
+#menusite .navbar-default .navbar-nav > .open > a:hover,
+#menusite .navbar-default .navbar-nav > .open > a:focus {
+    background-color: var(--violet);
+    background-image: none;
+    color: #ffffff;
+}
+
+#menusite .navbar-toggle {
+    border-radius: var(--radius-ctl);
+    border-color: var(--border);
+    margin: 0;
+}
+
+#menusite .navbar-toggle .icon-bar {
+    background-color: var(--violet);
+}
+
+#menusite .dropdown-menu {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-ctl);
+    box-shadow: var(--shadow-card);
+    padding: 6px;
+}
+
+#menusite .dropdown-menu > li > a {
+    border-radius: var(--radius-ctl);
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-soft);
+}
+
+#menusite .dropdown-menu > li > a:hover,
+#menusite .dropdown-menu > li > a:focus,
+#menusite .dropdown-menu > .active > a,
+#menusite .dropdown-menu > .active > a:hover,
+#menusite .dropdown-menu > .active > a:focus,
+#menusite .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+#menusite .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    background-color: var(--violet-tint);
+    background-image: none;
+    color: var(--violet-dark);
+}
+
+/* ==========================================================================
+   Đường dẫn + thời gian + ô tìm kiếm
+   ========================================================================== */
+
+.third-nav {
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.third-nav .bg {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: transparent;
+    padding: 16px 0 0;
+}
+
+.third-nav .breadcrumbs-wrap {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.breadcrumbs,
+.subs-breadcrumbs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+.breadcrumbs a,
+.subs-breadcrumbs a {
+    color: var(--muted);
+}
+
+.breadcrumbs li:not(:first-child):before {
+    content: '\203A';
+    color: #c8c3e4;
+    margin-right: 6px;
+}
+
+.third-nav .current-time {
+    display: inline-block;
+    float: none;
+    margin: 0;
+    line-height: 1.4;
+    color: var(--muted);
+    font-size: 12.5px;
+}
+
+.third-nav ul + .current-time {
+    float: none;
+    margin-top: 0;
+}
+
+.headerSearch {
+    margin: 0;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.headerSearch .input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: 0 6px 0 14px;
+    height: 40px;
+    width: 100%;
+}
+
+.headerSearch .form-control,
+.headerSearch input {
+    flex-grow: 1;
+    width: auto;
+    border: 0 !important;
+    outline: 0;
+    box-shadow: none;
+    background: none !important;
+    height: 38px;
+    padding: 0;
+    font-family: inherit;
+    font-size: 13.5px;
+    color: var(--ink);
+}
+
+.headerSearch .input-group-btn {
+    width: auto;
+    font-size: inherit !important;
+}
+
+.headerSearch .btn,
+.headerSearch .btn-info {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background-color: var(--violet);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.headerSearch .btn-info:focus,
+.headerSearch .btn-info.focus,
+.headerSearch .btn-info:hover,
+.headerSearch .btn-info:active,
+.headerSearch .btn-info.active {
+    background-color: var(--violet-dark);
+    border-color: var(--violet-dark);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Khối nội dung — layout/block.default.tpl, block.primary.tpl
+   ========================================================================== */
+
+.panel {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-card);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 18px 0;
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    color: var(--ink);
+}
+
+.panel-heading .bar {
+    width: 4px;
+    height: 17px;
+    border-radius: var(--radius-pill);
+    background-color: var(--violet);
+    flex-shrink: 0;
+}
+
+.panel-heading h3 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.panel-heading .more {
+    margin-left: auto;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--violet);
+}
+
+.panel-body {
+    padding: 14px 18px 18px;
+}
+
+.panel-body--tight {
+    padding: 10px 10px 12px;
+}
+
+.panel-default,
+.panel-primary {
+    border-color: var(--border);
+}
+
+.panel-primary {
+    background-color: var(--violet-tint);
+    border-color: #d9d1ff;
+}
+
+.panel-primary > .panel-heading {
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    color: var(--ink);
+}
+
+.panel-primary .panel-heading .bar {
+    background-color: var(--coral);
+}
+
+/* ==========================================================================
+   Nhãn chuyên mục, ảnh, dòng phụ chú
+   ========================================================================== */
+
+.cat-tag {
+    display: inline-block;
+    padding: 4px 11px;
+    border-radius: var(--radius-pill);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    background-color: var(--violet-tint);
+    color: var(--violet-dark);
+}
+
+.cat-tag.coral {
+    background-color: var(--coral-tint);
+    color: #c93d22;
+}
+
+.cat-tag.mint {
+    background-color: var(--mint-tint);
+    color: #0a7d68;
+}
+
+.cat-tag.amber {
+    background-color: var(--amber-tint);
+    color: #9a6300;
+}
+
+.cat-tag.onphoto {
+    background-color: rgba(255, 255, 255, .92);
+    color: var(--violet-dark);
+}
+
+.thumb {
+    display: block;
+    border-radius: var(--radius-img);
+    object-fit: cover;
+}
+
+/* Ảnh do module sinh ra kèm class img-thumbnail */
+.news_column .img-thumbnail,
+.block_news .img-thumbnail,
+.block_tophits .img-thumbnail {
+    border: 0;
+    padding: 0;
+    border-radius: var(--radius-img);
+    background: none;
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 12.5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   Mẫu tin
+   ========================================================================== */
+
+.news-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.news-item:first-child {
+    padding-top: 0;
+}
+
+.news-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.news-item .thumb {
+    flex-shrink: 0;
+    width: 168px;
+    height: 108px;
+}
+
+.news-item h3 {
+    font-size: 16px;
+}
+
+.news-item h3 a {
+    color: var(--ink);
+}
+
+.news-item p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 6px 0 0;
+}
+
+/* Danh sách xếp hạng — block_tophits. Số thứ tự do CSS đếm vì XTemplate
+   không có biến đếm vòng lặp. */
+.hot-list {
+    counter-reset: hotrank;
+}
+
+.hot-list .num:before {
+    counter-increment: hotrank;
+    content: counter(hotrank);
+}
+
+.hot-list li {
+    display: flex;
+    gap: 12px;
+    padding: 11px 0;
+    border-bottom: 1px solid #ded7fa;
+}
+
+.hot-list li:first-child {
+    padding-top: 0;
+}
+
+.hot-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.hot-list a {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.hot-list .txt {
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.hot-list .txt .thumb {
+    flex-shrink: 0;
+    width: 72px;
+    height: 52px;
+}
+
+.hot-list .num {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    background-color: var(--surface);
+    color: var(--violet);
+    font-size: 12.5px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hot-list li:first-child .num {
+    background-color: var(--coral);
+    color: #ffffff;
+}
+
+/* Danh sách chữ ở cột bên — block_news */
+.side-list li {
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.side-list li:first-child {
+    padding-top: 0;
+}
+
+.side-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.side-list a {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.side-list .thumb {
+    flex-shrink: 0;
+    width: 72px;
+    height: 52px;
+}
+
+.side-list li.has-img {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* Danh sách chuyên mục ở cột trái — block_category */
+.cat-list a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+    border-radius: var(--radius-ctl);
+    color: var(--ink-soft);
+    font-weight: 600;
+    font-size: 13.5px;
+}
+
+.cat-list a:hover {
+    background-color: var(--bg);
+}
+
+.cat-list .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-pill);
+    background-color: var(--violet);
+    flex-shrink: 0;
+}
+
+.cat-list .count {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.cat-list ul {
+    padding-left: 18px;
+}
+
+.cat-list .arrow {
+    margin-left: auto;
+    color: var(--muted);
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   Nút
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 0 20px;
+    border-radius: var(--radius-pill);
+    border: 0;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    text-shadow: none;
+    background-image: none;
+}
+
+.btn-primary {
+    background-color: var(--violet);
+    color: #ffffff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--violet-dark);
+    color: #ffffff;
+}
+
+.btn-default,
+.btn-ghost {
+    background-color: var(--bg);
+    color: var(--ink-soft);
+}
+
+.btn-xs,
+.btn-sm {
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 12.5px;
+}
+
+.form-control {
+    border-radius: var(--radius-ctl);
+    border-color: var(--border);
+    box-shadow: none;
+    font-family: inherit;
+}
+
+/* ==========================================================================
+   Chân trang — [MENU_FOOTER] [FEATURED_PRODUCT] [COMPANY_INFO] [QR_CODE] [FOOTER_SITE]
+   ========================================================================== */
+
+#footer {
+    background-color: var(--ink);
+    color: #cfcbe8;
+    padding: 34px 0 26px;
+    font-size: 13px;
+}
+
+#footer a {
+    color: #cfcbe8;
+}
+
+#footer a:hover {
+    color: #ffffff;
+}
+
+#footer .h3,
+#footer .panel-heading,
+#footer h3,
+#footer h4 {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .8px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 14px;
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+#footer .panel {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 0;
+    overflow: visible;
+}
+
+#footer .panel-body {
+    padding: 0;
+}
+
+#footer p {
+    margin: 0 0 6px;
+}
+
+#footer .menu li a,
+#footer ul li a {
+    display: block;
+    padding: 6px 0;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.footer-brand .mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    background-image: linear-gradient(135deg, #6b4eff, #a24bf0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.footer-brand .name {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.footer-social {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.footer-social a,
+.footer-social span {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, .08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerNav2 {
+    background-color: #100e2b;
+    color: #8f8ab5;
+    padding: 14px 0;
+    font-size: 12.5px;
+}
+
+.footerNav2 .inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.footerNav2 a {
+    color: #8f8ab5;
+}
+
+.footerNav2 a:hover {
+    color: #ffffff;
+}
+
+.footerNav2 .theme-change {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footerNav2 .bttop {
+    margin-left: auto;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, .08);
+    color: #cfcbe8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerNav2 .bttop a {
+    color: #cfcbe8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ô quảng cáo giữ chỗ của bản mẫu — thay bằng block banners thật */
+.ads-slot {
+    border: 1px dashed #cfc7f2;
+    background-color: #faf8ff;
+    color: #9c95c4;
+    border-radius: var(--radius-img);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Bình luận — modules/comment/main.tpl, comment.tpl
+   ========================================================================== */
+
+.comment-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.comment-head .bar {
+    width: 4px;
+    height: 17px;
+    border-radius: var(--radius-pill);
+    background-color: var(--violet);
+    flex-shrink: 0;
+}
+
+.comment-head .form-control {
+    margin-left: auto;
+    width: auto;
+    height: 34px;
+}
+
+.comment-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--ink);
+    margin: 0;
+}
+
+.comment-box,
+#formcomment textarea.form-control {
+    width: 100%;
+    min-height: 86px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-img);
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background-color: var(--bg);
+    resize: vertical;
+    outline: 0;
+    box-shadow: none;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.comment-row,
+.comment-list > li.media {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.comment-list > li.media:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.comment-list .media-body {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.comment-list .media-object {
+    border-radius: var(--radius-pill);
+}
+
+.comment-actions .spacer {
+    flex-grow: 1;
+}
+
+.comment-row .avatar,
+.comment-list .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-pill);
+    background-color: var(--mint-tint);
+    color: #0a7d68;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.comment-row .avatar img,
+.comment-list .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-tool {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-size: 12.5px;
+    color: var(--muted);
+    margin-top: 6px;
+}
+
+.comment-info {
+    color: var(--muted);
+    font-size: 12.5px;
+}
+
+/* ==========================================================================
+   Khối tin nổi bật — dùng bởi block_newscenter (block toàn cục, phải có style
+   ở mọi module). Core chỉ nạp css/news.css khi đang xem chính module news,
+   trong khi block này đặt được ở trang chủ thuộc module page, contact...
+   nên các rule dưới đây phải nằm ở components.css.
+   ========================================================================== */
+
+/* Ảnh lớn đầu trang, tiêu đề nằm trên ảnh */
+.hero-photo {
+    position: relative;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.hero-photo .shade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 190px;
+    background-image: linear-gradient(to top,
+            rgba(15, 13, 40, .88) 0%,
+            rgba(15, 13, 40, .55) 45%,
+            rgba(15, 13, 40, 0) 100%);
+}
+
+.hero-photo .cap {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+}
+
+.hero-photo h2 {
+    color: #ffffff;
+    font-size: 27px;
+    margin: 12px 0 0;
+}
+
+.hero-photo .cap .meta {
+    color: rgba(255, 255, 255, .82);
+}
+
+/* Ba tin phụ dưới ảnh lớn */
+.sub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 18px;
+}
+
+.sub-grid img {
+    width: 100%;
+    height: 96px;
+}
+
+.sub-grid h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.sub-grid h3 a {
+    color: var(--ink);
+}
+
+/* Điều chỉnh cho markup thật của block_newscenter */
+.hero-photo a {
+    display: block;
+}
+
+.hero-photo img {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.hero-photo .cap .hometext {
+    color: rgba(255, 255, 255, .86);
+    font-size: 13.5px;
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hero-photo .cap .meta a,
+.hero-photo .cap h2 a {
+    color: #ffffff;
+}
+
+.sub-grid .sub-item .thumb {
+    width: 100%;
+    height: 96px;
+}

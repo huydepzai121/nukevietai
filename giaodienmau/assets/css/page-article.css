@@ -1,0 +1,149 @@
+/**
+ * Giao diện mẫu — Trang chi tiết bài viết
+ * Tương ứng: layout.left-main-right.tpl + module news (detail)
+ * Đối chiếu: themes/default/css/news.css — #news_detail, #hometext, ul.related
+ */
+
+.navbar li.n1 > a {
+    color: #555555;
+    background-color: #e7e7e7;
+}
+
+#news_detail h1 {
+    font-family: var(--gd-serif);
+    font-size: 32px;
+    line-height: 1.22;
+    margin-bottom: 12px;
+    color: var(--gd-text-strong);
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--gd-border-soft);
+}
+
+/* Sapo */
+#hometext {
+    font-size: var(--gd-fs-lg);
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--gd-text);
+    margin-bottom: 16px;
+}
+
+/* Thân bài — cỡ chữ đọc dài trên cột 555px */
+.bodytext p {
+    font-size: var(--gd-fs-lg);
+    line-height: var(--gd-lh-read);
+    color: var(--gd-text);
+    margin-bottom: 16px;
+}
+
+.bodytext h2 {
+    font-family: var(--gd-serif);
+    font-size: var(--gd-fs-xxl);
+    margin: 24px 0 12px;
+}
+
+/* news.css: div.news_column .imgalt */
+.imgalt {
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+    color: var(--gd-muted);
+    font-size: var(--gd-fs-sm);
+    font-style: italic;
+}
+
+.pullquote {
+    border-left: 3px solid var(--gd-primary);
+    padding: 4px 0 4px 16px;
+    margin: 22px 0;
+    font-family: var(--gd-serif);
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--gd-primary-dark);
+}
+
+/* news.css: div.news_column .socialicon */
+.socialicon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.socialicon span {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--gd-radius-sm);
+    background-color: var(--gd-primary-tint);
+    color: var(--gd-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-tags {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid var(--gd-border-soft);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* news.css: div.news_column ul.related */
+ul.related li {
+    padding: 8px 0;
+    border-bottom: 1px dotted var(--gd-border-strong);
+}
+
+ul.related li:last-child {
+    border-bottom: 0;
+}
+
+ul.related a {
+    color: #3b3b3b;
+    padding-left: 6px;
+}
+
+/* Bình luận — module comment */
+.comment-box {
+    width: 100%;
+    height: 80px;
+    border: 1px solid var(--gd-border-input);
+    border-radius: var(--gd-radius);
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: var(--gd-fs-base);
+    color: #555555;
+    resize: none;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comment-item {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--gd-border-soft);
+    display: flex;
+    gap: 12px;
+}
+
+.comment-item .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--gd-placeholder);
+    flex-shrink: 0;
+}

@@ -1,0 +1,92 @@
+/**
+ * AI Today — Design tokens (tông tối công nghệ)
+ *
+ * Hai lớp: nguyên liệu --ai-* và ngữ nghĩa --color-* / --font-* / --text-* /
+ * --space-*. css/ai-theme.css chỉ dùng lớp ngữ nghĩa. Tên ngữ nghĩa trùng với
+ * nhat-trinh-design-system để css/nv-standard.css đọc được (--container,
+ * --gutter, --text-*, --measure, --section-py*).
+ *
+ * Tương phản (trên --color-bg #0b0f17): text 17.7:1, body 10.4:1, muted 6.3:1
+ * (5.2:1 trên --color-surface-alt), accent 6.6:1 — đạt WCAG AA cho chữ thường.
+ */
+
+:root {
+    /* ---------- Nguyên liệu ---------- */
+    --ai-night: #0b0f17;
+    --ai-panel: #121826;
+    --ai-panel-2: #1a2233;
+    --ai-line: #263044;
+    --ai-line-strong: #34405a;
+    --ai-white: #f3f6fb;
+    --ai-fog: #b6bfd0;
+    --ai-steel: #8a94a8;
+    --ai-blue: #5b95ff;
+    --ai-blue-dark: #3d7bf0;
+    --ai-violet: #a78bfa;
+    --ai-cyan: #22d3ee;
+
+    /* ---------- Màu ngữ nghĩa ---------- */
+    --color-bg: var(--ai-night);
+    --color-surface: var(--ai-panel);
+    --color-surface-alt: var(--ai-panel-2);
+    --color-text: var(--ai-white);
+    --color-text-body: var(--ai-fog);
+    --color-text-muted: var(--ai-steel);
+    --color-accent: var(--ai-blue);
+    --color-accent-hover: #8db5ff;
+    --color-on-accent: #06101f;
+    --color-accent-2: var(--ai-violet);
+    --color-highlight: var(--ai-cyan);
+    --color-border: var(--ai-line);
+    --color-border-strong: var(--ai-line-strong);
+    --gradient-brand: linear-gradient(90deg, var(--ai-blue) 0%, var(--ai-violet) 55%, var(--ai-cyan) 100%);
+
+    --color-success: #34d399;
+    --color-warning: #fbbf24;
+    --color-danger: #f87171;
+
+    /* ---------- Chữ: 2 họ, gốc 16px, tỉ lệ 1.25 ---------- */
+    --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+
+    --text-display: 3.815rem;
+    --text-h1: 2.441rem;
+    --text-h2: 1.953rem;
+    --text-h3: 1.563rem;
+    --text-h4: 1.25rem;
+    --text-h5: 1rem;
+    --text-h6: .8rem;
+    --text-lead: 1.125rem;
+    --text-body: 1rem;
+    --text-article: 1.0625rem;
+    --text-sm: .875rem;
+    --text-xs: .75rem;
+    --text-label: .6875rem;
+    --measure: 65ch;
+    --tracking-label: .14em;
+
+    /* ---------- Khoảng cách 0–6 ---------- */
+    --space-0: 0;
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 3rem;
+    --space-6: 6rem;
+    --section-py: var(--space-4);
+    --section-py-md: var(--space-5);
+    --section-py-lg: var(--space-6);
+
+    /* ---------- Bố cục ---------- */
+    --container: 1190px;
+    --gutter: 20px;
+    --touch-min: 44px;
+
+    /* ---------- Hình khối ---------- */
+    --radius: 10px;
+    --radius-sm: 6px;
+    --radius-pill: 999px;
+    --shadow-glow: 0 0 0 1px rgba(91, 149, 255, .35), 0 8px 30px rgba(91, 149, 255, .12);
+    --ease: cubic-bezier(.2, .6, .2, 1);
+    --duration: 180ms;
+}

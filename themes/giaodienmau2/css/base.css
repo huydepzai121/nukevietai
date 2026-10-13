@@ -1,0 +1,71 @@
+/**
+ * Nhịp Phố — Nền tảng: chữ, màu nền, liên kết
+ *
+ * Khung .wraper và lưới 24 cột do css/style.css + css/style.responsive.css
+ * của NukeViet đảm nhiệm; file này không định nghĩa lại để không phá
+ * phần responsive của hệ thống.
+ */
+
+body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--violet-dark);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--violet);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    font-weight: 800;
+    line-height: 1.22;
+    letter-spacing: -.01em;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 12.5px;
+}
+
+/* Lưới phụ dùng lại ở nhiều khối */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--gutter);
+}

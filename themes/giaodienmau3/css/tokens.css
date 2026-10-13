@@ -1,0 +1,64 @@
+/**
+ * Giao diện mẫu 3 — "Nhật Trình" — Design tokens
+ *
+ * Mọi giá trị dưới đây chép nguyên từ hai artboard đã chốt của hướng thiết kế A:
+ * Main.dc.html (bản 1080px) và MobileA.dc.html (bản 390px). Đây là hướng thiết
+ * kế mới, không bám themes/default — không có cột "nguồn theme gốc" như
+ * giaodienmau/. Cột ghi chú bên dưới nói rõ nơi dùng.
+ */
+
+:root {
+    /* Nền và bề mặt — báo in cổ điển, không dùng trắng thuần */
+    --nt-paper: #f7f3ea;          /* nền trang: body, ô nhập trong hộp bản tin */
+    --nt-surface: #fffdf7;        /* bề mặt nổi: ô tìm kiếm, hộp bản tin, thẻ từ khóa */
+    --nt-tint: #f2ece0;           /* dải nhấn: nền khối "Góc nhìn" cuối trang chủ */
+
+    /* Mực (chữ) */
+    --nt-ink: #14110d;            /* mực đậm: tiêu đề, viền kẻ đôi, nền thanh trên cùng/chân trang */
+    --nt-ink-soft: #3d372e;       /* mực nhạt: thân bài, sapo, tóm tắt */
+    --nt-muted: #7a7266;          /* chữ mờ: thời gian, tác giả, phụ chú, đường dẫn */
+    --nt-muted-soft: #9a9184;     /* chữ rất mờ: placeholder ô tìm kiếm, mục menu mờ trên di động */
+    --nt-tagline: #5b5348;        /* mô tả site dưới măng sét — Main.dc.html dòng 42 */
+
+    /* Đỏ và vàng đồng nhấn */
+    --nt-red: #a8231c;            /* đỏ nhấn: kicker chuyên mục, số thứ tự, liên kết, nút CTA */
+    --nt-red-dark: #7c1813;       /* đỏ đậm: hover liên kết/nút */
+    --nt-gold: #d8b26a;           /* vàng đồng — chỉ dùng trên nền mực: RSS, nhãn cột chân trang */
+
+    /* Viền */
+    --nt-border: #d8cfbe;         /* viền: ô tìm kiếm, hộp bản tin, thẻ từ khóa, dải phân cách khối */
+    --nt-border-dotted: #cfc5b2;  /* viền chấm: ngăn dòng trong danh sách chuyên mục/tin/đọc nhiều */
+    --nt-border-dark: #3a342a;    /* viền trên nền tối: ngăn khối chân trang với dòng bản quyền */
+    --nt-topbar-sep: #6b6355;     /* dấu gạch đứng phân cách trên thanh mực trên cùng */
+
+    /* Chữ trên nền mực (thanh trên cùng, chân trang) */
+    --nt-on-ink: #e8e0d0;         /* chữ thanh trên cùng */
+    --nt-footer-text: #cfc6b5;    /* chữ chân trang */
+    --nt-footer-muted: #8c8474;   /* chữ mờ trong chân trang: dòng bản quyền */
+
+    /* Họ chữ — nạp qua Google Fonts bằng <link> trong <head> mỗi trang */
+    --nt-font-display: 'Playfair Display', Georgia, serif;  /* măng sét, tiêu đề tin, số thứ tự, kỳ báo */
+    --nt-font-body: 'Noto Serif', Georgia, serif;            /* thân bài, danh sách, menu, biểu mẫu */
+
+    /* Lưới NukeViet — .wraper 1080px, 24 cột, gutter 30px (references/khung-nukeviet.md) */
+    --nt-wrap: 1080px;
+    --nt-gutter: 30px;
+    --nt-col-left: 210px;    /* 5/24 cột */
+    --nt-col-main: 555px;    /* 13/24 cột */
+    --nt-col-right: 255px;   /* 6/24 cột */
+    --nt-col-wide: 795px;    /* 18/24 cột */
+
+    /* Hình khối — đặc trưng "báo in": không bo góc */
+    --nt-radius: 0;
+
+    /* Ô giữ chỗ ảnh — dải chuyển màu sepia, chép nguyên từ hai artboard.
+       Mỗi biến ghi rõ khối nào dùng để lặp lại nhất quán, không thêm màu mới. */
+    --nt-ph-1: linear-gradient(155deg, #d8c9ae 0%, #a8967c 45%, #6e6353 100%); /* ảnh phóng sự — tin nổi bật trang chủ/di động, tiêu điểm cột phải */
+    --nt-ph-2: linear-gradient(160deg, #c3b7a6 0%, #8d8474 100%);             /* thẻ tin phụ — Kinh doanh */
+    --nt-ph-3: linear-gradient(160deg, #b9b1a3 0%, #7f7768 100%);             /* thẻ tin phụ — Văn hóa */
+    --nt-ph-4: linear-gradient(150deg, #cdc0ad 0%, #918875 100%);             /* ảnh nhỏ danh sách "Tin trong ngày" — dòng 1 */
+    --nt-ph-5: linear-gradient(150deg, #c6bba9 0%, #8a8170 100%);             /* ảnh nhỏ danh sách "Tin trong ngày" — dòng 2 */
+    --nt-ph-6: linear-gradient(150deg, #d2c5b1 0%, #948a77 100%);             /* ảnh nhỏ danh sách "Tin trong ngày" — dòng 3 */
+    --nt-ph-7: linear-gradient(150deg, #c9bda9 0%, #877e6d 100%);             /* ảnh nhỏ danh sách "Tin trong ngày" — dòng 4 */
+    --nt-ph-8: linear-gradient(150deg, #cbbca4 0%, #7f7565 100%);             /* ảnh khối "Tiêu điểm" cột phải */
+}

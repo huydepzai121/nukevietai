@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trang chủ — Giao diện mẫu Tin Tức 24h</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/page-home.css">
+</head>
+<body>
+
+<!-- Thanh trên cùng — header_extended.tpl: [CONTACT_DEFAULT] [SOCIAL_ICONS] [PERSONALAREA] -->
+<div class="section-header-bar">
+  <div class="wraper">
+    <div class="header-nav-inner">
+      <div class="grp contactDefault">
+        <span>Hotline: [SỐ ĐIỆN THOẠI]</span>
+        <span>Email: [EMAIL TÒA SOẠN]</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="social-icons">
+        <span title="Facebook"><svg width="11" height="11" viewBox="0 0 24 24" fill="#ffffff"><path d="M14 8.5V6.9c0-.7.2-1.1 1.2-1.1H16.5V3.1c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2H8.6v3h2.5V19h3v-7.5h2.5l.4-3H14z"/></svg></span>
+        <span title="YouTube"><svg width="11" height="11" viewBox="0 0 24 24" fill="#ffffff"><path d="M21.6 7.4c-.2-.9-.9-1.6-1.8-1.8C18.2 5.2 12 5.2 12 5.2s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9 2 12 2 12s0 3 .4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.6.4-4.6s0-3-.4-4.6zm-11.8 7.9V8.7l5.7 3.3-5.7 3.3z"/></svg></span>
+        <span title="RSS"><svg width="11" height="11" viewBox="0 0 24 24" fill="#ffffff"><circle cx="6.5" cy="17.5" r="2.2"/><path d="M4.3 10.4v3c3.5 0 6.3 2.8 6.3 6.3h3c0-5.1-4.2-9.3-9.3-9.3z"/><path d="M4.3 4.3v3c6.9 0 12.4 5.6 12.4 12.4h3C19.7 11 12.8 4.3 4.3 4.3z"/></svg></span>
+      </div>
+      <div class="grp personalArea">
+        <a href="#">Đăng nhập</a>
+        <a href="#">Đăng ký</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Đầu trang — header_extended.tpl: logo, site_description, [HEAD_RIGHT] -->
+<div class="section-header">
+  <div class="wraper">
+    <div id="header">
+      <div class="logo">
+        <a href="index.html"><div class="brand">Tin Tức <em>24h</em></div></a>
+        <span class="site_description">Nhanh, chính xác, đủ chiều</span>
+      </div>
+      <div class="right-ads">
+        <div class="ads-slot" style="height: 90px;">Banner 728 × 90</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Menu — [MENU_SITE], modules/menu/global.bootstrap.tpl -->
+<div class="section-nav">
+  <div class="wraper">
+    <div class="second-nav">
+      <div class="bg">
+        <div class="navbar">
+          <ul>
+            <li class="home n0"><a href="index.html" title="Trang chủ"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></a></li>
+            <li class="n1"><a href="chuyen-muc.html">Thời sự</a></li>
+            <li class="n2"><a href="chuyen-muc.html">Kinh tế</a></li>
+            <li class="n3"><a href="chuyen-muc.html">Xã hội</a></li>
+            <li class="n4"><a href="chuyen-muc.html">Pháp luật</a></li>
+            <li class="n5"><a href="chuyen-muc.html">Thế giới</a></li>
+            <li class="n6"><a href="chuyen-muc.html">Công nghệ</a></li>
+            <li class="n7"><a href="chuyen-muc.html">Thể thao</a></li>
+            <li class="n8"><a href="chuyen-muc.html">Giải trí</a></li>
+            <li class="n9"><a href="chuyen-muc.html">Sức khỏe</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-body">
+  <div class="wraper">
+
+    <!-- Đường dẫn + tìm kiếm — header_extended.tpl: .third-nav -->
+    <div class="third-nav">
+      <div class="row">
+        <div class="bg">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Trang chủ</a></li>
+          </ul>
+          <span class="current-time">Cập nhật lúc [GIỜ], [NGÀY THÁNG NĂM]</span>
+          <div class="headerSearch">
+            <input type="text" placeholder="Tìm kiếm...">
+            <span class="btn-info"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="body-grid">
+
+      <!-- ================= [LEFT] — 5/24 cột ================= -->
+      <div class="col-left">
+        <div class="panel">
+          <div class="panel-heading">Chuyên mục</div>
+          <div class="panel-body panel-body--tight">
+            <ul class="cat-list">
+              <li><a href="chuyen-muc.html">Thời sự <span class="count">248</span></a></li>
+              <li><a href="chuyen-muc.html">Kinh tế <span class="count">193</span></a></li>
+              <li><a href="chuyen-muc.html">Xã hội <span class="count">176</span></a></li>
+              <li><a href="chuyen-muc.html">Pháp luật <span class="count">142</span></a></li>
+              <li><a href="chuyen-muc.html">Thế giới <span class="count">130</span></a></li>
+              <li><a href="chuyen-muc.html">Công nghệ <span class="count">88</span></a></li>
+              <li><a href="chuyen-muc.html">Thể thao <span class="count">75</span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">Tin vắn 24h</div>
+          <div class="panel-body">
+            <ul class="hot-list" style="font-size: 13px;">
+              <li><a href="chi-tiet.html">Hội đồng nhân dân thành phố thông qua nghị quyết về cải tạo chung cư cũ</a></li>
+              <li><a href="chi-tiet.html">Ngành đường sắt mở bán vé tàu đợt cao điểm hè</a></li>
+              <li><a href="chi-tiet.html">Nhiều tuyến phố trung tâm cấm xe trong hai ngày cuối tuần</a></li>
+              <li><a href="chi-tiet.html">Giá xăng dầu trong nước được điều chỉnh từ chiều nay</a></li>
+              <li><a href="chi-tiet.html">Trường học công bố phương án tuyển sinh lớp 10</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ads-slot" style="height: 300px;">Quảng cáo 210 × 300</div>
+      </div>
+
+      <!-- ================= {MODULE_CONTENT} — 13/24 cột ================= -->
+      <div class="col-main">
+
+        <div class="hero">
+          <div class="ph" style="height: 300px;">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg>
+          </div>
+          <span class="cat-tag" style="margin-top: 12px;">Thời sự</span>
+          <h2 class="headline"><a href="chi-tiet.html">Quy hoạch đô thị ven sông: mở rộng không gian công cộng, hạn chế cao ốc</a></h2>
+          <p class="sapo">Bản quy hoạch đang lấy ý kiến đề xuất dành phần lớn quỹ đất hai bên bờ sông cho công viên và không gian đi bộ, đồng thời siết chiều cao công trình trong phạm vi hành lang thoát lũ.</p>
+          <div class="news-meta">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span>[GIỜ] hôm nay</span>
+            <span>·</span>
+            <span>[TÊN TÁC GIẢ]</span>
+            <span>·</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3v-5.5A8 8 0 1 1 21 12z"/></svg>
+            <span>34 bình luận</span>
+          </div>
+
+          <div class="sub-grid grid-3">
+            <div>
+              <div class="ph" style="height: 100px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <h3 class="headline"><a href="chi-tiet.html">Đề xuất kéo dài tuyến metro tới khu đô thị phía tây</a></h3>
+            </div>
+            <div>
+              <div class="ph" style="height: 100px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <h3 class="headline"><a href="chi-tiet.html">Doanh nghiệp xuất khẩu đón đơn hàng trở lại từ quý này</a></h3>
+            </div>
+            <div>
+              <div class="ph" style="height: 100px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <h3 class="headline"><a href="chi-tiet.html">Bệnh viện tuyến huyện triển khai hồ sơ bệnh án điện tử</a></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">Tin mới nhất</div>
+          <div class="panel-body">
+            <div class="news-item">
+              <div class="ph" style="width: 180px; height: 110px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <div>
+                <h3 class="headline" style="font-size: 17px;"><a href="chi-tiet.html">Học phí đại học công lập năm tới: các trường công bố lộ trình</a></h3>
+                <p class="text-muted" style="margin: 6px 0 0; line-height: 1.5;">Nhiều trường giữ nguyên mức thu cho khóa đang học và chỉ áp dụng mức mới với sinh viên nhập học từ năm sau.</p>
+                <div class="news-meta"><span class="cat-tag">Xã hội</span><span>[GIỜ] hôm nay</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="ph" style="width: 180px; height: 110px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <div>
+                <h3 class="headline" style="font-size: 17px;"><a href="chi-tiet.html">Thị trường bán lẻ hồi phục, mặt bằng trung tâm hết chỗ trống</a></h3>
+                <p class="text-muted" style="margin: 6px 0 0; line-height: 1.5;">Sức mua cải thiện kéo theo nhu cầu thuê mặt bằng, song giá chào thuê ở khu vực lõi vẫn là rào cản với hộ kinh doanh nhỏ.</p>
+                <div class="news-meta"><span class="cat-tag">Kinh tế</span><span>[GIỜ] hôm nay</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="ph" style="width: 180px; height: 110px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <div>
+                <h3 class="headline" style="font-size: 17px;"><a href="chi-tiet.html">Xét xử vụ án gian lận đấu thầu thiết bị y tế</a></h3>
+                <p class="text-muted" style="margin: 6px 0 0; line-height: 1.5;">Phiên tòa dự kiến kéo dài nhiều ngày với phần tranh luận về trách nhiệm của đơn vị thẩm định giá.</p>
+                <div class="news-meta"><span class="cat-tag">Pháp luật</span><span>[GIỜ] hôm nay</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="ph" style="width: 180px; height: 110px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <div>
+                <h3 class="headline" style="font-size: 17px;"><a href="chi-tiet.html">Mô hình lớp học không điện thoại được nhân rộng</a></h3>
+                <p class="text-muted" style="margin: 6px 0 0; line-height: 1.5;">Sau một học kỳ thí điểm, giáo viên ghi nhận thời gian tập trung của học sinh tăng lên rõ rệt trong giờ học.</p>
+                <div class="news-meta"><span class="cat-tag">Giáo dục</span><span>[GIỜ] hôm nay</span></div>
+              </div>
+            </div>
+            <div class="news-item">
+              <div class="ph" style="width: 180px; height: 110px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <div>
+                <h3 class="headline" style="font-size: 17px;"><a href="chi-tiet.html">Đội tuyển quốc gia chốt danh sách trước vòng loại</a></h3>
+                <p class="text-muted" style="margin: 6px 0 0; line-height: 1.5;">Ban huấn luyện giữ lại phần lớn bộ khung cũ và bổ sung ba gương mặt trẻ từ giải hạng nhất.</p>
+                <div class="news-meta"><span class="cat-tag">Thể thao</span><span>[GIỜ] hôm nay</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">Kinh tế</div>
+          <div class="panel-body">
+            <div class="cat-block__lead">
+              <div class="ph" style="width: 250px; height: 150px;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+              <div>
+                <h3 class="headline" style="font-size: 19px;"><a href="chi-tiet.html">Lãi suất huy động nhích lên, dòng tiền quay lại kênh tiết kiệm</a></h3>
+                <p class="text-muted" style="margin: 8px 0 0; line-height: 1.5;">Các ngân hàng thương mại điều chỉnh biểu lãi suất kỳ hạn dài, trong khi tín dụng bán lẻ vẫn tăng chậm.</p>
+              </div>
+            </div>
+            <div class="cat-block__more">
+              <a href="chi-tiet.html">Nông sản xuất khẩu được cấp mã vùng trồng mới</a>
+              <a href="chi-tiet.html">Cước vận tải biển giảm sau mùa cao điểm</a>
+              <a href="chi-tiet.html">Sàn thương mại điện tử siết chính sách người bán</a>
+              <a href="chi-tiet.html">Khu công nghiệp phía bắc kín chỗ thuê đất</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= [RIGHT] — 6/24 cột ================= -->
+      <div class="col-right">
+        <div class="panel panel-primary">
+          <div class="panel-heading">Đọc nhiều</div>
+          <div class="panel-body">
+            <ul class="hot-list" style="font-size: 13px;">
+              <li><span class="num">1</span><a href="chi-tiet.html">Bảng lương mới áp dụng cho khối hành chính sự nghiệp</a></li>
+              <li><span class="num">2</span><a href="chi-tiet.html">Ba tuyến cao tốc dự kiến thông xe trong năm nay</a></li>
+              <li><span class="num">3</span><a href="chi-tiet.html">Vì sao giá vé máy bay nội địa chưa hạ nhiệt?</a></li>
+              <li><span class="num">4</span><a href="chi-tiet.html">Bí quyết ôn thi của thủ khoa khối A năm ngoái</a></li>
+              <li><span class="num">5</span><a href="chi-tiet.html">Cảnh báo lừa đảo mạo danh cơ quan thuế qua điện thoại</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ads-slot" style="height: 250px; margin-bottom: 20px;">Quảng cáo 255 × 250</div>
+
+        <div class="panel">
+          <div class="panel-heading">Video</div>
+          <div class="panel-body panel-body--flush">
+            <div class="ph" style="height: 145px;">
+              <span class="play"><svg width="16" height="16" viewBox="0 0 24 24" fill="#ffffff"><path d="M8 5l12 7-12 7z"/></svg></span>
+            </div>
+            <div style="padding: 12px 15px;">
+              <h3 class="headline" style="font-size: 15px;"><a href="chi-tiet.html">Toàn cảnh công trường nút giao ba tầng nhìn từ trên cao</a></h3>
+              <ul class="side-list" style="margin-top: 6px;">
+                <li><a href="chi-tiet.html">Người dân vùng lũ dựng lại nhà sau bão</a></li>
+                <li><a href="chi-tiet.html">Phiên chợ đêm hồi sinh phố cổ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">Liên kết website</div>
+          <div class="panel-body">
+            <div class="select-fake">
+              <span>-- Chọn liên kết --</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#777777" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Chân trang — footer_extended.tpl: [FOOTER] -->
+<div id="footer">
+  <div class="wraper">
+    <div class="grid-4">
+      <div>
+        <div class="h3">Tin Tức 24h</div>
+        <p>Cơ quan chủ quản: [TÊN CƠ QUAN CHỦ QUẢN]</p>
+        <p>Giấy phép số [SỐ GIẤY PHÉP] do [CƠ QUAN CẤP] cấp.</p>
+        <p style="margin-top: 10px;">Tổng biên tập: [HỌ TÊN]</p>
+        <p>Địa chỉ: [ĐỊA CHỈ TÒA SOẠN]</p>
+        <p>Điện thoại: [SỐ ĐIỆN THOẠI]</p>
+      </div>
+      <div>
+        <div class="h3">Chuyên mục</div>
+        <ul class="menu">
+          <li><a href="chuyen-muc.html">Thời sự</a></li>
+          <li><a href="chuyen-muc.html">Kinh tế</a></li>
+          <li><a href="chuyen-muc.html">Pháp luật</a></li>
+          <li><a href="chuyen-muc.html">Thế giới</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="h3">Hỗ trợ</div>
+        <ul class="menu">
+          <li><a href="#">Liên hệ tòa soạn</a></li>
+          <li><a href="#">Quảng cáo</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Sơ đồ trang</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="h3">Nhận bản tin</div>
+        <p style="margin-bottom: 12px;">Bản tin sáng, gửi vào hộp thư mỗi ngày.</p>
+        <div class="footer-form">
+          <input type="text" placeholder="Email của bạn">
+          <button type="button">Đăng ký</button>
+        </div>
+        <div class="footer-social">
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="#dcdcdc"><path d="M14 8.5V6.9c0-.7.2-1.1 1.2-1.1H16.5V3.1c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5v2H8.6v3h2.5V19h3v-7.5h2.5l.4-3H14z"/></svg></span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="#dcdcdc"><path d="M21.6 7.4c-.2-.9-.9-1.6-1.8-1.8C18.2 5.2 12 5.2 12 5.2s-6.2 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 9 2 12 2 12s0 3 .4 4.6c.2.9.9 1.6 1.8 1.8 1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-4.6.4-4.6s0-3-.4-4.6zm-11.8 7.9V8.7l5.7 3.3-5.7 3.3z"/></svg></span>
+          <span><svg width="13" height="13" viewBox="0 0 24 24" fill="#dcdcdc"><circle cx="6.5" cy="17.5" r="2.2"/><path d="M4.3 10.4v3c3.5 0 6.3 2.8 6.3 6.3h3c0-5.1-4.2-9.3-9.3-9.3z"/><path d="M4.3 4.3v3c6.9 0 12.4 5.6 12.4 12.4h3C19.7 11 12.8 4.3 4.3 4.3z"/></svg></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footerNav2">
+  <div class="wraper">
+    <div class="inner">
+      <span class="pill on" title="Giao diện máy tính"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8"/></svg></span>
+      <a class="pill" href="mobile.html" title="Giao diện di động"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></a>
+      <span style="font-size: 12px;">© [NĂM] Tin Tức 24h. Vận hành trên NukeViet CMS.</span>
+      <span class="bttop"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V6"/><path d="M6 11l6-6 6 6"/></svg></span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

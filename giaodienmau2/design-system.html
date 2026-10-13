@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hệ thống thiết kế — Nhịp Phố</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/page-design-system.css">
+</head>
+<body>
+<div class="sheet">
+
+  <div class="sheet-head">
+    <span class="mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v12H6a2 2 0 0 1-2-2z"></path><path d="M17 9h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2"></path><path d="M8 9h5M8 13h5M8 16h3"></path></svg></span>
+    <div>
+      <h1 class="sheet-title">Hệ thống thiết kế — Nhịp Phố</h1>
+      <p class="muted" style="margin: 2px 0 0;">Hướng thứ hai cho website tin tức. Cấu trúc giữ nguyên theo <code>themes/default</code> của NukeViet, chỉ thay lớp nhìn.</p>
+    </div>
+  </div>
+  <div class="sheet-nav">
+    <a href="index.html">Trang chủ</a>
+    <a href="chi-tiet.html">Trang chi tiết</a>
+    <a href="mobile.html">Bản di động</a>
+  </div>
+
+  <h2>1. Khác gì so với giao diện mẫu 1</h2>
+  <table class="maptable">
+    <thead>
+      <tr><th style="width: 24%;">Hạng mục</th><th style="width: 38%;">Giao diện mẫu 1</th><th>Nhịp Phố (mẫu 2)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Khung, lưới, bố cục</td><td>.wraper 1080px, 24 cột, left-main-right</td><td><strong>Giữ nguyên</strong></td></tr>
+      <tr><td>Màu</td><td>Xanh #428bca / #245682 của theme default</td><td>Tím #6b4eff, san hô #ff6a4d, bạc hà #12bfa0</td></tr>
+      <tr><td>Chữ</td><td>Helvetica Neue + Times New Roman cho tiêu đề</td><td>Be Vietnam Pro, phân cấp bằng độ đậm</td></tr>
+      <tr><td>Khối nội dung</td><td>Panel Bootstrap 3, bo 4px, đầu khối nền xám</td><td>Thẻ bo 18px, tiêu đề có thanh màu, bóng nhẹ</td></tr>
+      <tr><td>Menu</td><td>Navbar chữ nhật của Bootstrap</td><td>Viên thuốc bo tròn, mục đang xem tô tím</td></tr>
+      <tr><td>Ảnh</td><td>Ô giữ chỗ</td><td>Ảnh thật, bo 14px, tiêu đề nằm trên ảnh lớn</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. Màu</h2>
+  <div class="sw-grid">
+    <div class="sw"><div class="chip" style="background-color: #6b4eff;"></div><div class="name">Tím chính</div><div class="hex">#6b4eff</div><div class="src">--violet · menu, nút, thanh tiêu đề khối</div></div>
+    <div class="sw"><div class="chip" style="background-color: #4a2fd0;"></div><div class="name">Tím đậm</div><div class="hex">#4a2fd0</div><div class="src">--violet-dark · liên kết</div></div>
+    <div class="sw"><div class="chip" style="background-color: #efebff;"></div><div class="name">Tím nhạt</div><div class="hex">#efebff</div><div class="src">--violet-tint · khối nhấn, trích dẫn</div></div>
+    <div class="sw"><div class="chip" style="background-color: #ff6a4d;"></div><div class="name">San hô</div><div class="hex">#ff6a4d</div><div class="src">--coral · nhấn phụ, nút đăng ký</div></div>
+    <div class="sw"><div class="chip" style="background-color: #12bfa0;"></div><div class="name">Bạc hà</div><div class="hex">#12bfa0</div><div class="src">--mint · nhãn chuyên mục</div></div>
+    <div class="sw"><div class="chip" style="background-color: #ffb020;"></div><div class="name">Hổ phách</div><div class="hex">#ffb020</div><div class="src">--amber · nhãn chuyên mục</div></div>
+    <div class="sw"><div class="chip" style="background-color: #17153b;"></div><div class="name">Chữ đậm</div><div class="hex">#17153b</div><div class="src">--ink · tiêu đề, chân trang</div></div>
+    <div class="sw"><div class="chip" style="background-color: #3a3663;"></div><div class="name">Chữ thường</div><div class="hex">#3a3663</div><div class="src">--ink-soft · sapo, menu</div></div>
+    <div class="sw"><div class="chip" style="background-color: #6f6b95;"></div><div class="name">Chữ mờ</div><div class="hex">#6f6b95</div><div class="src">--muted · thời gian, tác giả</div></div>
+    <div class="sw"><div class="chip" style="background-color: #f7f5ff;"></div><div class="name">Nền trang</div><div class="hex">#f7f5ff</div><div class="src">--bg</div></div>
+    <div class="sw"><div class="chip" style="background-color: #ffffff;"></div><div class="name">Nền thẻ</div><div class="hex">#ffffff</div><div class="src">--surface</div></div>
+    <div class="sw"><div class="chip" style="background-color: #e8e4f8;"></div><div class="name">Viền</div><div class="hex">#e8e4f8</div><div class="src">--border</div></div>
+  </div>
+  <p class="muted" style="margin-top: 12px;">Dải chuyển màu duy nhất trong cả giao diện nằm ở thanh trên cùng: <code>#6b4eff → #a24bf0 → #ff6a4d</code>. Mọi chỗ còn lại dùng màu phẳng.</p>
+
+  <h2>3. Chữ</h2>
+  <div class="type-row"><span class="lbl">Tiêu đề bài — 31px / 800</span><span style="font-size: 31px; font-weight: 800; line-height: 1.22;">Quy hoạch ven sông</span></div>
+  <div class="type-row"><span class="lbl">Tin nổi bật — 27px / 800</span><span style="font-size: 27px; font-weight: 800;">Tiêu đề trên ảnh lớn</span></div>
+  <div class="type-row"><span class="lbl">Tiêu đề tin — 16px / 800</span><span style="font-size: 16px; font-weight: 800;">Cước vận tải biển giảm</span></div>
+  <div class="type-row"><span class="lbl">Sapo — 16px / 600 / 1.62</span><span style="font-size: 16px; font-weight: 600; color: var(--ink-soft);">Bản quy hoạch đang lấy ý kiến đề xuất…</span></div>
+  <div class="type-row"><span class="lbl">Thân bài — 16px / 400 / 1.78</span><span style="font-size: 16px;">Theo hồ sơ trình lấy ý kiến, toàn bộ dải đất hai bên bờ sông…</span></div>
+  <div class="type-row"><span class="lbl">Mặc định — 14px / 1.55</span><span>Cỡ chữ nền của body</span></div>
+  <div class="type-row"><span class="lbl">Phụ chú — 12.5px</span><span class="muted">Thời gian, tác giả, số bình luận</span></div>
+  <p class="muted" style="margin-top: 12px;">Một họ chữ duy nhất: <code>Be Vietnam Pro</code> (400–800), dự phòng <code>Segoe UI</code>, <code>system-ui</code>. Chọn face này vì dấu tiếng Việt đầy đủ ở mọi độ đậm; phân cấp bằng cỡ và độ đậm chứ không trộn thêm họ chữ thứ hai.</p>
+
+  <h2>4. Lưới</h2>
+  <p class="muted" style="margin-bottom: 12px;">Không đổi so với NukeViet: khung <code>.wraper</code> 1080px, lưới 24 cột, khoảng cách 30px.</p>
+  <div class="gridnote" style="margin-bottom: 16px;">
+    <div class="cell" style="width: 210px;">[LEFT] — 5 cột</div>
+    <div class="cell" style="width: 555px;">{MODULE_CONTENT} — 13 cột</div>
+    <div class="cell" style="width: 255px;">[RIGHT] — 6 cột</div>
+  </div>
+  <div class="gridnote">
+    <div class="cell" style="width: 795px;">{MODULE_CONTENT} — 18 cột</div>
+    <div class="cell" style="width: 255px;">[RIGHT] — 6 cột</div>
+  </div>
+  <p class="muted" style="margin-top: 12px;">Bo góc: thẻ 18px, ảnh 14px, ô nhập 10px, menu và nhãn dạng viên thuốc. Bóng thẻ rất nhẹ: <code>0 2px 10px rgba(23,21,59,.04)</code>.</p>
+
+  <h2>5. Khối nội dung</h2>
+  <div class="grid-3">
+    <div class="panel">
+      <div class="panel-heading"><span class="bar"></span><h3>Khối mặc định</h3></div>
+      <div class="panel-body">Dựng theo <code>block.default.tpl</code>. Thanh màu 4px thay cho nền xám của đầu khối Bootstrap.</div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading"><span class="bar"></span><h3>Khối nhấn</h3></div>
+      <div class="panel-body">Dựng theo <code>block.primary.tpl</code>. Nền tím nhạt, thanh màu san hô.</div>
+    </div>
+    <div>
+      <div class="ads-slot" style="height: 128px;">Ô quảng cáo</div>
+    </div>
+  </div>
+
+  <h2>6. Nhãn, thẻ và nút</h2>
+  <div class="grid-2" style="align-items: start;">
+    <div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;">
+        <span class="cat-tag">Thời sự</span>
+        <span class="cat-tag coral">Kinh tế</span>
+        <span class="cat-tag mint">Đô thị</span>
+        <span class="cat-tag amber">Thể thao</span>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <a class="tag" href="#">Quy hoạch</a>
+        <a class="tag" href="#">Metro</a>
+        <a class="tag" href="#">Việc làm</a>
+      </div>
+    </div>
+    <div>
+      <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 18px;">
+        <button type="button" class="btn btn-primary">Gửi bình luận</button>
+        <button type="button" class="btn btn-ghost">Hủy</button>
+      </div>
+      <div class="headerSearch" style="width: 320px;">
+        <input type="text" placeholder="Tìm tin, chuyên mục, tác giả...">
+        <span class="go"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg></span>
+      </div>
+    </div>
+  </div>
+
+  <h2>7. Mẫu tin</h2>
+  <div class="grid-2" style="align-items: start;">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="news-item">
+          <img class="thumb" src="assets/img/list1.jpg" alt="Cảng hàng hóa" style="width: 168px; height: 108px;">
+          <div>
+            <h3><a href="chi-tiet.html">Tin có ảnh, sapo hai dòng</a></h3>
+            <p>Dòng tóm tắt giới hạn hai dòng, cắt bớt khi dài hơn.</p>
+            <div class="meta"><span class="cat-tag coral">Kinh tế</span><span>[GIỜ] hôm nay</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading"><span class="bar"></span><h3>Danh sách xếp hạng</h3></div>
+      <div class="panel-body">
+        <ul class="hot-list">
+          <li><span class="num">1</span><a href="chi-tiet.html">Số một tô nền san hô để bật lên</a></li>
+          <li><span class="num">2</span><a href="chi-tiet.html">Các mục sau dùng ô trắng, chữ tím</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2>8. Ánh xạ sang theme NukeViet</h2>
+  <table class="maptable">
+    <thead>
+      <tr><th style="width: 28%;">Phần trong bản mẫu</th><th style="width: 34%;">File theme tương ứng</th><th>Ghi chú</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Thanh trên, logo, menu, breadcrumb</td><td><code>layout/header_extended.tpl</code></td><td>Các vùng <code>[CONTACT_DEFAULT]</code>, <code>[SOCIAL_ICONS]</code>, <code>[PERSONALAREA]</code>, <code>[HEAD_RIGHT]</code>, <code>[MENU_SITE]</code></td></tr>
+      <tr><td>Bố cục 3 cột</td><td><code>layout/layout.left-main-right.tpl</code></td><td>5 / 13 / 6 trong lưới 24 cột</td></tr>
+      <tr><td><code>.panel</code> / <code>.panel-primary</code></td><td><code>layout/block.default.tpl</code>, <code>block.primary.tpl</code></td><td>Cần thêm phần tử <code>.bar</code> vào <code>panel-heading</code></td></tr>
+      <tr><td>Tin nổi bật, danh sách tin</td><td><code>modules/news/block_*.tpl</code>, <code>viewcat_*.tpl</code></td><td>Trang chủ module news dựng từ block, không có main.tpl</td></tr>
+      <tr><td>Chi tiết bài viết</td><td><code>modules/news/detail.tpl</code></td><td>Byline, chia sẻ, trích dẫn, từ khóa</td></tr>
+      <tr><td>Bình luận</td><td><code>modules/comment/*.tpl</code></td><td></td></tr>
+      <tr><td>Ô quảng cáo</td><td>block <code>banners</code></td><td>Thay <code>.ads-slot</code> bằng block banners thật</td></tr>
+      <tr><td>Chân trang</td><td><code>layout/footer_extended.tpl</code></td><td>Bốn cột + <code>.footerNav2</code></td></tr>
+      <tr><td>Token và thành phần</td><td><code>css/</code> của theme</td><td>Nạp theo thứ tự tokens → base → components → trang, trước <code>custom.css</code></td></tr>
+    </tbody>
+  </table>
+
+  <h2>9. Nguyên tắc khi mở rộng</h2>
+  <ul class="rules">
+    <li>Màu mới lấy từ bảng token; cần màu chưa có thì thêm vào <code>tokens.css</code>, không viết mã màu rời rạc trong trang.</li>
+    <li>Chỉ một dải chuyển màu, đặt ở thanh trên cùng. Chỗ khác dùng màu phẳng.</li>
+    <li>Nhóm phần tử cùng cấp bằng <code>flex</code>/<code>grid</code> kèm <code>gap</code>, không dùng margin lẻ từng phần tử.</li>
+    <li>Vùng chạm trên di động tối thiểu 44px; chữ thân bài không nhỏ hơn 16px.</li>
+    <li>Biểu tượng vẽ bằng SVG nội tuyến trên lưới 16/20/24px, không dùng emoji.</li>
+    <li>Ảnh luôn có <code>alt</code> và bo <code>--radius-img</code>; ảnh trong bản mẫu là ảnh minh họa, thay bằng ảnh tòa soạn trước khi dùng thật.</li>
+    <li>Dữ kiện chưa có để trong ngoặc vuông <code>[ ]</code>, không bịa số liệu hay tên riêng.</li>
+  </ul>
+
+</div>
+</body>
+</html>

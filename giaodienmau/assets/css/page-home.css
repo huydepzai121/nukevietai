@@ -1,0 +1,75 @@
+/**
+ * Giao diện mẫu — Trang chủ
+ * Tương ứng: layout.left-main-right.tpl + module news (bố cục trang chủ)
+ */
+
+.navbar li.n0 > a {
+    color: #555555;
+    background-color: #e7e7e7;
+}
+
+/* Khối tin nổi bật đầu trang */
+.hero {
+    background-color: var(--gd-surface);
+    border: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.hero .headline {
+    font-size: 28px;
+    margin: 12px 0 8px;
+}
+
+.hero .sapo {
+    color: #4a4a4a;
+    font-size: var(--gd-fs-base);
+    line-height: 1.5;
+}
+
+/* Ba tin phụ nằm dưới tin nổi bật */
+.sub-grid {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--gd-border-soft);
+}
+
+.sub-grid .headline {
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+/* Khối chuyên mục: 1 tin chính + danh sách tin phụ hai cột */
+.cat-block__lead {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--gd-border-soft);
+}
+
+.cat-block__more {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 25px;
+}
+
+.cat-block__more a {
+    color: var(--gd-text-soft);
+    line-height: 1.45;
+}
+
+/* Ô chọn liên kết website (block liên kết của NukeViet) */
+.select-fake {
+    border: 1px solid var(--gd-border-input);
+    border-radius: var(--gd-radius);
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: #555555;
+    font-size: 13px;
+    background-color: var(--gd-surface);
+}

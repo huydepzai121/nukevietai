@@ -1,0 +1,179 @@
+/**
+ * Giao diện mẫu 3 — "Nhật Trình" — Trang hệ thống thiết kế
+ * Chỉ dùng cho design-system.html, không đưa vào theme.
+ */
+
+body {
+    background-color: var(--nt-surface);
+}
+
+.sheet {
+    width: var(--nt-wrap);
+    margin: 0 auto;
+    padding: 34px 0 50px;
+}
+
+.sheet-head {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    border-bottom: 3px solid var(--nt-ink);
+    padding-bottom: 16px;
+}
+
+.sheet-title {
+    font-family: var(--nt-font-display);
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--nt-ink);
+}
+
+.sheet h2 {
+    font-family: var(--nt-font-display);
+    font-size: 22px;
+    color: var(--nt-ink);
+    border-bottom: 2px solid var(--nt-ink);
+    padding-bottom: 8px;
+    margin: 36px 0 16px;
+}
+
+.sheet code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    background-color: var(--nt-tint);
+    padding: 1px 5px;
+}
+
+/* Bảng màu */
+.sw-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.sw .chip {
+    height: 64px;
+    border: 1px solid rgba(0, 0, 0, .15);
+}
+
+.sw .name {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 8px;
+    color: var(--nt-ink);
+}
+
+.sw .hex {
+    font-size: 12px;
+    color: var(--nt-muted);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sw .src {
+    font-size: 11px;
+    color: var(--nt-muted-soft);
+    margin-top: 2px;
+}
+
+/* Thang chữ */
+.type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px dotted var(--nt-border-dotted);
+}
+
+.type-row .lbl {
+    width: 260px;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--nt-muted);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Sơ đồ lưới */
+.gridnote {
+    display: flex;
+    gap: var(--nt-gutter);
+}
+
+.gridnote .cell {
+    background-color: var(--nt-tint);
+    border: 1px solid var(--nt-border);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: var(--nt-ink-soft);
+}
+
+/* Bảng ánh xạ và so sánh */
+.maptable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.maptable th,
+.maptable td {
+    text-align: left;
+    padding: 9px 12px;
+    border: 1px solid var(--nt-border);
+    vertical-align: top;
+}
+
+.maptable th {
+    background-color: var(--nt-tint);
+    font-weight: 700;
+    color: var(--nt-ink);
+}
+
+.maptable td code {
+    background: none;
+    padding: 0;
+    color: var(--nt-red);
+}
+
+/* Điều hướng giữa các trang mẫu */
+.sheet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+}
+
+.sheet-nav a {
+    display: block;
+    padding: 7px 14px;
+    border: 1px solid var(--nt-border);
+    background-color: var(--nt-surface);
+    font-size: 13px;
+    color: var(--nt-ink);
+}
+
+.sheet-nav a:hover {
+    border-color: var(--nt-red);
+    color: var(--nt-red);
+}
+
+.swatch-ph {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.swatch-ph .cell {
+    width: 120px;
+}
+
+.swatch-ph .box {
+    height: 70px;
+}
+
+.swatch-ph .lbl {
+    font-size: 11px;
+    color: var(--nt-muted);
+    margin-top: 6px;
+}

@@ -1,0 +1,151 @@
+/**
+ * Giao diện mẫu — Trang hệ thống thiết kế
+ * Chỉ dùng cho trang design-system.html, không đưa vào theme.
+ */
+
+body {
+    background-color: var(--gd-surface);
+}
+
+.sheet {
+    width: var(--gd-wrap);
+    margin: 0 auto;
+    padding: 30px 0 40px;
+}
+
+.sheet-title {
+    font-family: var(--gd-serif);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--gd-primary-dark);
+}
+
+.sheet h2 {
+    font-family: var(--gd-serif);
+    font-size: var(--gd-fs-xxl);
+    color: var(--gd-primary-dark);
+    border-bottom: 2px solid var(--gd-primary);
+    padding-bottom: 8px;
+    margin: 30px 0 16px;
+}
+
+.sheet code {
+    font-family: var(--gd-mono);
+    font-size: 13px;
+    background-color: var(--gd-primary-tint);
+    padding: 1px 5px;
+    border-radius: 2px;
+}
+
+/* Bảng màu */
+.sw-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.sw .chip {
+    height: 64px;
+    border-radius: var(--gd-radius);
+    border: 1px solid rgba(0, 0, 0, .12);
+}
+
+.sw .name {
+    font-size: var(--gd-fs-sm);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.sw .hex {
+    font-size: var(--gd-fs-sm);
+    color: var(--gd-muted);
+    font-family: var(--gd-mono);
+}
+
+.sw .src {
+    font-size: 11px;
+    color: #9aa5ad;
+    margin-top: 2px;
+}
+
+/* Thang chữ */
+.type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.type-row .lbl {
+    width: 250px;
+    flex-shrink: 0;
+    font-size: var(--gd-fs-sm);
+    color: var(--gd-muted);
+    font-family: var(--gd-mono);
+}
+
+/* Sơ đồ lưới */
+.gridnote {
+    display: flex;
+    gap: var(--gd-gutter);
+}
+
+.gridnote .cell {
+    background-color: var(--gd-primary-tint);
+    border: 1px solid #c3d3e0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--gd-fs-sm);
+    color: var(--gd-primary-dark);
+}
+
+/* Bảng ánh xạ sang NukeViet */
+.maptable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.maptable th,
+.maptable td {
+    text-align: left;
+    padding: 9px 12px;
+    border: 1px solid var(--gd-border);
+    vertical-align: top;
+}
+
+.maptable th {
+    background-color: var(--gd-panel-head);
+    font-weight: 700;
+}
+
+.maptable td code {
+    background: none;
+    padding: 0;
+    color: var(--gd-primary-dark);
+}
+
+/* Điều hướng giữa các trang mẫu */
+.sheet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 14px 0 0;
+}
+
+.sheet-nav a {
+    display: block;
+    padding: 7px 14px;
+    border: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius-sm);
+    background-color: var(--gd-surface);
+    font-size: 13px;
+}
+
+.sheet-nav a:hover {
+    border-color: var(--gd-primary);
+    color: var(--gd-primary-dark);
+}

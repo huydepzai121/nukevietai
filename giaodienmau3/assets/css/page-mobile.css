@@ -1,0 +1,223 @@
+/**
+ * Giao diện mẫu 3 — "Nhật Trình" — Bản di động 390px
+ *
+ * Khối "body { max-width: 390px; ... }" bên dưới CHỈ giả khung xem mẫu, không
+ * thuộc về giao diện thật — khi lên theme phải bỏ, theme default vốn co giãn
+ * bằng @media. Vùng chạm tối thiểu 44px theo hướng dẫn của iOS/Android.
+ */
+
+body {
+    max-width: 390px;
+    margin: 0 auto;
+    background-color: var(--nt-surface);
+    border-left: 1px solid var(--nt-border);
+    border-right: 1px solid var(--nt-border);
+}
+
+.wraper {
+    width: 100%;
+    padding: 0 16px;
+}
+
+.section-body {
+    background-color: var(--nt-paper);
+}
+
+/* Thanh trên cùng */
+.header-nav-inner {
+    height: auto;
+    padding: 9px 0;
+    font-size: 11.5px;
+}
+
+/* Măng sét — nút mở menu, tên báo, nút tìm kiếm, mỗi nút vùng chạm 44px */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: none;
+    padding: 0;
+    border-bottom: 3px solid var(--nt-ink);
+}
+
+.header-menu-btn,
+.header-search-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--nt-ink);
+}
+
+.logo .brand {
+    font-size: 30px;
+}
+
+/* Menu — cuộn ngang, không thanh kẻ đôi phía trên (đã có ở dưới header) */
+.section-nav {
+    border-top: 0;
+    border-bottom: 1px solid var(--nt-ink);
+    overflow: hidden;
+}
+
+.menu-row {
+    height: 48px;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.menu-list {
+    gap: 20px;
+}
+
+.menu-list a {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* Đường dẫn — chỉ còn ô tìm kiếm */
+.third-nav {
+    border-bottom: 0;
+    padding: 14px 0;
+}
+
+.third-nav .search-box {
+    padding: 13px 12px;
+}
+
+/* Tin nổi bật đầu trang */
+.m-hero {
+    padding-bottom: 22px;
+}
+
+.m-hero .ph {
+    height: 210px;
+}
+
+.m-hero .kicker {
+    gap: 9px;
+}
+
+.m-hero .headline {
+    font-size: 28px;
+}
+
+.m-hero .excerpt {
+    margin-top: 10px;
+}
+
+/* Tin trong ngày — ảnh nhỏ hơn bản desktop */
+.news-row {
+    gap: 14px;
+    padding: 15px 0;
+}
+
+.news-row .thumb {
+    width: 104px;
+    height: 70px;
+}
+
+.news-row .headline {
+    font-size: 17px;
+}
+
+/* Đọc nhiều */
+.ranked-list {
+    gap: 13px;
+    padding-top: 13px;
+}
+
+.ranked-list .num {
+    font-size: 24px;
+    width: 20px;
+}
+
+.ranked-list a {
+    font-size: 14.5px;
+}
+
+/* Hộp bản tin sáng */
+.promo-box {
+    margin-top: 22px;
+    padding: 16px;
+}
+
+.promo-box .headline {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.promo-box .field {
+    padding: 13px 12px;
+    font-size: 13px;
+}
+
+.promo-box .btn-cta {
+    padding: 14px;
+    font-size: 13px;
+}
+
+/* Chân trang — một cột, rút gọn */
+#footer {
+    padding: 24px 0 22px;
+    margin-top: 24px;
+}
+
+.footer-mobile-brand {
+    font-family: var(--nt-font-display);
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--nt-paper);
+}
+
+.footer-mobile-info {
+    font-size: 12.5px;
+    line-height: 1.75;
+    margin-top: 10px;
+    color: var(--nt-footer-text);
+}
+
+.footer-mobile-bottom {
+    border-top: 1px solid var(--nt-border-dark);
+    margin-top: 16px;
+    padding-top: 14px;
+    font-size: 11.5px;
+    color: var(--nt-footer-muted);
+}
+
+/* Dải chuyển bản máy tính, dưới chân trang */
+.footerNav2 .inner {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 4px 0;
+}
+
+/* Thanh điều hướng dưới cùng — mỗi mục vùng chạm cao 56px */
+.tabbar {
+    display: flex;
+    background-color: var(--nt-surface);
+    border-top: 1px solid var(--nt-border);
+}
+
+.tabbar a {
+    flex-grow: 1;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 11.5px;
+    letter-spacing: .02em;
+    color: var(--nt-muted);
+}
+
+.tabbar a.on {
+    color: var(--nt-red);
+}

@@ -1,0 +1,105 @@
+/**
+ * Giao diện mẫu 2 — Trang chủ
+ * Tương ứng: layout.left-main-right.tpl + module news
+ */
+
+/* Ảnh lớn đầu trang, tiêu đề nằm trên ảnh */
+.hero-photo {
+    position: relative;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.hero-photo .shade {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 190px;
+    background-image: linear-gradient(to top,
+            rgba(15, 13, 40, .88) 0%,
+            rgba(15, 13, 40, .55) 45%,
+            rgba(15, 13, 40, 0) 100%);
+}
+
+.hero-photo .cap {
+    position: absolute;
+    left: 22px;
+    right: 22px;
+    bottom: 20px;
+}
+
+.hero-photo h2 {
+    color: #ffffff;
+    font-size: 27px;
+    margin: 12px 0 0;
+}
+
+.hero-photo .cap .meta {
+    color: rgba(255, 255, 255, .82);
+}
+
+/* Ba tin phụ dưới ảnh lớn */
+.sub-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    padding: 18px;
+}
+
+.sub-grid img {
+    width: 100%;
+    height: 96px;
+}
+
+.sub-grid h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.sub-grid h3 a {
+    color: var(--ink);
+}
+
+/* Khối chuyên mục: 1 tin chính + danh sách tin phụ hai cột */
+.lead-row {
+    display: flex;
+    gap: 16px;
+}
+
+.more-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 22px;
+    margin-top: 14px;
+}
+
+.more-grid a {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+/* Khối video ở cột phải */
+.video-wrap {
+    position: relative;
+}
+
+.video-wrap .play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    background-color: rgba(255, 255, 255, .92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

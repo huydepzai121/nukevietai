@@ -1,0 +1,35 @@
+<!-- @dsCard group="Brand" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ô giữ chỗ ảnh — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+.ph-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.ph-grid div { display: flex; flex-direction: column; gap: 6px; font-size: 11px; color: var(--color-text-muted); }
+.ph-grid i { display: block; aspect-ratio: 3/2; }
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Ô giữ chỗ ảnh <small>8 dải sepia</small></h2>
+<div class="ph-grid">
+<div><i class="ph"></i>.ph · --ph-1</div><div><i class="ph ph--2"></i>.ph--2</div><div><i class="ph ph--3"></i>.ph--3</div><div><i class="ph ph--4"></i>.ph--4</div>
+<div><i class="ph ph--5"></i>.ph--5</div><div><i class="ph ph--6"></i>.ph--6</div><div><i class="ph ph--7"></i>.ph--7</div><div><i class="ph ph--8"></i>.ph--8</div>
+</div>
+<figure class="figure" style="max-width:480px"><div class="ph" style="aspect-ratio:16/9"></div><figcaption>Chú thích ảnh: chữ nghiêng 12px, chữ mờ.</figcaption></figure>
+<p class="pv-note">Chưa có ảnh thật thì dùng .ph, luân phiên 8 biến thể, không tạo gradient mới. Ảnh thật: không bo góc, không đổ bóng, ưu tiên tông ấm.</p>
+</main>
+</body>
+</html>

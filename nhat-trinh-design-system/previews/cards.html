@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thẻ — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Thẻ <small>bài viết, sản phẩm, dịch vụ, bảng giá</small></h2>
+<div class="grid grid-3">
+<article class="card"><div class="card__media ph"></div><span class="eyebrow">Dịch vụ</span><h3 class="card__title"><a href="#">Thiết kế nhận diện thương hiệu</a></h3><p class="card__text">Mô tả ngắn hai dòng về nội dung của thẻ.</p><div class="meta">[Ngày] · 4 phút đọc</div></article>
+<article class="card"><div class="card__media ph ph--2"></div><span class="eyebrow">Sản phẩm</span><h3 class="card__title"><a href="#">Sổ tay bìa vải khổ A5</a></h3><div class="numeral" style="font-size:22px">[Giá]</div><button class="btn btn-primary btn-sm">Thêm vào giỏ</button></article>
+<article class="card card--featured"><span><span class="badge">Phổ biến</span></span><h3 class="card__title">Gói Doanh nghiệp</h3><div class="numeral" style="font-size:36px">[Giá]<span class="meta"> / tháng</span></div><ul class="list-ruled"><li>Không giới hạn người dùng</li><li>Hỗ trợ ưu tiên</li><li>Báo cáo hằng tháng</li></ul><button class="btn btn-primary btn-block">Chọn gói</button></article>
+</div>
+<div class="grid grid-2">
+<article class="card card--row"><div class="card__media ph ph--4"></div><div class="stack" style="gap:6px"><h3 class="card__title"><a href="#">Thẻ ngang có ảnh nhỏ</a></h3><div class="meta">[Ngày]</div></div></article>
+<article class="card card--boxed"><span class="eyebrow eyebrow--plain">Thẻ có khung</span><h3 class="card__title">Nội dung tách khỏi nền giấy</h3><p class="card__text">Dùng cho tính năng, lời chứng thực, thông tin liên hệ.</p></article>
+</div>
+</main>
+</body>
+</html>

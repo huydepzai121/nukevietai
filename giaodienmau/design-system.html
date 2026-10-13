@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hệ thống thiết kế — Giao diện mẫu Tin Tức 24h</title>
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/page-design-system.css">
+</head>
+<body>
+<div class="sheet">
+
+  <div class="sheet-title">Hệ thống thiết kế — Tin Tức 24h</div>
+  <p class="text-muted" style="margin: 4px 0 0;">Toàn bộ giá trị lấy nguyên từ <code>themes/default</code> của NukeViet: <code>css/style.css</code>, <code>css/news.css</code>, <code>css/menu.css</code>, <code>layout/*.tpl</code>. Cột “nguồn” trong bảng màu ghi rõ selector gốc.</p>
+  <div class="sheet-nav">
+    <a href="index.html">Trang chủ</a>
+    <a href="chuyen-muc.html">Trang chuyên mục</a>
+    <a href="chi-tiet.html">Trang chi tiết</a>
+    <a href="mobile.html">Bản di động</a>
+  </div>
+
+  <h2>1. Màu</h2>
+  <div class="sw-grid">
+    <div class="sw"><div class="chip" style="background-color: #428bca;"></div><div class="name">Chính</div><div class="hex">#428bca</div><div class="src">section-header-bar, panel-primary</div></div>
+    <div class="sw"><div class="chip" style="background-color: #245682;"></div><div class="name">Chính đậm</div><div class="hex">#245682</div><div class="src">#footer, tooltip</div></div>
+    <div class="sw"><div class="chip" style="background-color: #193c5a;"></div><div class="name">Chân trang</div><div class="hex">#193c5a</div><div class="src">.footerNav2</div></div>
+    <div class="sw"><div class="chip" style="background-color: #1a3f5e;"></div><div class="name">Liên kết</div><div class="hex">#1a3f5e</div><div class="src">a:link</div></div>
+    <div class="sw"><div class="chip" style="background-color: #0e2132;"></div><div class="name">Liên kết hover</div><div class="hex">#0e2132</div><div class="src">a:hover</div></div>
+    <div class="sw"><div class="chip" style="background-color: #a6c8e6;"></div><div class="name">Nhấn nhạt</div><div class="hex">#a6c8e6</div><div class="src">breadcrumbs a:hover</div></div>
+    <div class="sw"><div class="chip" style="background-color: #333333;"></div><div class="name">Chữ</div><div class="hex">#333333</div><div class="src">body</div></div>
+    <div class="sw"><div class="chip" style="background-color: #383838;"></div><div class="name">Chữ danh sách</div><div class="hex">#383838</div><div class="src">news.css: #topnews a</div></div>
+    <div class="sw"><div class="chip" style="background-color: #707070;"></div><div class="name">Chữ mờ</div><div class="hex">#707070</div><div class="src">a.dimgray, site_description</div></div>
+    <div class="sw"><div class="chip" style="background-color: #eeeeee;"></div><div class="name">Nền trang</div><div class="hex">#eeeeee</div><div class="src">body, .third-nav .bg</div></div>
+    <div class="sw"><div class="chip" style="background-color: #f5f5f5;"></div><div class="name">Đầu khối</div><div class="hex">#f5f5f5</div><div class="src">.panel-default .panel-heading</div></div>
+    <div class="sw"><div class="chip" style="background-color: #ffffff;"></div><div class="name">Nền khối</div><div class="hex">#ffffff</div><div class="src">.panel</div></div>
+    <div class="sw"><div class="chip" style="background-color: #dddddd;"></div><div class="name">Viền</div><div class="hex">#dddddd</div><div class="src">--nv-border-color</div></div>
+    <div class="sw"><div class="chip" style="background-color: #dcdcdc;"></div><div class="name">Viền đậm</div><div class="hex">#dcdcdc</div><div class="src">breadcrumbs, .third-nav</div></div>
+    <div class="sw"><div class="chip" style="background-color: #dadada;"></div><div class="name">Viền ngăn tin</div><div class="hex">#dadada</div><div class="src">news.css: #hot-news li</div></div>
+    <div class="sw"><div class="chip" style="background-color: #cccccc;"></div><div class="name">Thanh menu</div><div class="hex">#cccccc</div><div class="src">.second-nav .bg</div></div>
+    <div class="sw"><div class="chip" style="background-color: #c3d3e0;"></div><div class="name">Viền nhạt</div><div class="hex">#c3d3e0</div><div class="src">#topnews</div></div>
+    <div class="sw"><div class="chip" style="background-color: #dbe4ec;"></div><div class="name">Ô giữ chỗ ảnh</div><div class="hex">#dbe4ec</div><div class="src">bổ sung cho bản mẫu</div></div>
+  </div>
+  <p class="text-muted" style="margin-top: 12px;">Chỉ hai màu <strong>#dbe4ec</strong> (ô giữ chỗ ảnh) và <strong>#eef3f8</strong> (nền thẻ từ khóa) là bổ sung ngoài theme gốc; mọi màu còn lại đều có sẵn trong <code>themes/default</code>.</p>
+
+  <h2>2. Chữ</h2>
+  <div class="type-row"><span class="lbl">Tiêu đề bài — serif 32/1.22</span><span class="headline" style="font-size: 32px;">Quy hoạch đô thị ven sông</span></div>
+  <div class="type-row"><span class="lbl">Tên chuyên mục — serif 30</span><span class="headline" style="font-size: 30px; color: var(--gd-primary-dark);">Thời sự</span></div>
+  <div class="type-row"><span class="lbl">Tin nổi bật — serif 28</span><span class="headline" style="font-size: 28px;">Tiêu đề tin nổi bật trang chủ</span></div>
+  <div class="type-row"><span class="lbl">Tiêu đề tin — serif 17</span><span class="headline" style="font-size: 17px;">Học phí đại học công lập năm tới</span></div>
+  <div class="type-row"><span class="lbl">Sapo — sans 16/1.6 đậm</span><span style="font-size: 16px; font-weight: 700;">Bản quy hoạch đang lấy ý kiến đề xuất…</span></div>
+  <div class="type-row"><span class="lbl">Thân bài — sans 16/1.75</span><span style="font-size: 16px;">Theo hồ sơ trình lấy ý kiến, toàn bộ dải đất hai bên bờ sông…</span></div>
+  <div class="type-row"><span class="lbl">Mặc định — sans 14/1.42857</span><span>Cỡ chữ nền của <code>body</code> trong style.css</span></div>
+  <div class="type-row"><span class="lbl">Phụ chú — sans 12</span><span class="text-muted">Thời gian, tác giả, số bình luận</span></div>
+  <p class="text-muted" style="margin-top: 12px;">
+    Sans: <code>'Helvetica Neue', Helvetica, Arial, sans-serif</code> — đúng stack của <code>body</code> trong theme.<br>
+    Serif: <code>'Times New Roman', Times, serif</code> — font đã có sẵn trong theme ở <code>#header .logo .site_description</code>, dùng lại cho tiêu đề tin nên không phải nạp thêm webfont.
+  </p>
+
+  <h2>3. Lưới và khoảng cách</h2>
+  <p class="text-muted" style="margin-bottom: 12px;">Khung nội dung <code>.wraper</code> = <strong>1080px</strong>, lưới <strong>24 cột</strong> của NukeViet, khoảng cách cột <strong>30px</strong>.</p>
+  <div class="gridnote" style="margin-bottom: 16px;">
+    <div class="cell" style="width: 210px;">[LEFT] — 5 cột</div>
+    <div class="cell" style="width: 555px;">{MODULE_CONTENT} — 13 cột</div>
+    <div class="cell" style="width: 255px;">[RIGHT] — 6 cột</div>
+  </div>
+  <div class="gridnote">
+    <div class="cell" style="width: 795px;">{MODULE_CONTENT} — 18 cột</div>
+    <div class="cell" style="width: 255px;">[RIGHT] — 6 cột</div>
+  </div>
+  <p class="text-muted" style="margin-top: 12px;">Nhịp dọc: 20px giữa hai khối, 15px trong lòng khối, 10px giữa các dòng tin trong danh sách — đúng nhịp của <code>.panel-body</code> và <code>#hot-news</code> trong theme gốc.</p>
+
+  <h2>4. Khối nội dung</h2>
+  <div class="grid-3">
+    <div class="panel">
+      <div class="panel-heading">Khối mặc định</div>
+      <div class="panel-body">Dựng theo <code>layout/block.default.tpl</code> — viền #ddd, đầu khối #f5f5f5.</div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Khối nhấn</div>
+      <div class="panel-body">Dựng theo <code>layout/block.primary.tpl</code> — dùng cho khối cần hút mắt.</div>
+    </div>
+    <div>
+      <div class="ads-slot" style="height: 116px;">Ô quảng cáo</div>
+    </div>
+  </div>
+
+  <h2>5. Điều hướng và nút</h2>
+  <div class="grid-2" style="align-items: start;">
+    <div>
+      <ul class="breadcrumbs" style="margin-bottom: 20px;">
+        <li><a href="index.html">Trang chủ</a></li>
+        <li><a href="chuyen-muc.html">Thời sự</a></li>
+        <li><a href="chi-tiet.html">Đô thị</a></li>
+      </ul>
+      <div class="pager">
+        <a href="#">Trước</a><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">Sau</a>
+      </div>
+    </div>
+    <div>
+      <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;">
+        <span class="btn btn-primary">Gửi bình luận</span>
+        <span class="btn btn-default">Hủy</span>
+        <span class="btn btn-info-solid">Tìm kiếm</span>
+      </div>
+      <div class="headerSearch" style="width: 320px;">
+        <input type="text" placeholder="Tìm kiếm...">
+        <span class="btn-info"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+      </div>
+    </div>
+  </div>
+
+  <h2>6. Mẫu tin</h2>
+  <div class="grid-2" style="align-items: start;">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="news-item">
+          <div class="ph" style="width: 160px; height: 100px;"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--gd-placeholder-ink)" stroke-width="1.3"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-4 4-2-2-4 4"/></svg></div>
+          <div>
+            <h3 class="headline" style="font-size: 17px;"><a href="chi-tiet.html">Tin có ảnh đại diện, sapo hai dòng</a></h3>
+            <p class="text-muted" style="margin: 6px 0 0; line-height: 1.5;">Dòng tóm tắt giới hạn hai dòng, cắt bớt khi dài hơn.</p>
+            <div class="news-meta"><span class="cat-tag">Chuyên mục</span><span>[GIỜ] hôm nay</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Danh sách xếp hạng</div>
+      <div class="panel-body">
+        <ul class="hot-list" style="font-size: 13px;">
+          <li><span class="num">1</span><a href="chi-tiet.html">Tin không ảnh, đánh số bằng chữ serif</a></li>
+          <li><span class="num">2</span><a href="chi-tiet.html">Ngăn cách bằng đường 1px #dadada</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <h2>7. Ánh xạ sang theme NukeViet</h2>
+  <p class="text-muted" style="margin-bottom: 12px;">Bảng này là đường đi khi chuyển bản mẫu tĩnh thành theme <code>themes/giaodienmau/</code> ở bước sau.</p>
+  <table class="maptable">
+    <thead>
+      <tr><th style="width: 26%;">Phần trong bản mẫu</th><th style="width: 34%;">File theme tương ứng</th><th>Ghi chú</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Thanh trên, đầu trang, menu, đường dẫn</td><td><code>layout/header_extended.tpl</code></td><td>Các vùng <code>[CONTACT_DEFAULT]</code>, <code>[SOCIAL_ICONS]</code>, <code>[PERSONALAREA]</code>, <code>[HEAD_RIGHT]</code>, <code>[MENU_SITE]</code></td></tr>
+      <tr><td>Bố cục 3 cột trang chủ / chi tiết</td><td><code>layout/layout.left-main-right.tpl</code></td><td>5 / 13 / 6 trong lưới 24 cột</td></tr>
+      <tr><td>Bố cục 2 cột trang chuyên mục</td><td><code>layout/layout.main-right.tpl</code></td><td>18 / 6 cột</td></tr>
+      <tr><td><code>.panel</code> / <code>.panel-primary</code></td><td><code>layout/block.default.tpl</code>, <code>layout/block.primary.tpl</code></td><td>Giữ nguyên cấu trúc, chỉ thay CSS</td></tr>
+      <tr><td>Danh sách tin, tin nổi bật</td><td><code>modules/news/*.tpl</code></td><td>main.tpl, viewcat_*.tpl, detail.tpl</td></tr>
+      <tr><td>Bình luận</td><td><code>modules/comment/*.tpl</code></td><td>Form và danh sách bình luận</td></tr>
+      <tr><td>Ô quảng cáo</td><td>block <code>banners</code></td><td>Thay <code>.ads-slot</code> bằng block banners thật</td></tr>
+      <tr><td>Chân trang</td><td><code>layout/footer_extended.tpl</code></td><td>Khối menu, thông tin tòa soạn, đăng ký nhận tin</td></tr>
+      <tr><td>Token và thành phần</td><td><code>css/custom.css</code> hoặc <code>css/style.css</code></td><td>Nạp <code>tokens.css</code> trước, phần còn lại ghi đè theo thứ tự base → components → trang</td></tr>
+    </tbody>
+  </table>
+
+  <h2>8. Nguyên tắc khi mở rộng</h2>
+  <ul style="line-height: 1.9;">
+    <li>Màu mới phải lấy từ bảng token; cần màu chưa có thì thêm vào <code>tokens.css</code> kèm ghi chú nguồn, không viết mã màu rời rạc trong trang.</li>
+    <li>Tiêu đề tin luôn dùng serif, phần còn lại dùng sans. Không trộn thêm họ chữ thứ ba.</li>
+    <li>Nhóm phần tử cùng cấp bằng <code>flex</code>/<code>grid</code> kèm <code>gap</code>, không dùng margin lẻ từng phần tử.</li>
+    <li>Vùng chạm trên di động tối thiểu 44px; chữ thân bài không nhỏ hơn 16px.</li>
+    <li>Biểu tượng vẽ bằng SVG nội tuyến trên lưới 16/20/24px, không dùng emoji.</li>
+    <li>Dữ kiện chưa có để trong ngoặc vuông <code>[ ]</code>, không bịa số liệu hay tên riêng.</li>
+  </ul>
+
+</div>
+</body>
+</html>

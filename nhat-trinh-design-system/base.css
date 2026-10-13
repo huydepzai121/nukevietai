@@ -1,0 +1,215 @@
+/**
+ * Nhật Trình — Nền tảng: reset, chữ, khung, lưới
+ * Nạp sau bootstrap.min.css (BS3 24 cột của NukeViet) và tokens.css, trước components.css.
+ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text-body);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.25;
+}
+
+h1 { font-size: var(--text-h1); line-height: 1.16; letter-spacing: var(--tracking-tight); }
+h2 { font-size: var(--text-h2); line-height: 1.2; }
+h3 { font-size: var(--text-h3); }
+h4 { font-size: var(--text-h4); }
+h5 { font-size: var(--text-h5); }
+h6 { font-size: var(--text-h6); }
+
+p {
+    margin: 0 0 var(--space-3);
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--duration) var(--ease);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-accent-hover);
+}
+
+:focus-visible {
+    outline: var(--rule-strong) solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+hr {
+    border: 0;
+    border-top: var(--rule-thin) solid var(--color-border);
+    margin: var(--space-4) 0;
+    opacity: 1;
+}
+
+/* ---------- Khung — 1190px; trong theme đặt cho cả .wraper và .container ---------- */
+
+.wraper,
+.container,
+.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+}
+
+.wraper,
+.container { max-width: var(--container); }
+
+.container--narrow { max-width: calc(var(--container-narrow) + var(--gutter)); }
+
+/* Section: 24px (xs) · 48px (sm) · 96px (md+) */
+.section { padding: var(--section-py) 0; }
+
+.section--alt { background-color: var(--color-surface-alt); }
+
+.section--inverse {
+    background-color: var(--color-inverse);
+    color: var(--color-text-on-inverse);
+}
+
+.section--inverse h1,
+.section--inverse h2,
+.section--inverse h3 {
+    color: var(--color-surface);
+}
+
+@media (min-width: 768px) {
+    .section { padding: var(--section-py-md) 0; }
+}
+
+@media (min-width: 992px) {
+    .section { padding: var(--section-py-lg) 0; }
+}
+
+/* ---------- Lưới 24 cột ----------
+   Lưới lấy từ bootstrap.min.css (Bootstrap 3.4.1, 24 cột) của NukeViet —
+   file này không định nghĩa lại. Dùng .row + .col-xs-N / .col-sm-N / .col-md-N / .col-lg-N:
+   <div class="row">
+     <div class="col-xs-24 col-sm-12 col-md-8">…</div>
+   </div>
+   6 = 1/4 · 8 = 1/3 · 12 = 1/2 · 16 = 2/3 · 18 = 3/4.
+   .grid, .layout-* dưới đây là mẫu CSS Grid dựng sẵn cùng tỉ lệ, cho khối
+   không cần markup .row/.col. */
+
+.grid,
+.layout-sidebar,
+.layout-3col {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    row-gap: var(--gutter);
+    margin-left: calc(var(--gutter) / -2);
+    margin-right: calc(var(--gutter) / -2);
+}
+
+.grid > *,
+.layout-sidebar > *,
+.layout-3col > * {
+    grid-column: span 24;
+    min-width: 0;
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+}
+
+.grid--flush { row-gap: 0; }
+
+/* ---------- Mẫu lưới dựng sẵn trên 24 cột ---------- */
+
+/* .grid-2 / -3 / -4: xs 24 · sm 12 · md 12 / 8 / 6 */
+.grid-2 > *, .grid-3 > *, .grid-4 > * { grid-column: span 24; }
+
+@media (min-width: 768px) {
+    .grid-2 > *, .grid-3 > *, .grid-4 > * { grid-column: span 12; }
+}
+
+@media (min-width: 992px) {
+    .grid-3 > * { grid-column: span 8; }
+    .grid-4 > * { grid-column: span 6; }
+}
+
+/* .layout-sidebar: xs 24 · sm 16/8 · md 18/6 */
+/* .layout-3col: xs 24 · sm 16/8 (ẩn cột trái) · md 5/13/6 — giống layout.left-main-right.tpl */
+.layout-sidebar > *, .layout-3col > * { grid-column: span 24; }
+.layout-sidebar, .layout-3col { align-items: start; }
+
+@media (min-width: 768px) {
+    .layout-sidebar > :first-child { grid-column: span 16; }
+    .layout-sidebar > :last-child { grid-column: span 8; }
+    .layout-3col > :first-child { display: none; }
+    .layout-3col > :nth-child(2) { grid-column: span 16; }
+    .layout-3col > :last-child { grid-column: span 8; }
+}
+
+@media (min-width: 992px) {
+    .layout-sidebar > :first-child { grid-column: span 18; }
+    .layout-sidebar > :last-child { grid-column: span 6; }
+    .layout-3col > :first-child { display: block; grid-column: span 5; }
+    .layout-3col > :nth-child(2) { grid-column: span 13; }
+    .layout-3col > :last-child { grid-column: span 6; }
+}
+
+.stack { display: flex; flex-direction: column; gap: var(--space-3); }
+.stack-lg { display: flex; flex-direction: column; gap: var(--space-4); }
+.cluster { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+
+/* Chữ lớn giảm trên điện thoại (< 768px) */
+@media (max-width: 767.98px) {
+    :root {
+        --text-display: 2.441rem; /* 39px */
+        --text-h1: 1.953rem;      /* 31px */
+        --text-h2: 1.563rem;      /* 25px */
+        --text-h3: 1.25rem;       /* 20px */
+    }
+}
+
+/* ---------- Tiện ích chữ ---------- */
+
+.text-muted { color: var(--color-text-muted); font-size: var(--text-xs); }
+.text-center { text-align: center; }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

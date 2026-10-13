@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nút — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Nút</h2>
+<div class="pv-row">
+<button class="btn btn-primary">Đăng ký ngay</button>
+<button class="btn">Tìm hiểu thêm</button>
+<button class="btn btn-dark">Liên hệ</button>
+<a class="btn btn-link" href="#">Xem tất cả</a>
+<button class="btn btn-primary" disabled>Đã tắt</button>
+</div>
+<div class="pv-row">
+<button class="btn btn-primary btn-sm">Nhỏ</button>
+<button class="btn btn-primary">Vừa</button>
+<button class="btn btn-primary btn-lg">Lớn</button>
+</div>
+<div style="max-width:320px"><button class="btn btn-primary btn-block">Nút rộng hết khối</button></div>
+<p class="pv-note">Chữ hoa dãn .06em, không bo góc. Mỗi màn hình chỉ một nút đỏ chính.</p>
+</main>
+</body>
+</html>

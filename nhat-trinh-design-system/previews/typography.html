@@ -1,0 +1,43 @@
+<!-- @dsCard group="Type" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chữ — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+.ty { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 14px 24px; align-items: baseline; }
+.ty > span { font-size: 11px; color: var(--color-text-muted); }
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Chữ <small>Playfair Display + Noto Serif · gốc 16px, tỉ lệ 1.25</small></h2>
+<div class="ty">
+<span>Display — Playfair 900 / 61</span><div class="display">Nhật Trình</div>
+<span>H1 — Playfair 700 / 39</span><h1>Tiêu đề trang rõ ràng, ngắn gọn</h1>
+<span>H2 — Playfair 700 / 31</span><h2>Tiêu đề mục nội dung</h2>
+<span>H3 — Playfair 700 / 25</span><h3>Tiêu đề khối</h3>
+<span>H4 — Playfair 700 / 20</span><h4>Tiêu đề thẻ</h4>
+<span>Tagline — Playfair nghiêng 500 / 16</span><p class="tagline">Câu mô tả ngắn dưới logo hoặc tiêu đề lớn</p>
+<span>Lead — Noto Serif 18 / 1.65</span><p class="lead">Đoạn dẫn tóm tắt nội dung chính trong hai đến ba dòng, đặt ngay dưới tiêu đề.</p>
+<span>Body — Noto Serif 16 / 1.55</span><p>Chữ giao diện dùng cho mô tả, thẻ, biểu mẫu và hầu hết nội dung ngắn.</p>
+<span>Article — Noto Serif 16 / 1.85</span><div class="prose"><p>Thân bài dài như bài viết, trang giới thiệu, chính sách. Không nhỏ hơn 16px, độ dài dòng tối đa 65ch.</p></div>
+<span>Eyebrow — 11, hoa, dãn .16em</span><div><span class="eyebrow">Chuyên mục</span></div>
+<span>Meta — 12, chữ mờ</span><div class="meta">[Ngày] · [Tác giả] · 5 phút đọc</div>
+<span>Numeral — Playfair 900 / 26</span><div class="numeral">01</div>
+<span>Quote</span><blockquote class="quote">Một câu trích dẫn đáng nhớ, đặt nghiêng bằng chữ tiêu đề.<cite>— [Tên người], [chức danh]</cite></blockquote>
+</div>
+</main>
+</body>
+</html>

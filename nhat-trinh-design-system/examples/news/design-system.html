@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hệ thống thiết kế — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/page-design-system.css">
+</head>
+<body>
+<div class="sheet">
+
+  <div class="sheet-head">
+    <div>
+      <h1 class="sheet-title">Hệ thống thiết kế — Nhật Trình</h1>
+      <p class="text-muted" style="margin: 4px 0 0;">Hướng thiết kế thứ ba, hoàn toàn mới — không bám <code>themes/default</code>. Lấy nguyên giá trị từ hai artboard đã chốt: <code>Main.dc.html</code> (1080px) và <code>MobileA.dc.html</code> (390px). Mục 9 là bảng ánh xạ sang file theme khi dựng thật.</p>
+    </div>
+  </div>
+  <div class="sheet-nav">
+    <a href="index.html">Trang chủ</a>
+    <a href="chuyen-muc.html">Trang chuyên mục</a>
+    <a href="chi-tiet.html">Trang chi tiết</a>
+    <a href="mobile.html">Bản di động</a>
+  </div>
+
+  <h2>1. So sánh với hai bộ mẫu trước</h2>
+  <table class="maptable">
+    <thead>
+      <tr><th style="width: 18%;">Hạng mục</th><th style="width: 27%;">Bộ 1 — Tin Tức 24h</th><th style="width: 27%;">Bộ 2 — Nhịp Phố</th><th>Bộ 3 — Nhật Trình</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Khung, lưới, bố cục</td><td colspan="3"><strong>Cả ba bộ giữ nguyên</strong>: .wraper 1080px, 24 cột, left-main-right (210/555/255), main-right (795/255)</td></tr>
+      <tr><td>Hướng bám</td><td>Bám <code>themes/default</code>, chép nguyên mã màu/cỡ chữ</td><td>Giữ cấu trúc theme default, đổi lớp nhìn</td><td>Hướng mới hoàn toàn, không bám theme default</td></tr>
+      <tr><td>Màu nền</td><td>Xanh #428bca / #245682 của theme gốc</td><td>Tím #6b4eff, san hô #ff6a4d, bạc hà #12bfa0</td><td>Giấy #f7f3ea, mực #14110d, đỏ #a8231c, vàng đồng #d8b26a</td></tr>
+      <tr><td>Chữ</td><td>Helvetica Neue + Times New Roman (có sẵn trong theme)</td><td>Be Vietnam Pro (một họ chữ duy nhất)</td><td>Playfair Display (tiêu đề) + Noto Serif (thân bài), nạp qua Google Fonts</td></tr>
+      <tr><td>Bo góc</td><td>4px (Bootstrap 3)</td><td>18px, bo tròn nhiều nơi</td><td><strong>0 — không bo góc</strong>, đặc trưng báo in</td></tr>
+      <tr><td>Khối nội dung</td><td>Panel Bootstrap, đầu khối nền xám #f5f5f5</td><td>Thẻ bo 18px, bóng nhẹ, thanh màu 4px đầu khối</td><td>Gạch chân 2px mực dưới tiêu đề khối; khối nhấn viền 2px mực; danh sách kẻ chấm</td></tr>
+      <tr><td>Menu</td><td>Navbar chữ nhật Bootstrap</td><td>Viên thuốc bo tròn, mục chọn tô nền tím</td><td>Chữ hoa dãn chữ rộng, mục chọn gạch chân đỏ 2px, kẻ đôi trên/dưới cả thanh menu</td></tr>
+      <tr><td>Ảnh</td><td>Ô giữ chỗ xanh nhạt đơn sắc</td><td>Ảnh thật (picsum.photos)</td><td>Ô giữ chỗ dải chuyển màu sepia, 8 biến thể lấy từ artboard</td></tr>
+      <tr><td>Nội dung riêng</td><td>—</td><td>—</td><td>Măng sét kiểu "số báo" (kỳ, giá bán); khối "Góc nhìn" bình luận cộng tác viên ở cuối trang chủ</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. Màu</h2>
+  <div class="sw-grid">
+    <div class="sw"><div class="chip" style="background-color: #f7f3ea;"></div><div class="name">Nền giấy</div><div class="hex">#f7f3ea</div><div class="src">body, nền trang</div></div>
+    <div class="sw"><div class="chip" style="background-color: #fffdf7;"></div><div class="name">Bề mặt</div><div class="hex">#fffdf7</div><div class="src">ô tìm kiếm, hộp bản tin, thẻ từ khóa</div></div>
+    <div class="sw"><div class="chip" style="background-color: #f2ece0;"></div><div class="name">Dải nhấn</div><div class="hex">#f2ece0</div><div class="src">nền khối "Góc nhìn"</div></div>
+    <div class="sw"><div class="chip" style="background-color: #14110d;"></div><div class="name">Mực</div><div class="hex">#14110d</div><div class="src">tiêu đề, kẻ đôi, nền thanh trên cùng/chân trang</div></div>
+    <div class="sw"><div class="chip" style="background-color: #3d372e;"></div><div class="name">Mực nhạt</div><div class="hex">#3d372e</div><div class="src">thân bài, sapo, tóm tắt</div></div>
+    <div class="sw"><div class="chip" style="background-color: #7a7266;"></div><div class="name">Chữ mờ</div><div class="hex">#7a7266</div><div class="src">thời gian, tác giả, phụ chú</div></div>
+    <div class="sw"><div class="chip" style="background-color: #9a9184;"></div><div class="name">Chữ rất mờ</div><div class="hex">#9a9184</div><div class="src">placeholder ô tìm kiếm, mục menu mờ</div></div>
+    <div class="sw"><div class="chip" style="background-color: #5b5348;"></div><div class="name">Mô tả site</div><div class="hex">#5b5348</div><div class="src">tagline dưới măng sét</div></div>
+    <div class="sw"><div class="chip" style="background-color: #a8231c;"></div><div class="name">Đỏ nhấn</div><div class="hex">#a8231c</div><div class="src">kicker, số thứ tự, liên kết, nút CTA</div></div>
+    <div class="sw"><div class="chip" style="background-color: #7c1813;"></div><div class="name">Đỏ đậm</div><div class="hex">#7c1813</div><div class="src">hover liên kết/nút</div></div>
+    <div class="sw"><div class="chip" style="background-color: #d8b26a;"></div><div class="name">Vàng đồng</div><div class="hex">#d8b26a</div><div class="src">RSS, nhãn cột chân trang (chỉ trên nền mực)</div></div>
+    <div class="sw"><div class="chip" style="background-color: #d8cfbe;"></div><div class="name">Viền</div><div class="hex">#d8cfbe</div><div class="src">ô tìm kiếm, hộp bản tin, thẻ từ khóa</div></div>
+    <div class="sw"><div class="chip" style="background-color: #cfc5b2;"></div><div class="name">Viền chấm</div><div class="hex">#cfc5b2</div><div class="src">ngăn dòng trong danh sách</div></div>
+    <div class="sw"><div class="chip" style="background-color: #3a342a;"></div><div class="name">Viền trên nền tối</div><div class="hex">#3a342a</div><div class="src">ngăn chân trang với dòng bản quyền</div></div>
+    <div class="sw"><div class="chip" style="background-color: #e8e0d0;"></div><div class="name">Chữ thanh trên cùng</div><div class="hex">#e8e0d0</div><div class="src">.section-header-bar</div></div>
+    <div class="sw"><div class="chip" style="background-color: #cfc6b5;"></div><div class="name">Chữ chân trang</div><div class="hex">#cfc6b5</div><div class="src">#footer</div></div>
+    <div class="sw"><div class="chip" style="background-color: #8c8474;"></div><div class="name">Chữ mờ chân trang</div><div class="hex">#8c8474</div><div class="src">dòng bản quyền</div></div>
+  </div>
+  <p class="text-muted" style="margin-top: 12px;">Toàn bộ 17 màu trên chép nguyên từ hai artboard <code>Main.dc.html</code>/<code>MobileA.dc.html</code>, không làm tròn, không thêm màu ngoài danh sách này.</p>
+
+  <h2>3. Chữ</h2>
+  <div class="type-row"><span class="lbl">Măng sét — Playfair 900/62</span><span style="font-family: var(--nt-font-display); font-weight: 900; font-size: 44px;">Nhật Trình</span></div>
+  <div class="type-row"><span class="lbl">Tiêu đề nổi bật — Playfair 700/36</span><span class="headline headline--hero" style="font-size: 32px;">Tuyến đường ven sông thông xe</span></div>
+  <div class="type-row"><span class="lbl">Tiêu đề tin phụ — Playfair 700/20</span><span class="headline headline--sub">Doanh nghiệp nhỏ chờ gói vay lãi suất thấp</span></div>
+  <div class="type-row"><span class="lbl">Tiêu đề danh sách — Playfair 700/19</span><span class="headline headline--item">Bệnh viện tuyến huyện nhận thêm bác sĩ trẻ</span></div>
+  <div class="type-row"><span class="lbl">Số thứ tự — Playfair 900/26</span><span style="font-family: var(--nt-font-display); font-weight: 900; font-size: 26px; color: var(--nt-red);">01</span></div>
+  <div class="type-row"><span class="lbl">Sapo — Noto Serif 15.5/1.65</span><span class="excerpt">Đoạn cuối dài 4,2 km rút thời gian đi lại giờ cao điểm…</span></div>
+  <div class="type-row"><span class="lbl">Thân bài — Noto Serif 16/1.85</span><span style="font-size: 16px; color: var(--nt-ink-soft);">Dự án khởi công từ năm, chậm tiến độ hai lần vì vướng mặt bằng…</span></div>
+  <div class="type-row"><span class="lbl">Kicker chuyên mục — Noto Serif 10.5, hoa, dãn .16em</span><span class="kicker" style="margin: 0;"><span>Thời sự</span></span></div>
+  <div class="type-row"><span class="lbl">Phụ chú — Noto Serif 12</span><span class="text-muted">Thời gian, tác giả, số bình luận</span></div>
+  <p class="text-muted" style="margin-top: 12px;">
+    Chữ tiêu đề: <code>'Playfair Display', Georgia, serif</code> (500, 700, 900 và nghiêng 500).<br>
+    Chữ thân: <code>'Noto Serif', Georgia, serif</code> (400, 600, 700).<br>
+    Cả hai nạp bằng <code>&lt;link rel="stylesheet"&gt;</code> tới Google Fonts trong <code>&lt;head&gt;</code> của mỗi trang (không dùng <code>@import</code> trong CSS như <code>giaodienmau2</code>, để trình duyệt tải font song song với CSS thay vì phải đợi CSS phân giải xong).
+  </p>
+
+  <h2>4. Lưới và khoảng cách</h2>
+  <p class="text-muted" style="margin-bottom: 12px;">Khung nội dung <code>.wraper</code> = <strong>1080px</strong>, lưới <strong>24 cột</strong> của NukeViet, khoảng cách cột <strong>30px</strong> — giữ nguyên như hai bộ trước.</p>
+  <div class="gridnote" style="margin-bottom: 16px;">
+    <div class="cell" style="width: 210px;">[LEFT] — 5 cột</div>
+    <div class="cell" style="width: 555px;">{MODULE_CONTENT} — 13 cột</div>
+    <div class="cell" style="width: 255px;">[RIGHT] — 6 cột</div>
+  </div>
+  <div class="gridnote">
+    <div class="cell" style="width: 795px;">{MODULE_CONTENT} — 18 cột</div>
+    <div class="cell" style="width: 255px;">[RIGHT] — 6 cột</div>
+  </div>
+  <p class="text-muted" style="margin-top: 12px;"><strong>Bo góc = 0</strong> ở mọi nơi — đặc trưng "báo in" của hướng thiết kế này, khác hẳn 4px của Bộ 1 và 18px của Bộ 2. Hình khối thay bằng: kẻ đôi (viền trên 3px + viền dưới 1px mực) giữa măng sét và menu, gạch chân 2px mực dưới đầu khối, viền chấm 1px giữa các dòng danh sách.</p>
+
+  <h2>5. Ô giữ chỗ ảnh</h2>
+  <p class="text-muted" style="margin-bottom: 12px;">8 dải chuyển màu sepia, chép nguyên từ hai artboard, dùng luân phiên tùy vị trí — không tự nghĩ thêm màu mới.</p>
+  <div class="swatch-ph">
+    <div class="cell"><div class="ph box"></div><div class="lbl">--nt-ph-1 — ảnh phóng sự</div></div>
+    <div class="cell"><div class="ph ph--2 box"></div><div class="lbl">--nt-ph-2 — Kinh doanh</div></div>
+    <div class="cell"><div class="ph ph--3 box"></div><div class="lbl">--nt-ph-3 — Văn hóa</div></div>
+    <div class="cell"><div class="ph ph--4 box"></div><div class="lbl">--nt-ph-4 — danh sách 1</div></div>
+    <div class="cell"><div class="ph ph--5 box"></div><div class="lbl">--nt-ph-5 — danh sách 2</div></div>
+    <div class="cell"><div class="ph ph--6 box"></div><div class="lbl">--nt-ph-6 — danh sách 3</div></div>
+    <div class="cell"><div class="ph ph--7 box"></div><div class="lbl">--nt-ph-7 — danh sách 4</div></div>
+    <div class="cell"><div class="ph ph--8 box"></div><div class="lbl">--nt-ph-8 — Tiêu điểm</div></div>
+  </div>
+
+  <h2>6. Khối nội dung</h2>
+  <div class="grid-3">
+    <div class="panel">
+      <div class="panel-heading">Khối mặc định</div>
+      <div class="panel-body">Dựng theo <code>layout/block.default.tpl</code> — gạch chân 2px mực dưới tiêu đề, không nền xám.</div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Tiêu điểm</div>
+      <div class="panel-body">Dựng theo <code>layout/block.primary.tpl</code> — viền 2px mực bao quanh thay vì nền màu ở tiêu đề.</div>
+    </div>
+    <div class="panel-border promo-box" style="padding: 14px;">
+      <div class="kicker-label">Khối viền</div>
+      <div class="headline" style="font-size: 15px;">block.border.tpl</div>
+    </div>
+  </div>
+
+  <h2>7. Điều hướng và nút</h2>
+  <div class="grid-2" style="align-items: start;">
+    <div>
+      <ul class="breadcrumbs" style="margin-bottom: 20px;">
+        <li><a href="index.html">Trang nhất</a></li>
+        <li><a href="chuyen-muc.html">Thời sự</a></li>
+        <li><a href="chi-tiet.html">Giao thông</a></li>
+      </ul>
+      <div class="pager">
+        <a href="#">Trước</a><a class="on" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">Sau</a>
+      </div>
+    </div>
+    <div>
+      <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 20px;">
+        <span class="btn btn-primary">Gửi bình luận</span>
+        <span class="btn">Hủy</span>
+      </div>
+      <div class="search-box" style="width: 280px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a7266" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4.3-4.3"></path></svg>
+        <input type="text" placeholder="Tìm kiếm…">
+      </div>
+    </div>
+  </div>
+
+  <h2>8. Mẫu tin</h2>
+  <div class="grid-2" style="align-items: start;">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="news-row">
+          <div class="ph ph--4 thumb"></div>
+          <div>
+            <h3 class="headline headline--item">Tin có ảnh nhỏ, tóm tắt một dòng</h3>
+            <p class="excerpt">Dòng tóm tắt ngắn gọn, cắt bớt khi dài hơn hai dòng.</p>
+            <div class="meta">Chuyên mục · [Giờ]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">Danh sách xếp hạng</div>
+      <div class="panel-body">
+        <ol class="ranked-list" style="padding-top: 0;">
+          <li><span class="num">1</span><a href="#">Tin không ảnh, đánh số Playfair đỏ</a></li>
+          <li><span class="num">2</span><a href="#">Không viền, cách nhau bằng khoảng trắng đều</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <h2>9. Ánh xạ sang theme NukeViet</h2>
+  <p class="text-muted" style="margin-bottom: 12px;">Bảng này là đường đi khi chuyển bản mẫu tĩnh thành theme <code>themes/giaodienmau3/</code> ở bước sau. Tên file đối chiếu trực tiếp với <code>themes/default/</code> của repo.</p>
+  <table class="maptable">
+    <thead>
+      <tr><th style="width: 26%;">Phần trong bản mẫu</th><th style="width: 34%;">File theme tương ứng</th><th>Ghi chú</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Thanh trên cùng, măng sét, menu, đường dẫn</td><td><code>layout/header_extended.tpl</code></td><td>Vùng <code>[CONTACT_DEFAULT]</code>, <code>[HEAD_RIGHT]</code>, <code>[MENU_SITE]</code>. <code>[HEAD_RIGHT]</code> ở đây chứa ô tìm kiếm + đăng nhập/đặt báo thay vì banner quảng cáo mặc định — cần khai báo lại nội dung vị trí này khi dựng theme.</td></tr>
+      <tr><td>Bố cục 3 cột trang chủ / chi tiết</td><td><code>layout/layout.left-main-right.tpl</code></td><td>5 / 13 / 6 trong lưới 24 cột</td></tr>
+      <tr><td>Bố cục 2 cột trang chuyên mục</td><td><code>layout/layout.main-right.tpl</code></td><td>18 / 6 cột</td></tr>
+      <tr><td><code>.panel</code> mặc định (Chuyên mục, Đọc nhiều, Mới cập nhật, Tin trong ngày…)</td><td><code>layout/block.default.tpl</code></td><td>Giữ nguyên panel → panel-heading → panel-body, chỉ đổi CSS</td></tr>
+      <tr><td><code>.panel-primary</code> (Tiêu điểm)</td><td><code>layout/block.primary.tpl</code></td><td>Cấu trúc như trên, đổi viền 2px thay nền màu ở tiêu đề</td></tr>
+      <tr><td><code>.panel-border</code> (Bản tin sáng)</td><td><code>layout/block.border.tpl</code></td><td>Tpl gốc bọc bằng <code>&lt;div class=&quot;well&quot;&gt;</code> — đổi CSS <code>.well</code> theo <code>.panel-border</code>, không có <code>{BLOCK_TITLE}</code> riêng</td></tr>
+      <tr><td>Tin nổi bật + lưới tin phụ + Tin trong ngày (trang chủ)</td><td><code>modules/news/block_newscenter.tpl</code>, <code>block_headline.tpl</code>, <code>block_news.tpl</code></td><td>Trang chủ NukeViet dựng từ block, không có <code>main.tpl</code> riêng</td></tr>
+      <tr><td>"Đọc nhiều"</td><td><code>modules/news/block_tophits.tpl</code></td><td>Class dùng bởi block toàn cục — CSS phải nằm ở <code>components.css</code>, không nằm ở CSS riêng module news (xem mục "Lỗi thường gặp" của SKILL.md)</td></tr>
+      <tr><td>"Chuyên mục" cột trái</td><td><code>modules/news/block_category.tpl</code></td><td>Danh sách chuyên mục kẻ chấm</td></tr>
+      <tr><td>Trang chuyên mục: tiêu đề mục, tin nổi bật ngang, lưới 2 tin phụ, danh sách, phân trang</td><td><code>modules/news/viewcat_list.tpl</code>, <code>viewcat_page.tpl</code>, <code>viewcat_grid.tpl</code></td><td>Layout <code>main-right</code></td></tr>
+      <tr><td>Trang chi tiết</td><td><code>modules/news/detail.tpl</code></td><td>Kicker + tiêu đề + sapo + ảnh + thân bài + trích dẫn + từ khóa</td></tr>
+      <tr><td>Bình luận</td><td><code>modules/comment/main.tpl</code>, <code>comment.tpl</code></td><td>Form và danh sách bình luận</td></tr>
+      <tr><td>Khối "Góc nhìn" cuối trang chủ</td><td>Block toàn cục vị trí <code>[BOTTOM]</code>, dựng theo <code>layout/block.default.tpl</code></td><td>Nội dung 4 thẻ bình luận cộng tác viên tùy biến — không có module tương ứng sẵn trong core, cần block riêng hoặc module tin tùy chỉnh</td></tr>
+      <tr><td>Ô quảng cáo <code>.ads-slot</code></td><td>Block <code>banners</code></td><td>Thay bằng block banners thật khi dựng theme</td></tr>
+      <tr><td>Chân trang + dải chuyển bản di động</td><td><code>layout/footer_extended.tpl</code></td><td>Vùng <code>[FOOTER]</code>; <code>.footerNav2</code> là dải riêng bên dưới, không đổi vị trí</td></tr>
+      <tr><td>Token và thành phần dùng chung</td><td><code>css/custom.css</code></td><td>Nạp sau cùng trong <code>theme.php</code> nên luôn ghi đè; giữ đúng thứ tự tokens → base → components → trang khi gộp vào theme</td></tr>
+    </tbody>
+  </table>
+
+  <h2>10. Nguyên tắc khi mở rộng</h2>
+  <ul style="line-height: 1.9;">
+    <li>Màu mới phải lấy từ artboard gốc và thêm vào <code>tokens.css</code> kèm ghi chú nơi dùng; không viết mã màu rời rạc trong trang.</li>
+    <li>Tiêu đề luôn dùng Playfair Display, phần còn lại dùng Noto Serif. Không trộn thêm họ chữ thứ ba.</li>
+    <li>Không bo góc ở bất kỳ thành phần nào — đây là đặc trưng cố ý của hướng thiết kế này.</li>
+    <li>Ô giữ chỗ ảnh chỉ dùng 8 biến thể <code>--nt-ph-1</code>…<code>--nt-ph-8</code> đã có; cần thêm vị trí ảnh mới thì luân phiên lại các biến thể này, không tạo gradient mới.</li>
+    <li>Nhóm phần tử cùng cấp bằng <code>flex</code>/<code>grid</code> kèm <code>gap</code>, không dùng margin lẻ từng phần tử.</li>
+    <li>Vùng chạm trên di động tối thiểu 44px; chữ thân bài trang chi tiết không nhỏ hơn 16px.</li>
+    <li>Biểu tượng vẽ bằng SVG nội tuyến, không dùng emoji hay font biểu tượng.</li>
+    <li>Dữ kiện chưa có để trong ngoặc vuông <code>[ ]</code>, không bịa số liệu hay tên riêng.</li>
+  </ul>
+
+</div>
+</body>
+</html>

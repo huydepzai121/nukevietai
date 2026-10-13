@@ -1,0 +1,885 @@
+/**
+ * Giao diện mẫu 3 — "Nhật Trình" — Thành phần dùng chung
+ *
+ * Mọi khối dưới đây dùng ở nhiều trang: measng sét, menu, đường dẫn, khối nội
+ * dung (panel), mẫu tin, chân trang. Phần chỉ riêng một trang nằm ở page-*.css.
+ */
+
+/* ==========================================================================
+   Thanh trên cùng — [CONTACT_DEFAULT] [SOCIAL_ICONS] [PERSONALAREA]
+   ========================================================================== */
+
+.section-header-bar {
+    background-color: var(--nt-ink);
+    color: var(--nt-on-ink);
+    font-size: 12px;
+    letter-spacing: .02em;
+}
+
+.header-nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+}
+
+.header-nav-inner .grp {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-nav-inner .sep {
+    color: var(--nt-topbar-sep);
+}
+
+.header-nav-inner .rss {
+    color: var(--nt-gold);
+}
+
+/* ==========================================================================
+   Măng sét — #header + .logo + .right-ads → [HEAD_RIGHT]
+   ========================================================================== */
+
+#header {
+    display: grid;
+    grid-template-columns: var(--nt-col-left) 1fr var(--nt-col-right);
+    align-items: center;
+    gap: var(--nt-gutter);
+    padding: 26px 0 20px;
+}
+
+.masthead-issue {
+    font-size: 12px;
+    color: var(--nt-muted);
+    line-height: 1.7;
+}
+
+.masthead-issue .kicker-mini {
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    font-size: 10px;
+    color: var(--nt-red);
+    font-weight: 700;
+}
+
+.logo {
+    text-align: center;
+}
+
+.logo .site_authority {
+    font-size: 11px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--nt-muted);
+    margin-bottom: 8px;
+}
+
+.logo .brand {
+    display: inline-block;
+    font-family: var(--nt-font-display);
+    font-weight: 900;
+    font-size: 62px;
+    line-height: 1;
+    letter-spacing: -.01em;
+    color: var(--nt-ink);
+}
+
+.logo .site_description {
+    display: block;
+    font-family: var(--nt-font-display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--nt-tagline);
+    margin-top: 8px;
+}
+
+.right-ads {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--nt-border);
+    background-color: var(--nt-surface);
+    padding: 7px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-box input {
+    flex-grow: 1;
+    border: 0;
+    background: none;
+    font-family: inherit;
+    font-size: 12px;
+    color: var(--nt-ink-soft);
+    padding: 0;
+    outline: none;
+}
+
+.search-box input::placeholder {
+    color: var(--nt-muted-soft);
+}
+
+.account-links {
+    font-size: 11px;
+    color: var(--nt-muted);
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    display: flex;
+    gap: 8px;
+}
+
+.account-links a {
+    color: var(--nt-muted);
+}
+
+.account-links a:hover {
+    color: var(--nt-red);
+}
+
+/* ==========================================================================
+   Menu — [MENU_SITE]
+   ========================================================================== */
+
+.section-nav {
+    border-top: 3px solid var(--nt-ink);
+    border-bottom: 1px solid var(--nt-ink);
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+}
+
+.menu-list {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.menu-list a {
+    color: var(--nt-ink);
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu-list a:hover {
+    color: var(--nt-red);
+}
+
+.menu-list a.on {
+    color: var(--nt-red);
+    border-bottom-color: var(--nt-red);
+}
+
+.menu-list a.is-more {
+    color: var(--nt-muted-soft);
+}
+
+.menu-tools {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--nt-muted);
+}
+
+/* ==========================================================================
+   Đường dẫn — .third-nav + .breadcrumbs → header_extended.tpl
+   ========================================================================== */
+
+.third-nav {
+    border-bottom: 1px solid var(--nt-border);
+    padding: 12px 0;
+}
+
+.third-nav .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '/';
+    color: var(--nt-border-dotted);
+}
+
+.breadcrumbs a {
+    color: var(--nt-muted);
+}
+
+.breadcrumbs li:last-child {
+    color: var(--nt-ink-soft);
+}
+
+.current-time {
+    font-size: 12px;
+    color: var(--nt-muted);
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Khối nội dung — panel → panel-heading → panel-body (layout/block.*.tpl)
+   ========================================================================== */
+
+.panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: var(--nt-font-display);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--nt-ink);
+    padding-bottom: 6px;
+}
+
+.panel-heading .subtitle {
+    font-style: italic;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 15px;
+    color: var(--nt-muted);
+}
+
+.panel-body {
+    padding-top: 12px;
+}
+
+/* Khối viền đậm — dùng cho nội dung cần hút mắt (layout/block.primary.tpl) */
+.panel-primary {
+    border: 2px solid var(--nt-ink);
+    padding: 16px;
+}
+
+.panel-primary .panel-heading {
+    border-bottom: 0;
+    padding-bottom: 10px;
+    font-size: 10px;
+    letter-spacing: .18em;
+    color: var(--nt-red);
+    font-weight: 700;
+}
+
+.panel-primary .panel-body {
+    padding-top: 0;
+}
+
+.panel-primary .cta-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 11.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--nt-red);
+}
+
+/* Khối viền mảnh, không thanh tiêu đề riêng (layout/block.border.tpl) */
+.panel-border {
+    border: 1px solid var(--nt-border);
+    background-color: var(--nt-surface);
+    padding: 14px;
+}
+
+/* ==========================================================================
+   Danh sách phân cách chấm — chuyên mục, tin trong ngày, mới cập nhật
+   ========================================================================== */
+
+.dotted-list li {
+    border-bottom: 1px dotted var(--nt-border-dotted);
+    padding: 9px 0;
+    font-size: 14px;
+}
+
+.dotted-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.dotted-list a {
+    color: var(--nt-ink-soft);
+    display: block;
+}
+
+.dotted-list a:hover {
+    color: var(--nt-red);
+}
+
+/* Hàng tin có ảnh nhỏ — "Tin trong ngày", "Cùng chuyên mục" */
+.news-row {
+    display: flex;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px dotted var(--nt-border-dotted);
+}
+
+.news-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.news-row .thumb {
+    width: 120px;
+    height: 78px;
+    flex-shrink: 0;
+}
+
+.news-row .headline {
+    font-size: 19px;
+}
+
+.news-row .excerpt {
+    font-size: 13.5px;
+    color: var(--nt-ink-soft);
+    margin-top: 6px;
+    line-height: 1.55;
+}
+
+/* Danh sách xếp hạng — "Đọc nhiều" */
+.ranked-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 12px;
+}
+
+.ranked-list li {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.ranked-list .num {
+    font-family: var(--nt-font-display);
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--nt-red);
+    line-height: .9;
+    width: 22px;
+    flex-shrink: 0;
+}
+
+.ranked-list a {
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: var(--nt-ink);
+}
+
+.ranked-list a:hover {
+    color: var(--nt-red);
+}
+
+/* Danh sách theo giờ — "Mới cập nhật" */
+.time-list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 6px;
+}
+
+.time-list li {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px dotted var(--nt-border-dotted);
+}
+
+.time-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.time-list .time {
+    font-size: 11.5px;
+    color: var(--nt-red);
+    font-weight: 700;
+    width: 42px;
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+.time-list a {
+    font-size: 13.5px;
+    line-height: 1.45;
+    color: var(--nt-ink);
+}
+
+.time-list a:hover {
+    color: var(--nt-red);
+}
+
+/* ==========================================================================
+   Nhãn chuyên mục và mốc thời gian — dùng lặp lại trong mọi mẫu tin
+   ========================================================================== */
+
+.kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10.5px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--nt-red);
+    font-weight: 700;
+    margin: 14px 0 8px;
+}
+
+.kicker .sep {
+    width: 26px;
+    height: 1px;
+    background-color: var(--nt-border);
+    display: inline-block;
+}
+
+.kicker .time {
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--nt-muted);
+    font-size: 11.5px;
+}
+
+.meta {
+    font-size: 11.5px;
+    color: var(--nt-muted);
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   Tiêu đề tin — luôn Playfair Display, kích cỡ theo modifier
+   ========================================================================== */
+
+.headline {
+    font-family: var(--nt-font-display);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--nt-ink);
+}
+
+.headline a {
+    color: inherit;
+}
+
+.headline a:hover {
+    color: var(--nt-red);
+}
+
+.headline--hero {
+    font-size: 36px;
+    line-height: 1.16;
+    letter-spacing: -.01em;
+}
+
+.headline--sub {
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.headline--item {
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+.headline--sm {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.excerpt {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--nt-ink-soft);
+}
+
+.excerpt--sm {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.byline {
+    font-size: 12px;
+    color: var(--nt-muted);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Ô giữ chỗ ảnh — dải chuyển màu sepia, thay bằng ảnh thật khi có
+   ========================================================================== */
+
+.ph {
+    position: relative;
+    overflow: hidden;
+    background-image: var(--nt-ph-1);
+    flex-shrink: 0;
+}
+
+.ph--2 { background-image: var(--nt-ph-2); }
+.ph--3 { background-image: var(--nt-ph-3); }
+.ph--4 { background-image: var(--nt-ph-4); }
+.ph--5 { background-image: var(--nt-ph-5); }
+.ph--6 { background-image: var(--nt-ph-6); }
+.ph--7 { background-image: var(--nt-ph-7); }
+.ph--8 { background-image: var(--nt-ph-8); }
+
+.ph .ph-label {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--nt-ink);
+    color: var(--nt-on-ink);
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: 5px 9px;
+}
+
+/* ==========================================================================
+   Thẻ từ khóa
+   ========================================================================== */
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid var(--nt-border);
+    background-color: var(--nt-surface);
+    padding: 5px 10px;
+    font-size: 12px;
+    color: var(--nt-ink-soft);
+}
+
+.tag:hover {
+    border-color: var(--nt-red);
+    color: var(--nt-red);
+}
+
+/* ==========================================================================
+   Hộp bản tin — layout/block.border.tpl ("well")
+   ========================================================================== */
+
+.promo-box .kicker-label {
+    font-size: 10px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--nt-red);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.promo-box .headline {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.promo-box .field {
+    display: block;
+    width: 100%;
+    border: 1px solid var(--nt-border);
+    background-color: var(--nt-paper);
+    padding: 8px 10px;
+    font-size: 12px;
+    font-family: inherit;
+    color: var(--nt-ink-soft);
+    margin-bottom: 8px;
+}
+
+.promo-box .field::placeholder {
+    color: var(--nt-muted-soft);
+}
+
+.promo-box .btn-cta {
+    display: block;
+    width: 100%;
+    background-color: var(--nt-red);
+    color: var(--nt-surface);
+    text-align: center;
+    padding: 9px;
+    font-size: 12px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+}
+
+.promo-box .btn-cta:hover {
+    background-color: var(--nt-red-dark);
+}
+
+/* ==========================================================================
+   Nút và phân trang
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 13px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--nt-ink);
+    background-color: var(--nt-surface);
+    color: var(--nt-ink);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--nt-red);
+    border-color: var(--nt-red);
+    color: var(--nt-surface);
+}
+
+.btn-primary:hover {
+    background-color: var(--nt-red-dark);
+    border-color: var(--nt-red-dark);
+}
+
+.pager {
+    display: flex;
+    gap: 4px;
+}
+
+.pager--center {
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.pager a,
+.pager span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    height: 36px;
+    border: 1px solid var(--nt-border);
+    color: var(--nt-ink-soft);
+    font-size: 13px;
+    padding: 0 8px;
+}
+
+.pager a.on {
+    background-color: var(--nt-ink);
+    border-color: var(--nt-ink);
+    color: var(--nt-paper);
+}
+
+/* ==========================================================================
+   Ô quảng cáo giữ chỗ
+   ========================================================================== */
+
+.ads-slot {
+    border: 1px dashed var(--nt-border);
+    background-color: var(--nt-surface);
+    color: var(--nt-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Khối "Góc nhìn" — dải nhấn full-width, vị trí [BOTTOM]
+   ========================================================================== */
+
+.section-feature {
+    border-top: 3px solid var(--nt-ink);
+    border-bottom: 1px solid var(--nt-ink);
+    background-color: var(--nt-tint);
+}
+
+.section-feature .wraper {
+    padding: 26px 0 30px;
+}
+
+.feature-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.feature-head .title {
+    font-family: var(--nt-font-display);
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--nt-ink);
+}
+
+.feature-head .subtitle {
+    font-family: var(--nt-font-display);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--nt-muted);
+}
+
+.opinion-card {
+    border-left: 2px solid var(--nt-red);
+    padding-left: 14px;
+}
+
+.opinion-card .headline {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.opinion-card .excerpt {
+    font-size: 13.5px;
+    color: var(--nt-ink-soft);
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* ==========================================================================
+   Chân trang — #footer → [FOOTER]
+   ========================================================================== */
+
+#footer {
+    background-color: var(--nt-ink);
+    color: var(--nt-footer-text);
+    padding: 34px 0 26px;
+}
+
+#footer a {
+    color: var(--nt-footer-text);
+}
+
+#footer a:hover {
+    color: var(--nt-gold);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.4fr;
+    gap: var(--nt-gutter);
+}
+
+.footer-brand {
+    font-family: var(--nt-font-display);
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--nt-paper);
+}
+
+.footer-about {
+    font-size: 13px;
+    line-height: 1.7;
+    margin-top: 10px;
+}
+
+.footer-col-title {
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--nt-gold);
+    margin-bottom: 10px;
+}
+
+.footer-links li {
+    padding: 3px 0;
+    font-size: 13px;
+}
+
+.footer-contact {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--nt-border-dark);
+    margin-top: 22px;
+    padding-top: 16px;
+    font-size: 12px;
+    color: var(--nt-footer-muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Dải cuối cùng — chuyển đổi máy tính/di động, lên đầu trang */
+.footerNav2 {
+    background-color: var(--nt-ink);
+    border-top: 1px solid var(--nt-border-dark);
+    padding: 10px 0;
+    color: var(--nt-footer-text);
+}
+
+.footerNav2 .inner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 40px;
+}
+
+.footerNav2 .pill {
+    width: 30px;
+    height: 30px;
+    background-color: var(--nt-border-dark);
+    color: var(--nt-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerNav2 .pill.on {
+    background-color: var(--nt-red);
+    color: var(--nt-paper);
+}
+
+.footerNav2 .bttop {
+    width: 40px;
+    height: 40px;
+    background-color: var(--nt-border-dark);
+    color: var(--nt-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}

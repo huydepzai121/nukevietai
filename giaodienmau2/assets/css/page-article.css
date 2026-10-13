@@ -1,0 +1,184 @@
+/**
+ * Giao diện mẫu 2 — Trang chi tiết bài viết
+ * Tương ứng: layout.left-main-right.tpl + modules/news/detail.tpl
+ */
+
+/* Đang ở chuyên mục Đô thị, không phải trang chủ */
+.navbar li.active a {
+    background-color: transparent;
+    color: var(--ink-soft);
+}
+
+.navbar li:nth-child(4) a {
+    background-color: var(--violet);
+    color: #ffffff;
+}
+
+#news_detail h1 {
+    font-size: 31px;
+    margin: 12px 0 14px;
+}
+
+.byline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.byline .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-pill);
+    flex-shrink: 0;
+    background-image: linear-gradient(135deg, #6b4eff, #a24bf0);
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.byline .who {
+    font-weight: 700;
+    font-size: 13.5px;
+}
+
+.share {
+    display: flex;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.share span {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-pill);
+    background-color: var(--bg);
+    color: var(--violet-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sapo */
+.sapo {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.62;
+    color: var(--ink-soft);
+    margin: 18px 0 16px;
+}
+
+/* Thân bài — cỡ chữ đọc dài trên cột 555px */
+.bodytext p {
+    font-size: 16px;
+    line-height: 1.78;
+    margin: 0 0 18px;
+}
+
+.bodytext h2 {
+    font-size: 20px;
+    margin: 26px 0 12px;
+}
+
+.figure img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-img);
+}
+
+.figure figcaption {
+    color: var(--muted);
+    font-size: 12.5px;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.pullquote {
+    background-color: var(--violet-tint);
+    border-radius: var(--radius-card);
+    padding: 20px 22px;
+    margin: 22px 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--violet-dark);
+}
+
+.article-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+/* Tin liên quan */
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.related-grid img {
+    width: 100%;
+    height: 96px;
+}
+
+.related-grid h3 {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.related-grid h3 a {
+    color: var(--ink);
+}
+
+/* Bình luận — module comment */
+.comment-box {
+    width: 100%;
+    height: 86px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-img);
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--ink);
+    background-color: var(--bg);
+    resize: none;
+    outline: 0;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.comment-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.comment-row .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-pill);
+    background-color: var(--mint-tint);
+    color: #0a7d68;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

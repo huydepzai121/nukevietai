@@ -1,0 +1,26 @@
+/**
+ * NukeViet Content Management System
+ * @version 4.x
+ * @author VINADES.,JSC <contact@vinades.vn>
+ * @copyright (C) 2009-2021 VINADES.,JSC. All rights reserved
+ * @license GNU/GPL version 2 or any later version
+ * @see https://github.com/nukeviet The NukeViet CMS GitHub project
+ */
+
+/*
+ * File này không còn rule CSS nào — toàn bộ lớp nhìn của khu bình luận nằm
+ * ở css/components.css (nạp toàn cục qua theme.php, xem ghi chú tại khu vực
+ * "Bình luận" trong file đó), vì css/comment.css của theme chỉ được nhúng
+ * bởi modules/comment/main.tpl khi hằng NV_COMM_ID đã được định nghĩa
+ * (modules/comment/comment.php:351), tức chỉ trên trang chi tiết bài viết
+ * và trang module page. Trên trang module bình luận độc lập
+ * (index.php?nv=comment) hằng này không được định nghĩa nên file này không
+ * được nạp — nếu còn rule nào ở đây, khu bình luận trên trang đó sẽ mất lớp
+ * nhìn tương ứng.
+ *
+ * File này KHÔNG được xóa dù rỗng: sự tồn tại của nó quyết định theme nào
+ * cấp CSS cho module comment. modules/comment/comment.php:331 kiểm tra
+ * file_exists() của chính css/comment.css này để chọn $templateCSS — xóa
+ * file, module comment sẽ quay về dùng css/comment.css của theme default
+ * thay vì theme này.
+ */

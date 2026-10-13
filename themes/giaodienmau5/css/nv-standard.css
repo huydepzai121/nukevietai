@@ -1,0 +1,125 @@
+/**
+ * Lớp chuẩn thiết kế cho theme NukeViet 4.x (Bootstrap 3.4.1, lưới 24 cột)
+ *
+ * Do scripts/scaffold-theme.mjs chép vào themes/<ten-theme>/css/nv-standard.css
+ * và nạp ngay trước css/custom.css. Chỉ đụng tới khung, lưới, nhịp chữ và
+ * trạng thái focus — không đặt màu hay hình khối riêng của thiết kế nào.
+ * Cần các token --container, --gutter, --text-*, --measure, --section-py*
+ * (trong css/ds-tokens.css chép từ design system); thiếu thì dùng giá trị dự phòng.
+ *
+ * Điểm ngắt BS3: xs < 768 · sm ≥ 768 · md ≥ 992 · lg ≥ 1200.
+ */
+
+/* ==========================================================================
+   KHUNG — .wraper + .container tối đa 1190px (thay cho 1080px của default)
+   ========================================================================== */
+
+.wraper {
+    width: 100%;
+    max-width: var(--container, 1190px);
+}
+
+@media (min-width: 992px) {
+    .wraper { width: 100%; max-width: var(--container, 1190px); }
+}
+
+@media (min-width: 1200px) {
+    .wraper { width: 100%; max-width: var(--container, 1190px); }
+}
+
+/* ==========================================================================
+   LƯỚI — gutter 20px (10px mỗi bên) thay cho 10px (5px) của bootstrap.min.css
+   ========================================================================== */
+
+.container {
+    padding-left: calc(var(--gutter, 20px) / 2);
+    padding-right: calc(var(--gutter, 20px) / 2);
+}
+
+.row {
+    margin-left: calc(var(--gutter, 20px) / -2);
+    margin-right: calc(var(--gutter, 20px) / -2);
+}
+
+.row > [class*="col-xs-"],
+.row > [class*="col-sm-"],
+.row > [class*="col-md-"],
+.row > [class*="col-lg-"] {
+    padding-left: calc(var(--gutter, 20px) / 2);
+    padding-right: calc(var(--gutter, 20px) / 2);
+}
+
+/* ==========================================================================
+   CHỮ — gốc 16px, tỉ lệ 1.25; khối văn bản dài tối đa 65ch
+   ========================================================================== */
+
+body {
+    font-size: var(--text-body, 1rem);
+}
+
+h1, .h1 { font-size: var(--text-h1, 2.441rem); }
+h2, .h2 { font-size: var(--text-h2, 1.953rem); }
+h3, .h3 { font-size: var(--text-h3, 1.563rem); }
+h4, .h4 { font-size: var(--text-h4, 1.25rem); }
+h5, .h5 { font-size: var(--text-h5, 1rem); }
+h6, .h6 { font-size: var(--text-h6, .8rem); }
+
+/* Thân bài chi tiết tin, trang nội dung (module page), giới thiệu */
+#news-bodyhtml,
+.bodytext,
+.page .bodytext {
+    max-width: var(--measure, 65ch);
+    font-size: var(--text-article, 1rem);
+    line-height: 1.85;
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --text-display: 2.441rem;
+        --text-h1: 1.953rem;
+        --text-h2: 1.563rem;
+        --text-h3: 1.25rem;
+    }
+}
+
+/* ==========================================================================
+   SECTION — đệm dọc 24px (xs) · 48px (sm) · 96px (md+) cho khối .nv-section
+   (dùng trong layout/block tpl khi dựng khối lớn kiểu landing/doanh nghiệp)
+   ========================================================================== */
+
+.nv-section { padding: var(--section-py, 1.5rem) 0; }
+
+@media (min-width: 768px) {
+    .nv-section { padding: var(--section-py-md, 3rem) 0; }
+}
+
+@media (min-width: 992px) {
+    .nv-section { padding: var(--section-py-lg, 6rem) 0; }
+}
+
+/* ==========================================================================
+   TRUY CẬP — focus bàn phím luôn hiện rõ, vùng chạm ≥ 44px trên di động
+   ========================================================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+.btn:focus-visible,
+[tabindex]:focus-visible {
+    outline: 2px solid var(--color-accent, currentColor);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+@media (max-width: 767.98px) {
+    .form-control { height: var(--touch-min, 44px); }
+
+    .btn,
+    .pagination > li > a,
+    .pagination > li > span {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

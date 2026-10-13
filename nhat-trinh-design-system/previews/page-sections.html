@@ -1,0 +1,46 @@
+<!-- @dsCard group="Patterns" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mẫu section — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+body { padding: 0; } .pv { max-width: none; gap: 0; }
+</style>
+</head>
+<body>
+<main class="pv">
+<section class="container"><div class="hero">
+<div class="stack-lg"><span class="eyebrow">Giới thiệu</span><h1 class="hero__title">Tiêu đề hero ngắn, nói rõ giá trị chính</h1><p class="lead">Một đến hai câu giải thích bạn làm gì, cho ai, và vì sao nên chọn bạn.</p><div class="cluster"><a class="btn btn-primary btn-lg" href="#">Bắt đầu</a><a class="btn btn-lg" href="#">Xem bảng giá</a></div></div>
+<div class="hero__media ph"></div>
+</div></section>
+<section class="section section--alt"><div class="container stack-lg">
+<h2 class="section-title">Vì sao chọn chúng tôi</h2>
+<div class="grid grid-3">
+<div class="stack"><div class="numeral">01</div><h3>Ý tưởng thứ nhất</h3><p>Mô tả ngắn về lợi ích.</p></div>
+<div class="stack"><div class="numeral">02</div><h3>Ý tưởng thứ hai</h3><p>Mô tả ngắn về lợi ích.</p></div>
+<div class="stack"><div class="numeral">03</div><h3>Ý tưởng thứ ba</h3><p>Mô tả ngắn về lợi ích.</p></div>
+</div></div></section>
+<section class="section"><div class="container"><div class="cta"><div class="stack"><span class="eyebrow eyebrow--plain">Sẵn sàng?</span><h2>Lời kêu gọi hành động ngắn gọn</h2></div><a class="btn btn-primary btn-lg" href="#">Liên hệ ngay</a></div></div></section>
+<footer class="site-footer"><div class="container">
+<div class="footer-grid">
+<div class="stack"><a class="brand" href="#">Thương Hiệu</a><p>Mô tả ngắn về doanh nghiệp. Địa chỉ: [địa chỉ].</p></div>
+<div><div class="footer-title">Công ty</div><ul class="footer-links"><li><a href="#">Giới thiệu</a></li><li><a href="#">Tuyển dụng</a></li></ul></div>
+<div><div class="footer-title">Hỗ trợ</div><ul class="footer-links"><li><a href="#">Câu hỏi</a></li><li><a href="#">Liên hệ</a></li></ul></div>
+<div><div class="footer-title">Theo dõi</div><ul class="footer-links"><li><a href="#">Bản tin</a></li><li><a href="#">RSS</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>© [năm] [Tên doanh nghiệp]</span><span>[Giấy phép / mã số thuế]</span></div>
+</div></footer>
+</main>
+</body>
+</html>

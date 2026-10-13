@@ -1,0 +1,109 @@
+/**
+ * Giao diện mẫu — Nền tảng: reset, chữ, khung trang
+ * Đối chiếu: themes/default/css/style.css (mục "Global")
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--gd-body-bg);
+    color: var(--gd-text);
+    font-family: var(--gd-sans);
+    font-size: var(--gd-fs-base);
+    line-height: var(--gd-lh-base);
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--gd-link);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--gd-link-hover);
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Khung nội dung 1080px của theme default */
+.wraper {
+    width: var(--gd-wrap);
+    margin: 0 auto;
+}
+
+.text-muted {
+    color: var(--gd-muted);
+    font-size: var(--gd-fs-sm);
+}
+
+/* Bố cục 3 cột theo layout.left-main-right (5 / 13 / 6 trong lưới 24 cột) */
+.body-grid {
+    display: flex;
+    gap: var(--gd-gutter);
+    padding: 14px 0 30px;
+    align-items: flex-start;
+}
+
+.col-left {
+    width: var(--gd-col-left);
+    flex-shrink: 0;
+}
+
+.col-main {
+    width: var(--gd-col-main);
+    flex-shrink: 0;
+}
+
+.col-right {
+    width: var(--gd-col-right);
+    flex-shrink: 0;
+}
+
+/* Biến thể layout.main-right (18 / 6 cột) dùng cho trang chuyên mục */
+.col-main--wide {
+    width: var(--gd-col-wide);
+}
+
+/* Lưới phụ dùng lại ở nhiều trang */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 25px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--gd-gutter);
+}

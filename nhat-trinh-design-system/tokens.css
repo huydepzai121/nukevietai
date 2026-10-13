@@ -1,0 +1,134 @@
+/**
+ * Nhật Trình — Design tokens
+ *
+ * Hai lớp:
+ *   1. Nguyên liệu (--nt-*): giá trị gốc của phong cách báo in. Không dùng
+ *      trực tiếp trong thành phần mới.
+ *   2. Ngữ nghĩa (--color-*, --font-*, --text-*, --space-*...): tên theo vai
+ *      trò, dùng cho mọi loại website. Đổi thương hiệu = đổi lớp này.
+ */
+
+:root {
+    /* ---------- 1. Nguyên liệu ---------- */
+    --nt-paper: #f7f3ea;
+    --nt-surface: #fffdf7;
+    --nt-tint: #f2ece0;
+    --nt-ink: #14110d;
+    --nt-ink-soft: #3d372e;
+    --nt-muted: #7a7266;
+    --nt-muted-soft: #9a9184;
+    --nt-tagline: #5b5348;
+    --nt-red: #a8231c;
+    --nt-red-dark: #7c1813;
+    --nt-gold: #d8b26a;
+    --nt-border: #d8cfbe;
+    --nt-border-dotted: #cfc5b2;
+    --nt-border-dark: #3a342a;
+    --nt-topbar-sep: #6b6355;
+    --nt-on-ink: #e8e0d0;
+    --nt-footer-text: #cfc6b5;
+    --nt-footer-muted: #8c8474;
+
+    /* ---------- 2. Màu ngữ nghĩa ---------- */
+    --color-bg: var(--nt-paper);               /* nền trang — không dùng trắng thuần */
+    --color-surface: var(--nt-surface);        /* thẻ, ô nhập, hộp nổi */
+    --color-surface-alt: var(--nt-tint);       /* dải nhấn, vùng nền phụ */
+    --color-inverse: var(--nt-ink);            /* nền tối: thanh trên cùng, chân trang, khối CTA */
+
+    --color-text: var(--nt-ink);               /* tiêu đề, chữ đậm */
+    --color-text-body: var(--nt-ink-soft);     /* đoạn văn */
+    --color-text-muted: var(--nt-muted);       /* phụ chú, ngày giờ, nhãn */
+    --color-text-subtle: var(--nt-muted-soft); /* placeholder, mục bị tắt */
+    --color-text-tagline: var(--nt-tagline);   /* mô tả dưới logo / tiêu đề lớn */
+    --color-text-on-inverse: var(--nt-on-ink); /* chữ trên nền tối */
+    --color-text-on-inverse-muted: var(--nt-footer-muted);
+
+    --color-accent: var(--nt-red);             /* liên kết, CTA, nhãn, trạng thái chọn */
+    --color-accent-hover: var(--nt-red-dark);
+    --color-on-accent: var(--nt-surface);      /* chữ trên nền đỏ */
+    --color-highlight: var(--nt-gold);         /* điểm nhấn — chỉ dùng trên nền tối */
+
+    --color-border: var(--nt-border);          /* viền ô nhập, thẻ, dải phân cách */
+    --color-border-strong: var(--nt-ink);      /* kẻ đôi, gạch chân tiêu đề khối, khối nhấn */
+    --color-border-dotted: var(--nt-border-dotted);
+    --color-border-inverse: var(--nt-border-dark);
+
+    /* Trạng thái — suy ra từ bảng màu, không thêm hệ màu mới */
+    --color-danger: var(--nt-red);
+    --color-danger-bg: #f6e6e2;
+    --color-success: #3f5a2e;
+    --color-success-bg: #e9ecdc;
+    --color-warning: #8a5a12;
+    --color-warning-bg: #f4e7c9;
+
+    /* ---------- Chữ ---------- */
+    /* Tối đa 2 họ chữ. Gốc 16px, tỉ lệ 1.25 (major third): 13 · 16 · 20 · 25 · 31 · 39 · 61 */
+    --font-display: 'Playfair Display', Georgia, serif;  /* tiêu đề, số lớn, logo chữ */
+    --font-body: 'Noto Serif', Georgia, serif;          /* thân bài, giao diện, biểu mẫu */
+
+    --text-display: 3.815rem; /* 61px — logo chữ / hero rất lớn, Playfair 900 */
+    --text-h1: 2.441rem;      /* 39px — tiêu đề trang, lh 1.16 */
+    --text-h2: 1.953rem;      /* 31px — tiêu đề mục */
+    --text-h3: 1.563rem;      /* 25px — tiêu đề thẻ lớn */
+    --text-h4: 1.25rem;       /* 20px — tiêu đề thẻ */
+    --text-h5: 1rem;          /* 16px */
+    --text-h6: .8rem;         /* 13px */
+    --text-lead: 1.125rem;    /* 18px — sapo / đoạn dẫn, lh 1.65 */
+    --text-body: 1rem;        /* 16px — chữ gốc, lh 1.55 */
+    --text-article: 1rem;     /* 16px — thân bài dài, lh 1.85, không nhỏ hơn */
+    --text-sm: .875rem;       /* 14px */
+    --text-xs: .75rem;        /* 12px — phụ chú */
+    --text-label: .6875rem;   /* 11px — nhãn hoa dãn chữ */
+    --measure: 65ch;          /* độ dài dòng tối đa cho khối văn bản dài */
+
+    --tracking-label: .16em;  /* nhãn, kicker */
+    --tracking-nav: .1em;     /* menu, nút */
+    --tracking-tight: -.01em; /* tiêu đề lớn */
+
+    /* ---------- Khoảng cách — thang chuẩn 0–5 (giá trị như Bootstrap 5; BS3 không có tiện ích m-*/p-* nên dùng biến) ---------- */
+    --space-0: 0;
+    --space-1: .25rem;  /* 4px */
+    --space-2: .5rem;   /* 8px */
+    --space-3: 1rem;    /* 16px */
+    --space-4: 1.5rem;  /* 24px */
+    --space-5: 3rem;    /* 48px */
+    --space-6: 6rem;    /* 96px — đệm dọc section trên desktop */
+
+    /* Đệm dọc section: xs 24px · sm 48px · md+ 96px */
+    --section-py: var(--space-4);
+    --section-py-md: var(--space-5);
+    --section-py-lg: var(--space-6);
+
+    /* ---------- Bố cục — lưới 24 cột ---------- */
+    --grid-columns: 24;
+    --container: 1190px;        /* khung tối đa — .wraper và .container của NukeViet */
+    --container-narrow: 65ch;   /* bài viết, biểu mẫu dài */
+    --gutter: 20px;             /* 10px mỗi bên cột */
+    --header-height: 46px;
+    --touch-min: 44px;          /* vùng chạm tối thiểu trên di động */
+
+    /* ---------- Hình khối — đặc trưng báo in ---------- */
+    --radius: 0;
+    --rule-thin: 1px;
+    --rule-strong: 2px;
+    --rule-heavy: 3px;
+    --shadow: none;
+
+    /* ---------- Ô giữ chỗ ảnh — dải sepia ---------- */
+    --ph-1: linear-gradient(155deg, #d8c9ae 0%, #a8967c 45%, #6e6353 100%);
+    --ph-2: linear-gradient(160deg, #c3b7a6 0%, #8d8474 100%);
+    --ph-3: linear-gradient(160deg, #b9b1a3 0%, #7f7768 100%);
+    --ph-4: linear-gradient(150deg, #cdc0ad 0%, #918875 100%);
+    --ph-5: linear-gradient(150deg, #c6bba9 0%, #8a8170 100%);
+    --ph-6: linear-gradient(150deg, #d2c5b1 0%, #948a77 100%);
+    --ph-7: linear-gradient(150deg, #c9bda9 0%, #877e6d 100%);
+    --ph-8: linear-gradient(150deg, #cbbca4 0%, #7f7565 100%);
+
+    /* ---------- Chuyển động ---------- */
+    --ease: cubic-bezier(.2, .6, .2, 1);
+    --duration: 160ms;
+}
+
+/* Điểm ngắt — Bootstrap 3 của NukeViet (lưới 24 cột biên dịch sẵn):
+   xs < 768 · sm ≥ 768 · md ≥ 992 · lg ≥ 1200
+   Viết mobile-first (min-width); mọi row quan trọng khai báo tối thiểu xs / sm / md. */

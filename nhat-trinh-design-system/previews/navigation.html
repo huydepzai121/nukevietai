@@ -1,0 +1,33 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Điều hướng — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+body { padding: 0 0 32px; } .pv { max-width: none; gap: 0; }
+</style>
+</head>
+<body>
+<main class="pv">
+<div class="topbar"><div class="container"><span>[Thứ, ngày] · Hotline [số điện thoại]</span><span><a href="#">Đăng nhập</a> · <a href="#">Đăng ký</a></span></div></div>
+<header class="site-header"><div class="container"><a class="brand" href="#">Thương Hiệu</a><div class="input-group" style="max-width:280px"><input class="input" placeholder="Tìm kiếm"><button class="btn btn-dark">Tìm</button></div></div></header>
+<nav class="nav"><div class="container"><ul class="nav__list"><li><a href="#" aria-current="page">Trang chủ</a></li><li><a href="#">Giới thiệu</a></li><li><a href="#">Dịch vụ</a></li><li><a href="#">Sản phẩm</a></li><li><a href="#">Tin tức</a></li><li><a href="#">Liên hệ</a></li></ul><a class="btn btn-primary btn-sm" href="#">Nhận báo giá</a></div></nav>
+<div class="container stack-lg" style="padding-top:24px">
+<ol class="breadcrumbs"><li><a href="#">Trang chủ</a></li><li><a href="#">Dịch vụ</a></li><li>Thiết kế website</li></ol>
+<div class="tabs" role="tablist"><button role="tab" aria-selected="true">Tổng quan</button><button role="tab" aria-selected="false">Bảng giá</button><button role="tab" aria-selected="false">Câu hỏi</button></div>
+<ul class="pager"><li><a href="#">Trước</a></li><li><span aria-current="page">1</span></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">Sau</a></li></ul>
+</div>
+</main>
+</body>
+</html>

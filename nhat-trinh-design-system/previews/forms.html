@@ -1,0 +1,37 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biểu mẫu — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Biểu mẫu</h2>
+<div class="grid grid-2" style="max-width:720px">
+<label class="field"><span class="label">Họ và tên</span><input class="input" placeholder="Nguyễn Văn A"></label>
+<label class="field"><span class="label">Email</span><input class="input" type="email" placeholder="ban@vidu.vn"></label>
+<label class="field"><span class="label">Chủ đề</span><select class="select"><option>Tư vấn dịch vụ</option><option>Hỗ trợ</option></select></label>
+<label class="field is-invalid"><span class="label">Số điện thoại</span><input class="input" value="0123"><span class="help">Số điện thoại chưa đúng định dạng.</span></label>
+<label class="field" style="grid-column:1/-1"><span class="label">Nội dung</span><textarea class="textarea" placeholder="Bạn cần chúng tôi hỗ trợ điều gì?"></textarea><span class="help">Tối đa 500 ký tự.</span></label>
+<label class="check"><input type="checkbox" checked> Nhận bản tin hằng tuần</label>
+<div class="pv-row" style="justify-content:flex-end"><button class="btn">Hủy</button><button class="btn btn-primary">Gửi</button></div>
+</div>
+<h2 class="section-title">Ô nhập gắn nút</h2>
+<div class="input-group" style="max-width:420px"><input class="input" placeholder="Nhập email để nhận bản tin"><button class="btn btn-primary">Đăng ký</button></div>
+</main>
+</body>
+</html>

@@ -1,0 +1,132 @@
+/**
+ * Giao diện mẫu 3 — "Nhật Trình" — Nền tảng: reset, chữ, khung trang
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--nt-paper);
+    color: var(--nt-ink-soft);
+    font-family: var(--nt-font-body);
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--nt-red);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--nt-red-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--nt-font-display);
+    font-weight: 700;
+    color: var(--nt-ink);
+}
+
+p {
+    margin: 0 0 12px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* Khung nội dung 1080px — lưới 24 cột của NukeViet */
+.wraper {
+    width: var(--nt-wrap);
+    margin: 0 auto;
+}
+
+.text-muted {
+    color: var(--nt-muted);
+    font-size: 12px;
+}
+
+/* Bố cục 3 cột theo layout.left-main-right (5 / 13 / 6 trong lưới 24 cột) */
+.body-grid {
+    display: flex;
+    gap: var(--nt-gutter);
+    align-items: flex-start;
+    padding: 26px 0 34px;
+}
+
+.col-left {
+    width: var(--nt-col-left);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.col-main {
+    width: var(--nt-col-main);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.col-right {
+    width: var(--nt-col-right);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+/* Biến thể layout.main-right (18 / 6 cột) dùng cho trang chuyên mục */
+.col-main--wide {
+    width: var(--nt-col-wide);
+}
+
+/* Lưới phụ dùng lại ở nhiều trang — nhóm phần tử bằng grid + gap, không margin lẻ */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* Dải kẻ ngăn cách giữa các khối trong cột giữa */
+.divider {
+    border-top: 1px solid var(--nt-border);
+}

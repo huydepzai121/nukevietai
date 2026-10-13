@@ -1,0 +1,83 @@
+/**
+ * Giao diện mẫu — Trang chuyên mục
+ * Tương ứng: layout.main-right.tpl + module news (danh sách theo chuyên mục)
+ */
+
+.navbar li.n1 > a {
+    color: #555555;
+    background-color: #e7e7e7;
+}
+
+/* Tên chuyên mục */
+.cat-head {
+    border-bottom: 3px solid var(--gd-primary);
+    padding-bottom: 10px;
+    margin-bottom: 4px;
+}
+
+.cat-head h1 {
+    font-family: var(--gd-serif);
+    font-size: 30px;
+    color: var(--gd-primary-dark);
+}
+
+/* Chuyên mục con */
+.subcats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0 20px;
+}
+
+.subcats a {
+    display: block;
+    padding: 6px 14px;
+    background-color: var(--gd-surface);
+    border: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius-sm);
+    font-size: 13px;
+    color: var(--gd-text-soft);
+}
+
+.subcats a.on {
+    background-color: var(--gd-primary);
+    border-color: var(--gd-primary);
+    color: #ffffff;
+}
+
+/* Tin nổi bật của chuyên mục */
+.cat-lead {
+    background-color: var(--gd-surface);
+    border: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius);
+    padding: 15px;
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.cat-lead .headline {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.cat-lead .sapo {
+    color: #4a4a4a;
+    line-height: 1.55;
+}
+
+/* Thẻ tin dạng lưới hai cột */
+.card {
+    background-color: var(--gd-surface);
+    border: 1px solid var(--gd-border);
+    border-radius: var(--gd-radius);
+    overflow: hidden;
+}
+
+.card .body {
+    padding: 12px 14px 14px;
+}
+
+.card .headline {
+    font-size: 17px;
+}

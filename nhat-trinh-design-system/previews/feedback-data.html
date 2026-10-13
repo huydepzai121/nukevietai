@@ -1,0 +1,43 @@
+<!-- @dsCard group="Components" -->
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nhãn, thông báo, bảng — Nhật Trình</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="../tokens.css">
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../components.css">
+<style>
+body { padding: 32px; }
+.pv { display: flex; flex-direction: column; gap: 28px; max-width: 1080px; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+.pv-note { font-size: 12px; color: var(--color-text-muted); }
+
+</style>
+</head>
+<body>
+<main class="pv">
+<h2 class="section-title">Nhãn và thẻ từ khóa</h2>
+<div class="pv-row"><span class="badge">Mới</span><span class="badge badge--dark">Nổi bật</span><span class="badge badge--outline">Bản nháp</span><a class="tag" href="#">thiết kế</a><a class="tag" href="#">thương hiệu</a><a class="tag" href="#">in ấn</a></div>
+<h2 class="section-title">Thông báo</h2>
+<div class="stack" style="max-width:640px">
+<div class="alert alert--info"><strong>Lưu ý:</strong> Đơn hàng được xử lý trong giờ hành chính.</div>
+<div class="alert alert--success"><strong>Đã gửi.</strong> Chúng tôi sẽ liên hệ trong [thời gian].</div>
+<div class="alert alert--warning"><strong>Sắp hết hạn.</strong> Gói dịch vụ còn [số] ngày.</div>
+<div class="alert alert--danger"><strong>Lỗi.</strong> Không gửi được biểu mẫu, vui lòng thử lại.</div>
+</div>
+<h2 class="section-title">Bảng</h2>
+<table class="table" style="max-width:640px"><thead><tr><th>Hạng mục</th><th>Trạng thái</th><th class="num">Số lượng</th></tr></thead>
+<tbody><tr><td>Danh thiếp</td><td><span class="badge">Đang in</span></td><td class="num">[số]</td></tr><tr><td>Tờ rơi A5</td><td><span class="badge badge--outline">Chờ duyệt</span></td><td class="num">[số]</td></tr><tr><td>Catalogue</td><td><span class="badge badge--dark">Hoàn tất</span></td><td class="num">[số]</td></tr></tbody></table>
+<h2 class="section-title">Danh sách</h2>
+<div class="grid grid-3">
+<ul class="list-ruled"><li>Danh sách kẻ chấm</li><li>Ngăn dòng bằng viền chấm 1px</li><li>Dòng cuối không viền</li></ul>
+<ol class="list-ranked"><li><a href="#">Mục xếp hạng thứ nhất</a></li><li><a href="#">Số Playfair đỏ</a></li><li><a href="#">Không viền</a></li></ol>
+<dl class="spec"><dt>Kích thước</dt><dd>[số] × [số] cm</dd><dt>Chất liệu</dt><dd>Giấy mỹ thuật</dd><dt>Bảo hành</dt><dd>[số] tháng</dd></dl>
+</div>
+</main>
+</body>
+</html>

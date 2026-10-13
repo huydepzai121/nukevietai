@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nhật Trình — Design System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Noto+Serif:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="../themes/default/css/bootstrap.min.css">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+
+<header class="container text-center" style="padding-top: var(--space-5); padding-bottom: var(--space-4)">
+    <div class="stack" style="align-items: center">
+        <span class="eyebrow eyebrow--plain">Design System</span>
+        <h1 class="display">Nhật Trình</h1>
+        <p class="tagline">Phong cách báo in cổ điển cho mọi loại website</p>
+    </div>
+</header>
+
+<div class="rule-double"></div>
+
+<main class="container stack-lg" style="padding-top: var(--space-5); padding-bottom: var(--space-6)">
+    <p class="lead container--narrow" style="padding: 0; margin: 0">
+        Giấy ngà, mực đen, đỏ nhấn, hai họ chữ serif, không bo góc. Nạp
+        <code>tokens.css</code> → <code>base.css</code> → <code>components.css</code>
+        rồi dựng trang bằng các thành phần bên dưới. Chi tiết trong <code>README.md</code>.
+    </p>
+
+    <h2 class="section-title">Nền tảng</h2>
+    <ul class="grid grid-4 grid--flush list-ruled">
+        <li><a href="previews/colors.html">Màu</a></li>
+        <li><a href="previews/typography.html">Chữ</a></li>
+        <li><a href="previews/spacing-layout.html">Khoảng cách và bố cục</a></li>
+        <li><a href="previews/imagery.html">Ô giữ chỗ ảnh</a></li>
+    </ul>
+
+    <h2 class="section-title">Thành phần</h2>
+    <ul class="grid grid-4 grid--flush list-ruled">
+        <li><a href="previews/buttons.html">Nút</a></li>
+        <li><a href="previews/forms.html">Biểu mẫu</a></li>
+        <li><a href="previews/cards.html">Thẻ</a></li>
+        <li><a href="previews/navigation.html">Điều hướng</a></li>
+        <li><a href="previews/feedback-data.html">Nhãn, thông báo, bảng</a></li>
+        <li><a href="previews/page-sections.html">Mẫu section</a></li>
+    </ul>
+
+    <h2 class="section-title">Ví dụ <small>cùng một hệ thống, hai loại website</small></h2>
+    <div class="grid grid-2">
+        <a class="card card--boxed" href="examples/business.html">
+            <span class="eyebrow">Doanh nghiệp</span>
+            <span class="card__title">Website dịch vụ một trang</span>
+            <span class="card__text">Hero, dịch vụ, dự án, bảng giá, biểu mẫu liên hệ.</span>
+        </a>
+        <a class="card card--boxed" href="examples/news/index.html">
+            <span class="eyebrow">Tin tức</span>
+            <span class="card__title">Website báo điện tử</span>
+            <span class="card__text">Trang chủ 3 cột, chuyên mục, chi tiết bài, bản di động.</span>
+        </a>
+    </div>
+</main>
+
+</body>
+</html>
