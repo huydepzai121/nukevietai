@@ -173,7 +173,7 @@ function nv_site_theme($contents, $full = true)
     // Lớp nhìn "AI Today": font -> token -> theme (theo markup gốc của default)
     $html_links[] = [
         'rel' => 'stylesheet',
-        'href' => 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap&subset=vietnamese'
+        'href' => 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap&subset=vietnamese'
     ];
     $html_links[] = [
         'rel' => 'stylesheet',
@@ -196,6 +196,11 @@ function nv_site_theme($contents, $full = true)
     $html_links[] = [
         'rel' => 'stylesheet',
         'href' => NV_STATIC_URL . 'themes/' . $global_config['module_theme'] . '/css/ai-theme-modes.css'
+    ];
+    // AI Today v2 design system (nạp cuối cùng)
+    $html_links[] = [
+        'rel' => 'stylesheet',
+        'href' => NV_STATIC_URL . 'themes/' . $global_config['module_theme'] . '/css/aitoday.css'
     ];
 
     // Customs Style

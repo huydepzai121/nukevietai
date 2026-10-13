@@ -6,6 +6,9 @@
         <!-- BEGIN: metatags --><meta {THEME_META_TAGS.name}="{THEME_META_TAGS.value}" content="{THEME_META_TAGS.content}">
         <!-- END: metatags -->
         <link rel="shortcut icon" href="{SITE_FAVICON}">
+        <link rel="icon" type="image/png" href="{NV_BASE_SITEURL}uploads/favicon.png">
+        <link rel="apple-touch-icon" href="{NV_BASE_SITEURL}uploads/apple-touch-icon.png">
+        <meta name="theme-color" content="#09090b">
         <!-- BEGIN: links -->
         <link<!-- BEGIN: attr --> {LINKS.key}<!-- BEGIN: val -->="{LINKS.value}"<!-- END: val --><!-- END: attr -->>
         <!-- END: links -->

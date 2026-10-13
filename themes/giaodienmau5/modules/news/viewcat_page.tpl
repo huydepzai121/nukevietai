@@ -1,101 +1,45 @@
 <!-- BEGIN: main -->
 <!-- BEGIN: viewdescription -->
-<div class="news_column">
-    <div class="alert alert-info clearfix">
-        <h1>{CONTENT.title}</h1>
-        <!-- BEGIN: image -->
-        <img alt="{CONTENT.title}" src="{HOMEIMG1}" width="{IMGWIDTH1}" class="img-thumbnail pull-left imghome" />
-        <!-- END: image -->
-        <p>{CONTENT.description}</p>
-    </div>
+<div class="at-cat-head">
+    <h1>{CONTENT.title}</h1>
+    <p>{CONTENT.description}</p>
 </div>
 <!-- END: viewdescription -->
+<div class="at-grid">
 <!-- BEGIN: viewcatloop -->
-<div class="news_column">
     <!-- BEGIN: featured -->
-    <div class="panel panel-default">
-        <div class="panel-body featured">
-            <!-- BEGIN: image -->
-            <a href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}><img  alt="{HOMEIMGALT1}" src="{HOMEIMG1}" width="{IMGWIDTH1}" class="img-thumbnail pull-left imghome" /></a>
-            <!-- END: image -->
-            <h2>
-                <a href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}>{CONTENT.title}</a>
-                <!-- BEGIN: newday --><span class="icon_new">&nbsp;</span><!-- END: newday -->
-            </h2>
-            <div class="text-muted">
-                <ul class="list-unstyled list-inline">
-                    <li>
-                        <em class="fa fa-clock-o">&nbsp;</em> {CONTENT.publtime}
-                    </li>
-                    <li>
-                        <em class="fa fa-eye">&nbsp;</em> {LANG.view}: {CONTENT.hitstotal}
-                    </li>
-                    <!-- BEGIN: comment -->
-                    <li>
-                        <em class="fa fa-comment-o">&nbsp;</em> {LANG.total_comment}: {CONTENT.hitscm}
-                    </li>
-                    <!-- END: comment -->
-                </ul>
-            </div>
-            {CONTENT.hometext}
-            <!-- BEGIN: adminlink -->
-            <p class="text-right">
-                {ADMINLINK}
-            </p>
-            <!-- END: adminlink -->
+    <article class="at-card at-card--featured">
+        <!-- BEGIN: image --><a class="at-card-media" href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}><img alt="{HOMEIMGALT1}" src="{HOMEIMG1}" loading="lazy"></a><!-- END: image -->
+        <div class="at-card-body">
+            <h2 class="at-card-title"><a href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}>{CONTENT.title}</a><!-- BEGIN: newday --><span class="at-badge">Mới</span><!-- END: newday --></h2>
+            <div class="at-card-text">{CONTENT.hometext}</div>
+            <div class="at-meta"><span>{CONTENT.publtime}</span><span>{CONTENT.hitstotal} lượt xem</span><!-- BEGIN: comment --><span>{CONTENT.hitscm} bình luận</span><!-- END: comment --></div>
+            <!-- BEGIN: adminlink --><div class="at-admin">{ADMINLINK}</div><!-- END: adminlink -->
         </div>
-    </div>
+    </article>
     <!-- END: featured -->
     <!-- BEGIN: news -->
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <!-- BEGIN: image -->
-            <a href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}><img  alt="{HOMEIMGALT1}" src="{HOMEIMG1}" width="{IMGWIDTH1}" class="img-thumbnail pull-left imghome" /></a>
-            <!-- END: image -->
-            <h3>
-                <a href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}>{CONTENT.title}</a>
-                <!-- BEGIN: newday -->
-                <span class="icon_new">&nbsp;</span>
-                <!-- END: newday -->
-            </h3>
-            <div class="text-muted">
-                <ul class="list-unstyled list-inline">
-                    <li><em class="fa fa-clock-o">&nbsp;</em> {CONTENT.publtime}</li>
-                    <li><em class="fa fa-eye">&nbsp;</em> {LANG.view}: {CONTENT.hitstotal}</li>
-                    <!-- BEGIN: comment -->
-                    <li><em class="fa fa-comment-o">&nbsp;</em> {LANG.total_comment}: {CONTENT.hitscm}</li>
-                    <!-- END: comment -->
-                </ul>
-            </div>
-            {CONTENT.hometext}
-            <!-- BEGIN: adminlink -->
-            <p class="text-right">
-                {ADMINLINK}
-            </p>
-            <!-- END: adminlink -->
+    <article class="at-card">
+        <!-- BEGIN: image --><a class="at-card-media" href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}><img alt="{HOMEIMGALT1}" src="{HOMEIMG1}" loading="lazy"></a><!-- END: image -->
+        <div class="at-card-body">
+            <h3 class="at-card-title"><a href="{CONTENT.link}" title="{CONTENT.title}" {CONTENT.target_blank}>{CONTENT.title}</a><!-- BEGIN: newday --><span class="at-badge">Mới</span><!-- END: newday --></h3>
+            <div class="at-card-text">{CONTENT.hometext}</div>
+            <div class="at-meta"><span>{CONTENT.publtime}</span><span>{CONTENT.hitstotal} lượt xem</span><!-- BEGIN: comment --><span>{CONTENT.hitscm} bình luận</span><!-- END: comment --></div>
+            <!-- BEGIN: adminlink --><div class="at-admin">{ADMINLINK}</div><!-- END: adminlink -->
         </div>
-    </div>
+    </article>
     <!-- END: news -->
-</div>
 <!-- END: viewcatloop -->
+</div>
 <!-- BEGIN: related -->
-<hr/>
-<h4>{ORTHERNEWS}</h4>
-<ul class="related list-items">
-    <!-- BEGIN: loop -->
-    <li>
-        <em class="fa fa-angle-right">&nbsp;</em><a href="{RELATED.link}" title="{RELATED.title}" {EXTLINK}>{RELATED.title} <em>({RELATED.publtime}) </em></a>
-        <!-- BEGIN: newday -->
-        <span class="icon_new">&nbsp;</span>
-        <!-- END: newday -->
-    </li>
-    <!-- END: loop -->
-</ul>
+<section class="at-related">
+    <h4>{ORTHERNEWS}</h4>
+    <ul>
+        <!-- BEGIN: loop --><li><a href="{RELATED.link}" title="{RELATED.title}" {EXTLINK}>{RELATED.title}</a> <time>{RELATED.publtime}</time><!-- BEGIN: newday --><!-- END: newday --></li><!-- END: loop -->
+    </ul>
+</section>
 <!-- END: related -->
 <!-- BEGIN: generate_page -->
-<div class="clearfix"></div>
-<div class="text-center">
-    {GENERATE_PAGE}
-</div>
+<div class="at-pager">{GENERATE_PAGE}</div>
 <!-- END: generate_page -->
 <!-- END: main -->

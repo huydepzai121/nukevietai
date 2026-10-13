@@ -3,57 +3,48 @@
             </section>
         </div>
     </div>
-    <footer class="section-footer-top" id="footer">
-        <div class="wraper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-24 col-sm-24 col-md-6">
-                        [MENU_FOOTER]
-                    </div>
-                    <div class="col-xs-24 col-sm-24 col-md-10">
-                        [FEATURED_PRODUCT]
-                    </div>
-                    <div class="col-xs-24 col-sm-24 col-md-8">
-                        [COMPANY_INFO]
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-24 col-sm-24 col-md-8">
-                        <div class="qr-code-wraper">
-                            [QR_CODE]
-                        </div>
-                        <div id="ftip" data-content="">
-                            <div class="bg"></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-24 col-sm-24 col-md-16">
-                        [FOOTER_SITE]
-                    </div>
-                </div>
+    <footer class="at-footer" id="footer">
+        <div class="at-container at-footer-grid">
+            <div class="at-footer-brand">
+                <a class="at-brand" href="{THEME_SITE_HREF}" title="{SITE_NAME}">
+                    <svg class="at-brand-mark" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="11" fill="url(#atg)"/><path d="M14 33 L24 14 L34 33 M18.5 26 H29.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg>
+                    <span class="at-brand-text">AI <b>Today</b></span>
+                </a>
+                <p>Tin tức, kiến thức và hướng dẫn về trí tuệ nhân tạo bằng tiếng Việt. Dễ hiểu, chính xác, có trách nhiệm.</p>
             </div>
+            <div>
+                <h3 class="at-footer-title">Chuyên mục</h3>
+                <ul class="at-footer-links">
+                    <li><a href="/tin-tuc-ai/">Tin tức AI</a></li>
+                    <li><a href="/mo-hinh-ngon-ngu-lon/">Mô hình ngôn ngữ lớn</a></li>
+                    <li><a href="/cong-cu-ai/">Công cụ AI</a></li>
+                    <li><a href="/huong-dan/">Hướng dẫn</a></li>
+                    <li><a href="/dao-duc-phap-ly-ai/">Đạo đức &amp; Pháp lý AI</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="at-footer-title">AI Today</h3>
+                <ul class="at-footer-links">
+                    <li><a href="/about/ve-ai-today.html">Về chúng tôi</a></li>
+                    <li><a href="/about/chinh-sach-noi-dung.html">Chính sách nội dung</a></li>
+                    <li><a href="/about/lien-he-hop-tac.html">Hợp tác</a></li>
+                    <li><a href="/contact/">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="at-footer-title">Theo dõi</h3>
+                <ul class="at-footer-links">
+                    <li><a href="/news/rss/">RSS</a></li>
+                    <li><a href="/siteterms/privacy.html">Chính sách bảo mật</a></li>
+                    <li><a href="/siteterms/terms-and-conditions.html">Điều khoản sử dụng</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="at-container at-footer-bottom">
+            <span>&copy; 2026 AI Today. Bảo lưu mọi quyền.</span>
+            <a class="bttop pointer" href="#" aria-label="Lên đầu trang">Lên đầu trang ↑</a>
         </div>
     </footer>
-    <nav class="section-footer-bottom footerNav2">
-        <div class="wraper">
-            <div class="container">
-                <!-- BEGIN: theme_type -->
-                <div class="theme-change">
-                <!-- BEGIN: loop -->
-                    <!-- BEGIN: other -->
-                    <a href="{STHEME_TYPE}" rel="nofollow" title="{STHEME_INFO}"><i class="fa fa-{STHEME_ICON}"></i></a>
-                    <!-- END: other -->
-                    <!-- BEGIN: current -->
-                    <span title="{LANG.theme_type_select}: {STHEME_TITLE}"><i class="fa fa-{STHEME_ICON}"></i></span>
-                    <!-- END: current -->
-                <!-- END: loop -->
-                </div>
-                <!-- END: theme_type -->
-                <div class="bttop">
-                    <a class="pointer"><i class="fa fa-eject fa-lg"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
     {ADMINTOOLBAR}
     <!-- SiteModal Required!!! -->
     <div id="sitemodal" class="modal fade" role="dialog">
@@ -65,11 +56,5 @@
                 <button type="button" class="close" data-dismiss="modal"><span class="fa fa-times"></span></button>
             </div>
         </div>
-    </div>
-    <div class="fix_banner_left">
-        [FIX_BANNER_LEFT]
-    </div>
-    <div class="fix_banner_right">
-        [FIX_BANNER_RIGHT]
     </div>
 <!-- ===== END FOOTER ===== -->
