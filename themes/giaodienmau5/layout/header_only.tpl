@@ -2,6 +2,7 @@
     <html lang="{LANG.Content_Language}" xmlns="http://www.w3.org/1999/xhtml" prefix="og: http://ogp.me/ns#">
     <head>
         <title>{THEME_PAGE_TITLE}</title>
+        <script src="{NV_BASE_SITEURL}themes/{TEMPLATE}/js/theme-mode.js"></script>
         <!-- BEGIN: metatags --><meta {THEME_META_TAGS.name}="{THEME_META_TAGS.value}" content="{THEME_META_TAGS.content}">
         <!-- END: metatags -->
         <link rel="shortcut icon" href="{SITE_FAVICON}">

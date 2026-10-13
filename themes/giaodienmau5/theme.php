@@ -192,6 +192,11 @@ function nv_site_theme($contents, $full = true)
         'rel' => 'stylesheet',
         'href' => NV_STATIC_URL . 'themes/' . $global_config['module_theme'] . '/css/custom.css'
     ];
+    // Chế độ sáng/tối (data-theme)
+    $html_links[] = [
+        'rel' => 'stylesheet',
+        'href' => NV_STATIC_URL . 'themes/' . $global_config['module_theme'] . '/css/ai-theme-modes.css'
+    ];
 
     // Customs Style
     if (isset($module_config['themes'][$global_config['module_theme']]) and !empty($module_config['themes'][$global_config['module_theme']])) {

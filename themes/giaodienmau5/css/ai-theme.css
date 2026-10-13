@@ -125,7 +125,7 @@ img.img-thumbnail,
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: rgba(11, 15, 23, .88);
+    background-color: color-mix(in srgb, var(--color-bg) 88%, transparent);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-top: 1px solid var(--color-border);
@@ -501,7 +501,7 @@ a.list-group-item:focus { background-color: var(--color-surface-alt); color: var
 
 #news-bodyhtml pre,
 #news-bodyhtml code {
-    background-color: #070a10;
+    background-color: var(--color-surface-alt);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     color: var(--color-highlight);
