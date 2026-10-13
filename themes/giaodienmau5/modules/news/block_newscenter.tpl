@@ -1,25 +1,32 @@
 <!-- BEGIN: main -->
-<div id="hot-news">
-    <div class="panel panel-default news_column">
-        <div class="panel-body">
-            <div class="row">
-                <div class="col-md-14 margin-bottom-lg">
-                    <div class="margin-bottom text-center"><a href="{main.link}" title="{main.title}" {main.target_blank}><img src="{main.imgsource}" alt="{main.title}" width="{main.width}" class="img-thumbnail"/></a></div>
-                    <h2 class="margin-bottom-sm"><a href="{main.link}" title="{main.title}" {main.target_blank}>{main.titleclean60}</a></h2>
-                    {main.hometext}
-                    <p class="text-right"><a href="{main.link}"><em class="fa fa-sign-out"></em>{lang.more}</a></p>
+<section class="np-hero" id="hot-news" data-np-carousel>
+    <div class="np-hero-track">
+        <article class="np-slide is-active">
+            <a class="np-slide-link" href="{main.link}" title="{main.title}" {main.target_blank}>
+                <img src="{main.imgsource}" alt="{main.title}">
+                <div class="np-slide-caption">
+                    <span class="np-kicker">Tiêu điểm</span>
+                    <h2>{main.title}</h2>
+                    <p>{main.hometext}</p>
                 </div>
-                <div class="hot-news-others col-md-10 margin-bottom-lg">
-                    <ul class="column-margin-left list-none">
-                        <!-- BEGIN: othernews -->
-                        <li class="icon_list">
-                            <a class="show black h4 clearfix" href="{othernews.link}" {othernews.target_blank} <!-- BEGIN: tooltip -->data-placement="{TOOLTIP_POSITION}" data-content="{othernews.hometext_clean}" data-img="{othernews.imgsource}" data-rel="tooltip"<!-- END: tooltip --> title="{othernews.title}" ><img src="{othernews.imgsource}" alt="{othernews.title}" class="img-thumbnail pull-right margin-left-sm" style="width:65px;"/><span>{othernews.titleclean60}</span></a>
-                        </li>
-                        <!-- END: othernews -->
-                    </ul>
+            </a>
+        </article>
+        <!-- BEGIN: othernews -->
+        <article class="np-slide">
+            <a class="np-slide-link" href="{othernews.link}" title="{othernews.title}" {othernews.target_blank}>
+                <img src="{othernews.imgsource}" alt="{othernews.title}" loading="lazy">
+                <div class="np-slide-caption">
+                    <span class="np-kicker">Tiêu điểm</span>
+                    <h2>{othernews.title}</h2>
+                    <p>{othernews.hometext_clean}</p>
                 </div>
-            </div>
-        </div>
+            </a>
+        </article>
+        <!-- BEGIN: tooltip --><!-- END: tooltip -->
+        <!-- END: othernews -->
     </div>
-</div>
+    <button type="button" class="np-hero-nav np-prev" aria-label="Tin trước"><em class="fa fa-chevron-left"></em></button>
+    <button type="button" class="np-hero-nav np-next" aria-label="Tin sau"><em class="fa fa-chevron-right"></em></button>
+    <div class="np-hero-dots" role="tablist"></div>
+</section>
 <!-- END: main -->

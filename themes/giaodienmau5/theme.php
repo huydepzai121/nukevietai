@@ -173,7 +173,7 @@ function nv_site_theme($contents, $full = true)
     // Lớp nhìn "AI Today": font -> token -> theme (theo markup gốc của default)
     $html_links[] = [
         'rel' => 'stylesheet',
-        'href' => 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@500;600;700;800&display=swap&subset=vietnamese'
+        'href' => 'https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap&subset=vietnamese'
     ];
     $html_links[] = [
         'rel' => 'stylesheet',

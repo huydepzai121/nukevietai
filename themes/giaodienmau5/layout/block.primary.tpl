@@ -1,10 +1,8 @@
 <!-- BEGIN: mainblock -->
-<div class="panel panel-primary">
-	<div class="panel-heading">
-		{BLOCK_TITLE}
-	</div>
-	<div class="panel-body">
-		{BLOCK_CONTENT}
-	</div>
-</div>
+<section class="widget">
+    <h3 class="widget-title"><span>{BLOCK_TITLE}</span></h3>
+    <div class="widget-body">
+        {BLOCK_CONTENT}
+    </div>
+</section>
 <!--  END: mainblock -->
