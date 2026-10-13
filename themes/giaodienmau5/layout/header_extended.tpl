@@ -25,8 +25,10 @@
                     <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
                 </button>
                 <div class="personalArea">[PERSONALAREA]</div>
+                <div class="at-pos at-pos--social social-icons">[SOCIAL_ICONS]</div><div class="at-pos at-pos--contact contactDefault">[CONTACT_DEFAULT]</div>
             </div>
         </div>
+        <div class="at-container at-pos at-pos--headright right-ads">[HEAD_RIGHT]</div>
         <div id="tip" data-content=""><div class="bg"></div></div>
     </header>
     <div class="section-body">

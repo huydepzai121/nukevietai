@@ -40,6 +40,10 @@
                 </ul>
             </div>
         </div>
+        <div class="at-container at-footer-blocks">
+            <div class="at-pos">[MENU_FOOTER]</div><div class="at-pos">[FEATURED_PRODUCT]</div><div class="at-pos">[COMPANY_INFO]</div><div class="at-pos qr-code-wraper">[QR_CODE]</div><div class="at-pos at-pos--wide">[FOOTER_SITE]</div>
+        </div>
+        <div id="ftip" data-content=""><div class="bg"></div></div>
         <div class="at-container at-footer-bottom">
             <span>&copy; 2026 AI Today. Bảo lưu mọi quyền.</span>
             <a class="bttop pointer" href="#" aria-label="Lên đầu trang">Lên đầu trang ↑</a>
@@ -57,4 +61,6 @@
             </div>
         </div>
     </div>
+<div class="fix_banner_left">[FIX_BANNER_LEFT]</div>
+    <div class="fix_banner_right">[FIX_BANNER_RIGHT]</div>
 <!-- ===== END FOOTER ===== -->
