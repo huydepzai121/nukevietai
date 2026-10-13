@@ -194,6 +194,37 @@ img.img-thumbnail,
     color: var(--color-text);
 }
 
+/* Dropdown của menu chính — style.css dùng #menusite nên phải cùng độ ưu tiên */
+#menusite .dropdown-menu {
+    padding: var(--space-2) 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .45);
+}
+
+#menusite .dropdown-menu > li { border-color: var(--color-border); }
+
+#menusite .dropdown-menu > li > a {
+    background-color: transparent;
+    color: var(--color-text-body);
+    font-size: var(--text-sm);
+}
+
+#menusite .dropdown-menu > li > a:hover,
+#menusite .dropdown-menu > li > a:focus,
+#menusite .dropdown-menu > .active > a,
+#menusite .dropdown-menu > .active > a:hover,
+#menusite .dropdown-menu > .active > a:focus,
+#menusite .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+#menusite .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    background: var(--color-surface-alt) !important;
+    color: var(--color-text) !important;
+}
+
 /* Breadcrumb + ô tìm kiếm — .third-nav */
 .third-nav .row { border-bottom: 0; }
 
