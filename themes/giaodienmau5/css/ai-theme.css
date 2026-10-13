@@ -68,7 +68,7 @@ img.img-thumbnail,
 
 /* ===== HEADER STYLES ===== */
 
-.site-banner { opacity: .12; }
+.site-banner { display: none; }
 
 .section-header-bar {
     background: var(--color-bg);
@@ -252,7 +252,48 @@ img.img-thumbnail,
     color: var(--color-on-accent);
 }
 
+/* Mạng xã hội trên thanh trên cùng — [SOCIAL_ICONS] (.socialList) */
+.socialList li a {
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.socialList li a:hover,
+.socialList li a[href*='facebook']:hover,
+.socialList li a[href*='youtube']:hover,
+.socialList li a[href*='twitter']:hover {
+    background-color: var(--color-surface-alt);
+    border-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+#tip,
+#tip .bg { background-color: var(--color-surface); color: var(--color-text-body); }
+
+#tip a { color: var(--color-text); }
+
 /* ===== END HEADER STYLES ===== */
+
+/* ===== BODY STYLES ===== */
+
+/* Khung nội dung #body — style.css để nền trắng + viền + bóng */
+#body,
+.section-body {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.section-body > .wraper { background: none; }
+
+/* ===== END BODY STYLES ===== */
 
 /* ===== BLOCK STYLES ===== */
 
@@ -315,6 +356,43 @@ a.list-group-item:focus { background-color: var(--color-surface-alt); color: var
 
 .list-group-item.active,
 .list-group-item.active:hover { background-color: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+
+/* Chuyên mục dạng cây — news block_category (.metismenu). jquery.metisMenu.css
+   được nạp trong tpl, SAU CSS theme, nên selector có thêm .section-body để thắng. */
+.section-body .metismenu .sidebar,
+.section-body .metismenu .sidebar-nav {
+    background: var(--color-surface);
+    background-image: none;
+}
+
+.section-body .metismenu .sidebar-nav ul a {
+    padding: 10px var(--space-3);
+    border-top: 1px solid var(--color-border);
+    box-shadow: none;
+    background: none;
+    color: var(--color-text-body);
+    font-size: var(--text-sm);
+}
+
+.section-body .metismenu .sidebar-nav > ul > li:first-child > a { border-top: 0; }
+
+.section-body .metismenu .sidebar-nav ul a:hover,
+.section-body .metismenu .sidebar-nav ul a:focus,
+.section-body .metismenu .sidebar-nav ul a:active,
+.section-body .metismenu .sidebar-nav .active > a {
+    background-color: var(--color-surface-alt);
+    background-image: linear-gradient(to right, var(--color-accent) 3px, transparent 3px);
+    color: var(--color-text);
+}
+
+.section-body .metismenu .sidebar-nav ul ul a {
+    padding-left: calc(var(--space-3) * 2);
+    background-color: rgba(255, 255, 255, .02);
+    color: var(--color-text-muted);
+}
+
+.section-body .metismenu .arrow,
+.section-body .metismenu .fa.arrow { color: var(--color-text-muted); }
 
 /* ===== END BLOCK STYLES ===== */
 
@@ -396,10 +474,20 @@ a.list-group-item:focus { background-color: var(--color-surface-alt); color: var
 }
 
 .related a,
-.detail-related a { color: var(--color-text-body); }
+.detail-related a,
+div.news_column ul.related a,
+#topnews ul.lastest-news a {
+    color: var(--color-text-body);
+    background-image: none;
+    border-bottom-color: var(--color-border);
+}
+
+div.news_column ul.related li { padding: 4px 0; }
 
 .related a:hover,
-.detail-related a:hover { color: var(--color-accent-hover); }
+.detail-related a:hover,
+div.news_column ul.related a:hover,
+#topnews ul.lastest-news a:hover { color: var(--color-accent-hover); background: none; }
 
 /* Tooltip xem nhanh tin (popover của BS3) */
 .popover {
