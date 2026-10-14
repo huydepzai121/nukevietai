@@ -70,7 +70,7 @@ function ds_home_html()
     }
     $h .= '</ul></div></div></div></div></div>';
     // notices
-    $h .= '<div class="col-md-7"><div class="ds-box ds-notice"><h2 class="ds-box__title">Thông báo mới</h2><ul class="ds-dotlist" id="dsNotice">';
+    $h .= '<div class="col-md-7"><div class="ds-box ds-notice"><h2 class="ds-box__title"><span>Thông báo mới</span></h2><ul class="ds-dotlist" id="dsNotice">';
     foreach (ds_rows('', 12, 0) as $i => $r) {
         $h .= ds_li($r, ($i < 4 ? 'on' : '') . ($i % 3 == 2 ? ' blue' : ''));
     }
@@ -100,12 +100,12 @@ function ds_home_html()
     $h .= '<div class="row ds-row"><div class="col-md-17"><div class="row"><div class="col-sm-12">' . $sec('Tin tức - Sự kiện', $c1l, $c1) . '</div><div class="col-sm-12">' . $sec('Hoạt động', $c2l, $c2) . '</div></div>';
     $h .= '<div class="row"><div class="col-sm-12">' . $sec('Thị trường &amp; Phần cứng', $c3l, $c3) . '</div><div class="col-sm-12">' . $sec('Đạo đức &amp; Pháp lý', $c4l, $c4) . '</div></div></div>';
     // gallery
-    $h .= '<div class="col-md-7"><div class="ds-box ds-gallery"><h2 class="ds-box__title">Sự kiện qua ảnh</h2><div class="ds-gal" id="dsGal">';
+    $h .= '<div class="col-md-7"><div class="ds-box ds-gallery"><h2 class="ds-box__title"><span>Sự kiện qua ảnh</span></h2><div class="ds-gal" id="dsGal">';
     foreach (ds_rows("homeimgfile<>''", 8, 3) as $i => $r) {
         $h .= '<a class="ds-gal__item' . ($i == 0 ? ' active' : '') . '" href="' . $r['link'] . '" title="' . $r['title'] . '"><img src="' . $r['thumb'] . '" alt="' . $r['title'] . '" loading="lazy"><span>' . $r['title'] . '</span></a>';
     }
     $h .= '<button type="button" class="ds-gal__nav prev" data-dir="-1" aria-label="Ảnh trước">&lsaquo;</button><button type="button" class="ds-gal__nav next" data-dir="1" aria-label="Ảnh sau">&rsaquo;</button></div></div>';
-    $h .= '<div class="ds-box ds-notice"><h2 class="ds-box__title">Tin khác</h2><ol class="ds-numlist">';
+    $h .= '<div class="ds-box ds-notice"><h2 class="ds-box__title"><span>Tin khác</span></h2><ol class="ds-numlist">';
     foreach (ds_rows('', 6, 4) as $r) {
         $h .= ds_li($r);
     }
