@@ -393,3 +393,4 @@ body,.ds-body,.ds-body p,.ds-body li,.ds-body a,.ds-body h1,.ds-body h2,.ds-body
 .ds-box.ds-sec{border:1px solid #ddd!important;padding:5px!important;border-radius:4px}
 .ds-box.ds-sec .ds-sec__head{height:34px!important;line-height:20px!important;padding:4px 0!important;margin:0!important;border-bottom:1px solid #0078d3!important;box-sizing:border-box}
 .ds-box.ds-sec .ds-sec__head a{display:inline!important;height:auto!important;line-height:25px!important;padding:8px 40px 8px 15px!important;margin:0!important;font-size:14px!important;font-weight:700!important;text-transform:uppercase}
+.ds-body .news_column .panel-body p.h3,.ds-body .news_column .other-news p.h3{padding:0!important;line-height:21px!important;font-size:14px!important;font-weight:500!important}
