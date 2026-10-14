@@ -94,8 +94,6 @@ a:hover, a:focus { color: var(--np-red); text-decoration: none; }
 .btn-np, .np-search .btn { height: 46px; background: var(--np-red) !important; color: #fff !important; border: 0 !important; border-radius: 0 !important; font-weight: 700; padding: 0 22px; text-transform: uppercase; }
 
 /* ---------- Breadcrumb ---------- */
-.at-crumbs { background: transparent !important; border: 0 !important; margin: 18px 0 0 !important; padding: 0 !important; box-shadow: none !important; }
-.at-crumbs .breadcrumbs li, .at-crumbs .breadcrumbs li a { color: var(--np-muted) !important; font-size: 13.5px; background: none !important; }
 
 /* ---------- Thân trang ---------- */
 .np-body-row { margin-top: 22px; margin-bottom: 40px; }
@@ -280,4 +278,26 @@ hr { border-color: var(--np-border) !important; }
     .np-slide-caption h2 { font-size: 19px !important; }
     .np-hero-dots { top: 12px; right: 12px; }
     .np-lead-title { font-size: 20px !important; }
+}
+
+/* ---------- Breadcrumb (np-bc) ---------- */
+.np-bc { margin: 16px 0 4px; padding: 0 0 10px; border-bottom: 1px solid var(--np-border); scroll-margin-top: 80px; }
+.np-bc__list { display: flex; align-items: center; flex-wrap: nowrap; list-style: none; margin: 0; padding: 0; gap: 0; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; white-space: nowrap; font-family: var(--ff-body, "Be Vietnam Pro", system-ui, sans-serif); font-size: 13.5px; line-height: 1.5; }
+.np-bc__list::-webkit-scrollbar { display: none; }
+.np-bc__item { display: inline-flex; align-items: center; min-width: 0; flex: 0 0 auto; color: var(--np-muted); background: none; border: 0; }
+.np-bc__item + .np-bc__item::before { content: ""; flex: 0 0 auto; width: 7px; height: 7px; margin: 0 11px 0 7px; border-right: 1.5px solid currentColor; border-top: 1.5px solid currentColor; transform: rotate(45deg); opacity: .55; }
+.np-bc__item a { display: inline-flex; align-items: center; gap: 6px; color: var(--np-muted) !important; text-decoration: none !important; background: none !important; border: 0 !important; padding: 2px 0; border-radius: 3px; transition: color .15s; }
+.np-bc__item a:hover { color: var(--np-red) !important; }
+.np-bc__item a:focus-visible { outline: 2px solid var(--np-red); outline-offset: 2px; }
+.np-bc__item a span { display: inline-block; max-width: 260px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.np-bc__home { flex: 0 0 auto; margin-top: -1px; }
+.np-bc__item:last-child { flex: 0 1 auto; }
+.np-bc__item:last-child a { color: var(--np-text) !important; font-weight: 600; pointer-events: none; }
+.np-bc__item:last-child a span { max-width: 520px; }
+@media (max-width: 767px) {
+  .np-bc { margin-top: 12px; }
+  .np-bc__list { font-size: 13px; }
+  .np-bc__item--home a span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .np-bc__item a span { max-width: 180px; }
+  .np-bc__item:last-child a span { max-width: 240px; }
 }

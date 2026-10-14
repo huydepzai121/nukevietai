@@ -46,18 +46,11 @@
             <section>
                 <div class="container" id="body">
                     <!-- BEGIN: breadcrumbs -->
-                    <nav class="third-nav at-crumbs" aria-label="breadcrumb">
-                        <div class="breadcrumbs-wrap">
-                            <div class="display">
-                                <a class="show-subs-breadcrumbs hidden" href="#" onclick="showSubBreadcrumbs(this, event);"><em class="fa fa-lg fa-angle-right"></em></a>
-                                <ul class="breadcrumbs list-none"></ul>
-                            </div>
-                            <ul class="subs-breadcrumbs"></ul>
-                            <ul class="temp-breadcrumbs hidden" itemscope itemtype="https://schema.org/BreadcrumbList">
-                                <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="{THEME_SITE_HREF}" itemprop="item" title="{LANG.Home}"><span itemprop="name">{LANG.Home}</span></a><i class="hidden" itemprop="position" content="1"></i></li>
-                                <!-- BEGIN: loop --><li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="{BREADCRUMBS.link}" itemprop="item" title="{BREADCRUMBS.title}"><span class="txt" itemprop="name">{BREADCRUMBS.title}</span></a><i class="hidden" itemprop="position" content="{BREADCRUMBS.position}"></i></li><!-- END: loop -->
-                            </ul>
-                        </div>
+                    <nav class="np-bc" aria-label="Breadcrumb">
+                        <ol class="np-bc__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <li class="np-bc__item np-bc__item--home" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="{THEME_SITE_HREF}" itemprop="item" title="{LANG.Home}"><svg class="np-bc__home" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 3.2 2.5 11h2.7v9.3h5.3v-6h3v6h5.3V11h2.7z"/></svg><span itemprop="name">{LANG.Home}</span></a><meta itemprop="position" content="1"></li>
+                            <!-- BEGIN: loop --><li class="np-bc__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="{BREADCRUMBS.link}" itemprop="item" title="{BREADCRUMBS.title}"><span itemprop="name">{BREADCRUMBS.title}</span></a><meta itemprop="position" content="{BREADCRUMBS.position}"></li><!-- END: loop -->
+                        </ol>
                     </nav>
                     <!-- END: breadcrumbs -->
                     <!-- BEGIN: currenttime --><!-- END: currenttime -->
