@@ -4,17 +4,10 @@
         </div>
     </div>
     <footer class="ds-footer" id="footer">
-        <div class="ds-footer__menu"><div class="ds-wrap">
-            <a href="{THEME_SITE_HREF}">Trang nhất</a><a href="/tin-tuc-ai/">Tin tức AI</a><a href="/mo-hinh-ngon-ngu-lon/">Mô hình ngôn ngữ lớn</a><a href="/cong-cu-ai/">Công cụ AI</a><a href="/thi-truong-dau-tu/">Thị trường &amp; Đầu tư</a><a href="/about/ve-ai-today.html">Về chúng tôi</a><a href="/contact/">Liên hệ</a>
-        </div></div>
+        <div class="ds-fpos">[DS_FOOTER_NAV]</div>
         <div class="ds-wrap ds-footer__main">
             <img class="ds-footer__logo" src="{NV_BASE_SITEURL}themes/{TEMPLATE}/images/ds-logo.svg" alt="" width="90" height="60">
-            <div class="ds-footer__info">
-                <h3>AI TODAY - TIN TỨC TRÍ TUỆ NHÂN TẠO</h3>
-                <p>Tin tức, kiến thức và phân tích về trí tuệ nhân tạo bằng tiếng Việt. Nguồn tin tổng hợp từ X và các nguồn công khai, được biên tập lại.</p>
-                <p><a href="/siteterms/privacy.html">Chính sách bảo mật</a> · <a href="/siteterms/terms-and-conditions.html">Điều khoản sử dụng</a> · <a href="/news/rss/">RSS</a></p>
-                <p>&copy; 2026 AI Today. Mã nguồn NukeViet CMS.</p>
-            </div>
+            <div class="ds-fpos ds-fpos--info">[DS_FOOTER_INFO]</div>
             <div class="ds-footer__blocks">
                 <div class="at-pos">[MENU_FOOTER]</div><div class="at-pos">[FEATURED_PRODUCT]</div><div class="at-pos">[COMPANY_INFO]</div><div class="at-pos qr-code-wraper">[QR_CODE]</div><div class="at-pos">[FOOTER_SITE]</div>
             </div>

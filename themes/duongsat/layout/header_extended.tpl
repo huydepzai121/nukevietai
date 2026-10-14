@@ -21,10 +21,7 @@
         <div class="ds-bar">
             <div class="ds-wrap ds-bar__in">
                 <span class="ds-date" id="np-date">{NV_CURRENTTIME}</span>
-                <div class="ds-ticker">
-                    <strong class="ds-ticker__label"><em class="fa fa-certificate"></em> Điểm tin nhanh:</strong>
-                    <div class="ds-ticker__track"><ul class="ds-ticker__list"><!-- BEGIN: ticker --><li><a href="{TICK.link}" title="{TICK.title}">{TICK.title}</a></li><!-- END: ticker --></ul></div>
-                </div>
+                <div class="ds-tickpos">[DS_TICKER]</div>
                 <div class="ds-bar__right">
                     <div class="at-pos ds-social">[SOCIAL_ICONS]</div>
                     <div class="personalArea">[PERSONALAREA]</div>

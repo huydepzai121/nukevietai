@@ -71,13 +71,10 @@ function nv_site_theme($contents, $full = true)
 
     // Determine tpl file, check exists tpl file
     $layout_file = ($full) ? 'layout.' . $module_info['layout_funcs'][$op_file] . '.tpl' : 'simple.tpl';
-    require_once NV_ROOTDIR . '/themes/' . $global_config['module_theme'] . '/ds_home.php';
+    // Trang chủ: toàn bộ nội dung do block quản lý ([TOP], [BOTTOM], [RIGHT])
     if ($home and $full) {
-        $ds_home = ds_home_html();
-        if ($ds_home !== '') {
-            $contents = $ds_home;
-            $layout_file = 'layout.main.tpl';
-        }
+        $contents = '';
+        $layout_file = 'layout.main-right.tpl';
     }
 
     if (!file_exists(NV_ROOTDIR . '/themes/' . $global_config['module_theme'] . '/layout/' . $layout_file)) {
@@ -303,12 +300,6 @@ function nv_site_theme($contents, $full = true)
     }
 
     // Module contents
-    if ($full) {
-        foreach (ds_rows('', 8) as $_tick) {
-            $xtpl->assign('TICK', $_tick);
-            $xtpl->parse('main.ticker');
-        }
-    }
     $xtpl->assign('MODULE_CONTENT', $contents);
 
     // Header variables

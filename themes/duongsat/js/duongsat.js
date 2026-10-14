@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var tl=document.querySelector('.ds-ticker__list');
   if(tl){var n=tl.children.length;rot(tl.children,function(i){tl.style.transform='translateY('+(-22*i)+'px)'},3500);}
   var nl=document.getElementById('dsNotice');
-  if(nl){var li=nl.children,p=0,per=4,pages=Math.ceil(li.length/per);
+  if(nl){var li=nl.children,p=0,per=+nl.dataset.per||4,pages=Math.ceil(li.length/per);
     document.querySelectorAll('.ds-pager button').forEach(function(b){b.addEventListener('click',function(){p=(p+ +b.dataset.dir+pages)%pages;for(var k=0;k<li.length;k++)li[k].classList.toggle('on',k>=p*per&&k<(p+1)*per)})});}
   var g=document.getElementById('dsGal');
   if(g){var it=g.querySelectorAll('.ds-gal__item');var setg=function(n){it.forEach(function(e,k){e.classList.toggle('active',k==n)})};var rg=rot(it,setg,4000);
