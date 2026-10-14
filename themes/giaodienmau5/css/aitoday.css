@@ -374,4 +374,4 @@ input.fcode, input.fcode.form-control { width: 130px !important; min-width: 130p
 .captchaImg { vertical-align: middle; border-radius: 4px; }
 .well { font-size: 15.5px; line-height: 1.7; padding: 16px 20px; border-radius: 6px; box-shadow: none; }
 .news_column p.comment-title, p.comment-title { font-size: 18px !important; font-weight: 700; }
-.news_column .panel-body p, #ratingstar ~ p, .news_column .rating p { font-size: 15px !important; }
+.news_column .panel-body > p, .news_column .panel-body > div:not(.bodytext) > p { font-size: 15px !important; }
