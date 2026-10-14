@@ -1,5 +1,5 @@
 <!-- BEGIN: main -->
-<span><a title="{GLANG.signin} - {GLANG.register}" class="pa pointer button" data-toggle="tip" data-target="#guestBlock_{BLOCKID}" data-click="y" data-callback="loginFormLoad"><em class="fa fa-user fa-lg"></em><span class="hidden">{GLANG.signin}</span></a></span>
+<span><a title="{GLANG.signin} - {GLANG.register}" class="pa pointer button" data-toggle="tip" data-target="#guestBlock_{BLOCKID}" data-click="y" data-callback="loginFormLoad"><span class="login">{GLANG.signin}</span></a></span>
 <!-- START FORFOOTER -->
 <div id="guestBlock_{BLOCKID}" class="hidden">
     <div class="log-area" style="margin:-15px"></div>
