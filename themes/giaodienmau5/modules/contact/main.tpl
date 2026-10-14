@@ -41,16 +41,7 @@
                         <em class="fa fa-fax fa-horizon margin-right"></em>{LANG.fax}: <span>{DEP.fax}</span>
                     </p>
                     <!-- END: fax -->
-                    <!-- BEGIN: email -->
-                    <p>
-                        <em class="fa fa-envelope fa-horizon margin-right"></em>{LANG.email}: <span>
-                            <!-- BEGIN: item -->
-                            <!-- BEGIN: comma -->&nbsp; <!-- END: comma -->
-                            <a href="mailto:{EMAIL}" class="black">{EMAIL}</a>
-                        <!-- END: item -->
-                        </span>
-                    </p>
-                    <!-- END: email -->
+                    <!-- BEGIN: email --><!-- Email ẩn công khai, liên hệ qua biểu mẫu --><!-- END: email -->
                     <!-- BEGIN: yahoo -->
                     <p>
                         <em class="icon-yahoo fa-horizon margin-right"></em>{YAHOO.name}: <span>
