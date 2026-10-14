@@ -405,3 +405,10 @@ body,.ds-body,.ds-body p,.ds-body li,.ds-body a,.ds-body h1,.ds-body h2,.ds-body
 }
 /* ticker bar 1050 at y=205 */
 .ds-bar>.ds-wrap.ds-bar__in{max-width:1050px!important;margin:5px auto 0!important}
+@media (min-width:992px){
+.ds-body .ds-home-top{margin:0!important;display:flex;flex-wrap:nowrap}
+.ds-body .ds-home-top>.ds-home-top__main{width:707px!important;flex:0 0 707px;padding:0 10px 0 0!important}
+.ds-body .ds-home-top>.ds-home-top__right{width:353px!important;flex:0 0 353px;padding:0 0 0 10px!important}
+}
+.ds-home-top__right:empty{display:none}
+.ds-body .ds-home-top{margin-top:12px!important}

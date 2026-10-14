@@ -74,7 +74,7 @@ function nv_site_theme($contents, $full = true)
     // Trang chủ: toàn bộ nội dung do block quản lý ([TOP], [BOTTOM], [RIGHT])
     if ($home and $full) {
         $contents = '';
-        $layout_file = 'layout.main-right.tpl';
+        $layout_file = 'layout.home.tpl';
     }
 
     if (!file_exists(NV_ROOTDIR . '/themes/' . $global_config['module_theme'] . '/layout/' . $layout_file)) {
