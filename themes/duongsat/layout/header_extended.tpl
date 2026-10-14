@@ -7,7 +7,7 @@
         <div class="ds-banner">
             <div class="ds-wrap ds-banner__in">
                 <a class="ds-brand" title="{SITE_NAME}" href="{THEME_SITE_HREF}">
-                    <img class="ds-brand__logo" src="{NV_BASE_SITEURL}themes/{TEMPLATE}/images/ds-logo.svg" alt="{SITE_NAME}" width="120" height="80">
+                    <img class="ds-brand__logo" src="{NV_BASE_SITEURL}themes/{TEMPLATE}/images/ds-logo-oval.png" alt="{SITE_NAME}" width="160" height="100">
                     <span class="ds-brand__text"><span class="ds-brand__name">AI TODAY</span><span class="ds-brand__sub">Tin tức Trí tuệ nhân tạo</span></span>
                     <!-- BEGIN: site_name_h1 --><h1 class="sr-only">{SITE_NAME}</h1><!-- END: site_name_h1 -->
                     <!-- BEGIN: site_name_span --><span class="sr-only">{SITE_NAME}</span><!-- END: site_name_span -->

@@ -231,3 +231,13 @@ body{background:#fff!important;font-family:"Times New Roman",Times,serif!importa
 .ds-footer__info p{font-size:12px!important;margin:0 0 2px!important}
 #footer .ds-footer__info a:hover{color:#ffe100!important}
 #footer.ds-footer .ds-footer__info h3,#footer.ds-footer .ds-footer__info h3 *,#footer.ds-footer .ds-fpos--info *{color:#fff!important}
+/* header photo + oval logo, links, ad banner */
+.ds-banner__in{background:#8fc8f5 url(../images/ds-header.jpg) center/cover no-repeat!important}
+.ds-brand__logo{width:160px!important;height:100px!important;border-radius:0!important;background:none!important;padding:0!important}
+.ds-links{display:flex;align-items:center;gap:8px;margin:0 0 16px;font-size:13px}
+.ds-links label{margin:0;font-weight:400;white-space:nowrap}
+.ds-links select{flex:1;height:30px;font-size:12px}
+.ds-adbanner{margin:4px 0 16px}.ds-adbanner img{max-width:100%;height:auto;display:block}
+@media (max-width:767px){.ds-brand__logo{width:80px!important;height:50px!important}.ds-banner__in{min-height:90px!important}}
+.ds-home-bottom .widget:has(.ds-adbanner){grid-column:1/-1!important;flex:0 0 100%!important;width:100%!important;max-width:100%!important;float:none!important;clear:both;border:0!important;padding:0!important;background:none!important}
+html{background:#fff!important}
