@@ -185,3 +185,49 @@ html,body{background:#eef1f4!important}
 .ds-tickpos .ds-ticker{flex:1 1 auto;min-width:0}
 .ds-body .at-sidebar>.widget--plain,.ds-body .at-main>.widget--plain{margin-bottom:0}
 @media(min-width:768px){.ds-home-bottom{display:flex;flex-wrap:wrap;margin:0 -8px}.ds-home-bottom>.widget{width:50%;padding:0 8px}}
+
+/* ===== match duongsatvinhphu.com (edu29) 2026-10-14 ===== */
+body{background:#fff!important;font-family:"Times New Roman",Times,serif!important;font-size:13px!important;color:#333!important}
+.ds-wrap,.ds-body{max-width:1060px!important;width:100%}
+.ds-body,.ds-body p,.ds-body li,.ds-body a,.ds-body h3,.ds-body h4{font-family:"Times New Roman",Times,serif!important}
+.ds-body li a,.ds-body p{font-size:13px}
+/* header */
+.ds-banner{background:none!important}
+.ds-banner__in{min-height:150px!important;background:#cfe9fb url(../images/ds-banner.svg) center/cover no-repeat}
+.ds-brand__name{font-family:Arial,Helvetica,sans-serif!important;font-size:30px!important;text-transform:uppercase;color:#ffe100!important;-webkit-text-stroke:1px #c4161f;text-shadow:1px 1px 0 #c4161f!important}
+.ds-brand__sub{font-size:14px!important}
+.ds-brand__logo{border-radius:50%;background:#fff;padding:4px}
+/* menu */
+.ds-nav{background:none!important;border:0!important}
+.ds-nav>.ds-wrap{background-image:linear-gradient(#0090dd,#0079d4);padding:0!important}
+.ds-nav .navbar-nav{justify-content:flex-start}
+.ds-nav .navbar-nav>li{flex:0 0 auto!important}
+.ds-nav .navbar-nav>li+li:before{top:0;bottom:0;background:linear-gradient(#0090dd,#0072b9,#015899)!important;width:1px}
+.ds-nav .navbar-nav>li>a{font-family:"Times New Roman",Times,serif!important;font-weight:700!important;font-size:13px!important;padding:15px 18px!important;line-height:20px!important}
+.ds-nav .navbar-nav>li>a:hover,.ds-nav .navbar-nav>li.active>a,.ds-nav .navbar-nav>li.open>a{background:linear-gradient(#0079d4,#015899)!important;color:#fff!important}
+/* ticker bar */
+.ds-bar{background:transparent!important;border:0!important;margin:5px 0}
+.ds-bar__in{border:1px solid #ddd;background:#fff;min-height:28px!important;font-size:12px!important;padding:0 8px!important;font-family:"Times New Roman",Times,serif}
+.ds-date{color:#333;font-size:12px}
+.ds-ticker__label{font-weight:700;font-size:11px}
+.ds-ticker__list a{color:#e22!important;font-size:11px}
+.ds-search{width:110px!important}
+.ds-search .form-control{height:22px!important;font-size:11px!important}
+.ds-search__btn{height:22px}
+/* boxes / sidebar */
+.ds-body{padding-top:6px!important}
+.ds-box,.ds-body .panel,.ds-body .widget{border:1px solid #ddd!important;border-radius:0!important;box-shadow:none!important}
+.ds-sec__head a,.ds-body .widget-title span,.ds-box__title>span,.ds-body .panel-heading>*:first-child{font-family:"Times New Roman",Times,serif!important;font-size:12.5px!important;line-height:30px!important;height:30px}
+.ds-sec__head a:after,.ds-body .widget-title span:after,.ds-box__title>span:after,.ds-body .panel-heading>*:first-child:after{border-width:30px 18px 0 0!important}
+/* footer */
+.ds-footer{background-image:linear-gradient(to bottom,#009fe2,#008fdc)!important;border-top:0!important;color:#fff!important;font-size:13px;margin-top:20px}
+.ds-footer__menu{background:#183883!important}
+.ds-footer__menu .ds-wrap{justify-content:center}
+.ds-footer__menu a{font-family:"Times New Roman",Times,serif;font-size:13px!important;font-weight:400!important;padding:8px 12px!important}
+.ds-footer__logo{display:none!important}
+.ds-footer__main{justify-content:center;text-align:center;padding:20px 0!important}
+.ds-footer__info,.ds-footer__info *{color:#fff!important;font-family:"Times New Roman",Times,serif!important;text-align:center}
+.ds-footer__info h3{font-size:16px!important}
+.ds-footer__info p{font-size:12px!important;margin:0 0 2px!important}
+#footer .ds-footer__info a:hover{color:#ffe100!important}
+#footer.ds-footer .ds-footer__info h3,#footer.ds-footer .ds-footer__info h3 *,#footer.ds-footer .ds-fpos--info *{color:#fff!important}
