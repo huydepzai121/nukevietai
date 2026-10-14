@@ -22,7 +22,8 @@
                     <li><a href="/tin-tuc-ai/">Tin tức AI</a></li>
                     <li><a href="/mo-hinh-ngon-ngu-lon/">Mô hình ngôn ngữ lớn</a></li>
                     <li><a href="/cong-cu-ai/">Công cụ AI</a></li>
-                    <li><a href="/huong-dan/">Hướng dẫn</a></li>
+                    <li><a href="/thi-truong-dau-tu/">Thị trường &amp; Đầu tư</a></li>
+                    <li><a href="/phan-cung-ai/">Phần cứng AI</a></li>
                     <li><a href="/dao-duc-phap-ly-ai/">Đạo đức &amp; Pháp lý AI</a></li>
                 </ul>
             </div>
