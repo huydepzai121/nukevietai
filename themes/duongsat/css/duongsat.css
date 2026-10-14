@@ -397,3 +397,11 @@ body,.ds-body,.ds-body p,.ds-body li,.ds-body a,.ds-body h1,.ds-body h2,.ds-body
 .fa,em.fa,i.fa,.ds-footer .fa,.ds-body .fa{font-family:FontAwesome!important}
 /* reference has no back-to-top button */
 .ds-top,#footer .bttop{display:none!important}
+/* column splits like ref: main 795 (pad-right 10) + sidebar 265, x=153 */
+@media (min-width:992px){
+.ds-body .np-body-row{margin-left:0!important;margin-right:0!important;display:flex;flex-wrap:nowrap}
+.ds-body .np-body-row>.np-main{width:795px!important;flex:0 0 795px;padding:0 10px 0 0!important}
+.ds-body .np-body-row>.np-sidebar{width:265px!important;flex:0 0 265px;padding:0!important}
+}
+/* ticker bar 1050 at y=205 */
+.ds-bar>.ds-wrap.ds-bar__in{max-width:1050px!important;margin:5px auto 0!important}
