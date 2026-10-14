@@ -1,0 +1,41 @@
+name: nukeviet2
+networks:
+  nukeviet2:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.211.6.0/24
+services:
+  nukeviet2_web:
+    container_name: nukeviet2_web
+    image: nukeviet-nukeviet_web
+    volumes:
+      - .:/var/www/html
+      - ./.docker/php/php.ini:/usr/local/etc/php/conf.d/zz-nukeviet.ini:ro
+      - ./.docker/apache/nukeviet.conf:/etc/apache2/conf-enabled/zz-nukeviet.conf:ro
+    ports: ["127.0.0.1:8090:80"]
+    environment: {TZ: Asia/Ho_Chi_Minh}
+    networks: [nukeviet2]
+    depends_on: {nukeviet2_db: {condition: service_healthy}}
+    restart: unless-stopped
+  nukeviet2_db:
+    container_name: nukeviet2_db
+    image: docker.io/mariadb:11.5
+    volumes:
+      - ./.docker/mariadb/nukeviet.cnf:/etc/mysql/conf.d/nukeviet.cnf:ro
+      - nukeviet2_mysql:/var/lib/mysql
+    environment:
+      MARIADB_DATABASE: nukeviet
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      TZ: Asia/Ho_Chi_Minh
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    networks: [nukeviet2]
+    restart: unless-stopped
+volumes:
+  nukeviet2_mysql:
+    name: nukeviet2_mysql

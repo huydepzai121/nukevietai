@@ -1,0 +1,738 @@
+/**
+ * AI Today — lớp nhìn tông tối công nghệ cho markup gốc của themes/default
+ *
+ * Không sửa tpl: mọi selector dưới đây bám đúng class mà core/module sinh ra
+ * (header_extended.tpl, menu global.bootstrap.tpl, block.*.tpl, news/*.tpl…).
+ * Nạp sau style.css + style.responsive.css, trước nv-standard.css / custom.css.
+ * Mỗi khối có cặp marker để sửa riêng từng phần.
+ */
+
+/* ===== BASE STYLES ===== */
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-body);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-text);
+    letter-spacing: -.01em;
+    line-height: 1.25;
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--color-text);
+    transition: color var(--duration) var(--ease);
+}
+
+a:hover,
+a:focus {
+    color: var(--color-accent-hover);
+    text-decoration: none;
+}
+
+p { color: var(--color-text-body); }
+
+hr { border-top-color: var(--color-border); }
+
+.text-muted,
+.dimgray,
+.small,
+small { color: var(--color-text-muted); }
+
+.black,
+a.black { color: var(--color-text) !important; }
+
+.nv-fullbg { background-color: var(--color-bg); }
+
+::selection { background: rgba(91, 149, 255, .35); color: var(--color-text); }
+
+img.img-thumbnail,
+.img-thumbnail,
+.thumbnail {
+    padding: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface-alt);
+}
+
+/* ===== END BASE STYLES ===== */
+
+/* ===== HEADER STYLES ===== */
+
+.site-banner { display: none; }
+
+.section-header-bar {
+    background: var(--color-bg);
+    background-image: none;
+    border-bottom: 1px solid var(--color-border);
+    font-size: var(--text-sm);
+}
+
+.section-header-bar,
+.section-header-bar a,
+.contactDefault,
+.social-icons,
+.personalArea { color: var(--color-text-muted); }
+
+.section-header-bar a:hover { color: var(--color-highlight); }
+
+.section-header {
+    position: relative;
+    background:
+        radial-gradient(60% 120% at 0% 0%, rgba(91, 149, 255, .16) 0%, rgba(11, 15, 23, 0) 60%),
+        radial-gradient(50% 120% at 100% 0%, rgba(167, 139, 250, .14) 0%, rgba(11, 15, 23, 0) 60%);
+}
+
+#header .logo { padding: var(--space-4) var(--space-3) var(--space-4) 0; }
+
+#header .logo img {
+    max-height: 64px;
+    border-radius: var(--radius-sm);
+}
+
+#header .logo .site_description {
+    margin-top: var(--space-2);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Menu chính — module menu, khối global.bootstrap (#menusite .navbar-default) */
+.second-nav .bg,
+#menusite .bg {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.section-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: color-mix(in srgb, var(--color-bg) 88%, transparent);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+#menusite .navbar-default,
+.navbar-default {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+#menusite .navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a {
+    background-color: transparent;
+    color: var(--color-text-body);
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+#menusite .navbar-default .navbar-nav > li > a:hover,
+#menusite .navbar-default .navbar-nav > li > a:focus,
+#menusite .navbar-default .navbar-nav > .open > a,
+#menusite .navbar-default .navbar-nav > .open > a:hover,
+#menusite .navbar-default .navbar-nav > .open > a:focus {
+    background: var(--color-surface-alt) !important;
+    color: var(--color-text) !important;
+}
+
+#menusite .navbar-default .navbar-nav > .active > a,
+#menusite .navbar-default .navbar-nav > .active > a:hover,
+#menusite .navbar-default .navbar-nav > .active > a:focus {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: var(--color-border-strong);
+    border-radius: var(--radius-sm);
+}
+
+.navbar-default .navbar-toggle .icon-bar { background-color: var(--color-text); }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus { background-color: var(--color-surface-alt); }
+
+.dropdown-menu {
+    padding: var(--space-2) 0;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .45);
+}
+
+.dropdown-menu > li > a { color: var(--color-text-body); padding: var(--space-2) var(--space-3); }
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a {
+    background-color: var(--color-surface-alt);
+    color: var(--color-text);
+}
+
+/* Dropdown của menu chính — style.css dùng #menusite nên phải cùng độ ưu tiên */
+/* style.css đặt nền/viền khung bằng !important nên phải dùng !important để đè */
+#menusite .dropdown-menu {
+    padding: var(--space-2) 0;
+    background-color: var(--color-surface) !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .45);
+}
+
+#menusite .dropdown-menu > li { border-bottom-color: var(--color-border); }
+
+#menusite .dropdown-submenu li a { color: var(--color-text-body); }
+
+#menusite .dropdown-menu > li > a {
+    background-color: transparent;
+    color: var(--color-text-body);
+    font-size: var(--text-sm);
+}
+
+#menusite .dropdown-menu > li > a:hover,
+#menusite .dropdown-menu > li > a:focus,
+#menusite .dropdown-menu > .active > a,
+#menusite .dropdown-menu > .active > a:hover,
+#menusite .dropdown-menu > .active > a:focus,
+#menusite .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+#menusite .navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+#menusite .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    background: var(--color-surface-alt) !important;
+    color: var(--color-text) !important;
+}
+
+/* Breadcrumb + ô tìm kiếm — .third-nav */
+.third-nav .row { border-bottom: 0; }
+
+.third-nav .bg { background: none; }
+
+.breadcrumbs a,
+.breadcrumbs li:last-child a {
+    background-color: transparent;
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs li:last-child a:hover {
+    background-color: transparent;
+    color: var(--color-accent-hover);
+}
+
+.breadcrumbs a:before,
+.breadcrumbs a:after,
+.breadcrumbs a:hover:before,
+.breadcrumbs a:hover:after { border-color: transparent; border-left-color: transparent; }
+
+.breadcrumbs li + li a:before {
+    content: '/';
+    position: static;
+    border: 0;
+    margin-right: var(--space-2);
+    color: var(--color-border-strong);
+}
+
+.subs-breadcrumbs,
+.subs-breadcrumbs li { background: var(--color-surface); border-color: var(--color-border); }
+
+.third-nav .current-time { color: var(--color-text-muted); }
+
+.headerSearch .form-control,
+.headerSearch input {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-right: 0;
+    border-radius: var(--radius-pill) 0 0 var(--radius-pill);
+    color: var(--color-text);
+}
+
+.headerSearch input:hover,
+.headerSearch input:focus { border-color: var(--color-accent); box-shadow: none; }
+
+.headerSearch .btn-info,
+.headerSearch .btn-info:hover,
+.headerSearch .btn-info:focus,
+.headerSearch .btn-info:active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    border-radius: 0 var(--radius-pill) var(--radius-pill) 0;
+    color: var(--color-on-accent);
+}
+
+/* Mạng xã hội trên thanh trên cùng — [SOCIAL_ICONS] (.socialList) */
+.socialList li a {
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-pill);
+    color: var(--color-text-muted);
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+}
+
+.socialList li a:hover,
+.socialList li a[href*='facebook']:hover,
+.socialList li a[href*='youtube']:hover,
+.socialList li a[href*='twitter']:hover {
+    background-color: var(--color-surface-alt);
+    border-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+#tip,
+#tip .bg { background-color: var(--color-surface); color: var(--color-text-body); }
+
+#tip a { color: var(--color-text); }
+
+/* ===== END HEADER STYLES ===== */
+
+/* ===== BODY STYLES ===== */
+
+/* Khung nội dung #body — style.css để nền trắng + viền + bóng */
+#body,
+.section-body {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.section-body > .wraper { background: none; }
+
+/* ===== END BODY STYLES ===== */
+
+/* ===== BLOCK STYLES ===== */
+
+/* Khung block: block.default / primary / border(.well) / simple */
+.panel {
+    margin-bottom: var(--space-4);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: none;
+}
+
+.panel-default > .panel-heading,
+.panel-primary > .panel-heading,
+.panel-heading {
+    padding: var(--space-3);
+    background: none;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: var(--radius) var(--radius) 0 0;
+    color: var(--color-text);
+    font-family: var(--font-display);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+}
+
+.panel-heading a { color: inherit; }
+
+.panel-primary > .panel-heading {
+    border-bottom: 2px solid transparent;
+    border-image: var(--gradient-brand) 1;
+}
+
+.panel-primary { border-color: var(--color-border-strong); }
+
+.panel-body { padding: var(--space-3); }
+
+.panel-footer {
+    background-color: var(--color-surface-alt);
+    border-top-color: var(--color-border);
+}
+
+.well {
+    background-color: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    box-shadow: none;
+    color: var(--color-text-body);
+}
+
+.list-group-item {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-body);
+}
+
+a.list-group-item:hover,
+a.list-group-item:focus { background-color: var(--color-surface-alt); color: var(--color-text); }
+
+.list-group-item.active,
+.list-group-item.active:hover { background-color: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+
+/* Chuyên mục dạng cây — news block_category (.metismenu). jquery.metisMenu.css
+   được nạp trong tpl, SAU CSS theme, nên selector có thêm .section-body để thắng. */
+.section-body .metismenu .sidebar,
+.section-body .metismenu .sidebar-nav {
+    background: var(--color-surface);
+    background-image: none;
+}
+
+.section-body .metismenu .sidebar-nav ul a {
+    padding: 10px var(--space-3);
+    border-top: 1px solid var(--color-border);
+    box-shadow: none;
+    background: none;
+    color: var(--color-text-body);
+    font-size: var(--text-sm);
+}
+
+.section-body .metismenu .sidebar-nav > ul > li:first-child > a { border-top: 0; }
+
+.section-body .metismenu .sidebar-nav ul a:hover,
+.section-body .metismenu .sidebar-nav ul a:focus,
+.section-body .metismenu .sidebar-nav ul a:active,
+.section-body .metismenu .sidebar-nav .active > a {
+    background-color: var(--color-surface-alt);
+    background-image: linear-gradient(to right, var(--color-accent) 3px, transparent 3px);
+    color: var(--color-text);
+}
+
+.section-body .metismenu .sidebar-nav ul ul a {
+    padding-left: calc(var(--space-3) * 2);
+    background-color: rgba(255, 255, 255, .02);
+    color: var(--color-text-muted);
+}
+
+.section-body .metismenu .arrow,
+.section-body .metismenu .fa.arrow { color: var(--color-text-muted); }
+
+/* ===== END BLOCK STYLES ===== */
+
+/* ===== NEWS STYLES ===== */
+
+/* Tin nổi bật — block_newscenter (#hot-news) */
+#hot-news .panel {
+    background:
+        linear-gradient(180deg, rgba(91, 149, 255, .06) 0%, rgba(18, 24, 38, 0) 40%),
+        var(--color-surface);
+}
+
+#hot-news h2 { font-size: var(--text-h3); }
+
+#hot-news h2 a:hover { color: var(--color-accent-hover); }
+
+#hot-news .hot-news-others li {
+    padding: var(--space-2) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+#hot-news .hot-news-others li:last-child { border-bottom: 0; }
+
+#hot-news .hot-news-others .h4 { font-size: var(--text-sm); font-weight: 600; line-height: 1.45; }
+
+/* Lưới / danh sách chuyên mục — viewcat_* dùng chung .news_column */
+.news_column .panel-body,
+.news_column.panel-body { color: var(--color-text-body); }
+
+.news_column h3,
+.news_column .h3 { font-size: var(--text-h4); line-height: 1.35; }
+
+.news_column h3 a:hover,
+.news_column .h3 a:hover { color: var(--color-accent-hover); }
+
+.news_column .imghome {
+    width: 40%;
+    max-width: 260px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin: 0 var(--space-3) var(--space-2) 0;
+}
+
+.news_column .text-muted,
+.news_column .list-inline { font-size: var(--text-xs); }
+
+.thumbnail .caption { color: var(--color-text-body); }
+
+.thumbnail img { border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+
+.icon_new { color: var(--color-highlight); }
+
+/* Chi tiết bài — detail.tpl */
+.news_column h1,
+.news_column .title { font-size: var(--text-h1); line-height: 1.15; }
+
+#news-bodyhtml {
+    color: var(--color-text-body);
+}
+
+#news-bodyhtml a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+
+#news-bodyhtml img { max-width: 100%; height: auto; border-radius: var(--radius-sm); }
+
+#news-bodyhtml blockquote {
+    margin: var(--space-4) 0;
+    padding: var(--space-2) var(--space-3);
+    border-left: 3px solid var(--color-accent-2);
+    background: var(--color-surface-alt);
+    color: var(--color-text);
+}
+
+#news-bodyhtml pre,
+#news-bodyhtml code {
+    background-color: var(--color-surface-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-highlight);
+}
+
+.related a,
+.detail-related a,
+div.news_column ul.related a,
+#topnews ul.lastest-news a {
+    color: var(--color-text-body);
+    background-image: none;
+    border-bottom-color: var(--color-border);
+}
+
+div.news_column ul.related li { padding: 4px 0; }
+
+.related a:hover,
+.detail-related a:hover,
+div.news_column ul.related a:hover,
+#topnews ul.lastest-news a:hover { color: var(--color-accent-hover); background: none; }
+
+/* Tooltip xem nhanh tin (popover của BS3) */
+.popover {
+    background-color: var(--color-surface);
+    border-color: var(--color-border-strong);
+    border-radius: var(--radius);
+    color: var(--color-text-body);
+}
+
+.popover-title { background: var(--color-surface-alt); border-bottom-color: var(--color-border); color: var(--color-text); }
+
+.popover.top > .arrow:after { border-top-color: var(--color-surface); }
+.popover.bottom > .arrow:after { border-bottom-color: var(--color-surface); }
+.popover.left > .arrow:after { border-left-color: var(--color-surface); }
+.popover.right > .arrow:after { border-right-color: var(--color-surface); }
+
+/* ===== END NEWS STYLES ===== */
+
+/* ===== UI STYLES ===== */
+
+.btn { border-radius: var(--radius-pill); font-weight: 600; }
+
+.btn-primary,
+.btn-info {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-on-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-info:hover,
+.btn-info:focus {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    color: var(--color-on-accent);
+}
+
+a.btn.btn-primary,
+a.btn.btn-info { color: var(--color-on-accent); }
+
+.btn-default {
+    background-color: transparent;
+    border-color: var(--color-border-strong);
+    color: var(--color-text);
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active {
+    background-color: var(--color-surface-alt);
+    border-color: var(--color-accent);
+    color: var(--color-text);
+}
+
+a.btn.btn-default { color: var(--color-text); }
+
+.form-control,
+select.form-control,
+textarea.form-control {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    color: var(--color-text);
+}
+
+.form-control:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(91, 149, 255, .25);
+}
+
+.form-control::placeholder { color: var(--color-text-muted); }
+
+.input-group-addon {
+    background-color: var(--color-surface-alt);
+    border-color: var(--color-border);
+    color: var(--color-text-muted);
+}
+
+label,
+.control-label { color: var(--color-text); }
+
+.table { color: var(--color-text-body); }
+
+.table > thead > tr > th,
+.table > tbody > tr > td,
+.table > tbody > tr > th { border-color: var(--color-border); }
+
+.table-striped > tbody > tr:nth-of-type(odd) { background-color: rgba(255, 255, 255, .02); }
+
+.table-hover > tbody > tr:hover { background-color: var(--color-surface-alt); }
+
+.pagination > li > a,
+.pagination > li > span {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-body);
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus { background-color: var(--color-surface-alt); color: var(--color-text); }
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--color-on-accent);
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a { background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-text-muted); }
+
+.nav-tabs { border-bottom-color: var(--color-border); }
+
+.nav-tabs > li > a { color: var(--color-text-muted); border-radius: var(--radius-sm) var(--radius-sm) 0 0; }
+
+.nav-tabs > li > a:hover { background-color: var(--color-surface-alt); border-color: var(--color-border); }
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color: var(--color-surface);
+    border-color: var(--color-border) var(--color-border) transparent;
+    color: var(--color-text);
+}
+
+.label { border-radius: var(--radius-pill); }
+
+.label-primary,
+.badge { background-color: var(--color-accent); color: var(--color-on-accent); }
+
+.alert { border-radius: var(--radius); background-color: var(--color-surface-alt); border-color: var(--color-border); color: var(--color-text-body); }
+.alert-info { border-left: 3px solid var(--color-accent); }
+.alert-success { border-left: 3px solid var(--color-success); }
+.alert-warning { border-left: 3px solid var(--color-warning); }
+.alert-danger { border-left: 3px solid var(--color-danger); }
+
+.modal-content {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-strong);
+    border-radius: var(--radius);
+    color: var(--color-text-body);
+}
+
+.modal-header,
+.modal-footer { border-color: var(--color-border); }
+
+.close { color: var(--color-text); text-shadow: none; opacity: .7; }
+
+.modal-backdrop.in { opacity: .7; }
+
+/* ===== END UI STYLES ===== */
+
+/* ===== FOOTER STYLES ===== */
+
+#footer {
+    min-height: 0;
+    padding: var(--space-5) 0 var(--space-4);
+    background: var(--color-surface);
+    background-image: none;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 0;
+    font-size: var(--text-sm);
+}
+
+#footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-brand);
+}
+
+#footer,
+#footer a,
+#footer p { color: var(--color-text-body); }
+
+#footer a:hover { color: var(--color-accent-hover); }
+
+#footer .h3,
+#footer .h3 a {
+    color: var(--color-text);
+    font-size: var(--text-label);
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+}
+
+#footer .menu li,
+#footer .menu li:nth-child(2n),
+#footer .menu li:nth-child(2n + 1) { border-color: var(--color-border); }
+
+.footerNav2 {
+    background-color: var(--color-bg);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+}
+
+.footerNav2 .theme-change a,
+.footerNav2 .theme-change span,
+.footerNav2 .bttop a {
+    background-color: var(--color-surface);
+    border-color: var(--color-border);
+    color: var(--color-text-body);
+}
+
+.footerNav2 .theme-change a:hover,
+.footerNav2 .bttop a:hover { background-color: var(--color-accent); color: var(--color-on-accent); }
+
+/* ===== END FOOTER STYLES ===== */
